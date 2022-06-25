@@ -1,9 +1,8 @@
 .App {
-  
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #a7a7a7;
+  background: rgb(123, 123, 123);
   height: 100vh;
   width: 100vw;
   margin: auto;
@@ -12,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #a7a7a7;
+  background: rgb(123, 123, 123);
   height: 100vh;
   width: 100vw;
   margin: auto;
@@ -20,7 +19,7 @@
 .login{
   font-weight: bold;
   font-size: 26px;
-  color: #950018;
+  color: rgb(215, 129, 21);;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 .login-panel{
@@ -28,10 +27,10 @@
   height: 600px;
   width: 400px;
   border-radius: 8px;
-  box-shadow: 10px 10px 20px #826b6f;
+  box-shadow: 10px 10px 20px rgb(70, 70, 70);
 }
 .login-logo{
-  background-color: #950018;
+  background-color: rgb(215, 129, 21);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   display: flex;
@@ -46,7 +45,6 @@
   height: 40px;
   padding-top: 50px;
 }
-
 .password-section{
   padding-top: 10px;
   display: flex;
@@ -87,8 +85,13 @@
   border-style: none;
   color: white;
   font-weight: bolder;
-  background-color: #950018;
-  ;
+  background-color: rgb(158, 183, 252);
+  opacity: 1;
+  transition: 10ms;
+}
+.login-button:hover{
+  background-color: rgb(57, 82, 151);
+  opacity: 1;
 }
 .account-options{
   display: flex;
@@ -113,23 +116,70 @@ font-size: 11px;
   height: 90vh;
   width: 90vw;
   background-color: white;
-  box-shadow: 10px 10px 20px #826b6f;
+  box-shadow: 10px 10px 20px rgb(70, 70, 70);
   border-radius: 10px;
   overflow-y: auto;
   overflow-x: auto;
 }
-.schedules-panel{
-width: 400px;
-height: 900px;
-background-color: rgb(30, 51, 41);
+
+.schedules{
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 400px;
+  height: 800px;
+  background-color: rgb(39, 42, 51);
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 5;
 }
-.form-panel{
+.system-title{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.schedules-list{
+  color: white;
+  font-size: 18px;
+}
+
+.boc-form-panel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1200px;
-  height: 900px;
+  height: 800px;
+  background-color: white;
+}
+.create-button-panel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 800px;
   background-color: white;
 }
 .profile-panel{
   width: 400px;
-  height: 900px;
-  background-color: rgb(55, 70, 0);
+  height: 800px;
+  background-color: rgb(39, 42, 51);
+}
+.new-bill-button{
+  width: 150px;
+  height: 150px;
+  font-size: 14pt;
+  border-style: none;
+  border-radius: 100px;
+  opacity: 1;
+  transition: 0.3s;
+  font-weight: bold;
+  background-color: coral;
+  color: rgb(39, 42, 51);;
+}
+.new-bill-button:hover{opacity: 0.8;
+  background-color: rgb(158, 183, 252);
+color: white;
 }

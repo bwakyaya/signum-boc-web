@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Dashboard from "../dashboard";
 import App from "../../App";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function Login({ setToken }) {
   return (
@@ -39,7 +37,7 @@ export default function Login({ setToken }) {
               <App />;
             }}
           >
-            Login
+            LOGIN
           </button>
         </div>
         <div className="account-options">

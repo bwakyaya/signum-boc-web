@@ -1,17 +1,15 @@
 import React from "react";
+import BOCForm from "./boc-form";
+import NewBOCButton from "./create-boc-button";
+import Schedules from "./schedules-panel";
+import Profile from "./profile-panel";
 
 const Dashboard = (token) => {
   return (
     <div className="home-page">
-      <div className="schedules-panel">
-        <h>Panel 1</h>
-      </div>
-      <div className="form-panel">
-        <h>Panel 2</h>
-      </div>
-      <div className="profile-panel">
-        <h>Panel 3</h>
-      </div>
+      <Schedules />
+      <NewBOCButton />
+      <Profile />
     </div>
   );
 };
