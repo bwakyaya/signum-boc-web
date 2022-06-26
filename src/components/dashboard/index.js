@@ -9,7 +9,7 @@ const Dashboard = (token) => {
     <div className="home-page">
       <Schedules />
       <NewBOCButton />
-      <Profile />
+      {/* <Profile /> */}
     </div>
   );
 };

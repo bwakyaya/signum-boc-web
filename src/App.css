@@ -110,6 +110,7 @@ font-size: 11px;
 .system-name{
   color: white;
 }
+
 .home-page{
   display: flex;
   flex-direction: row;
@@ -119,21 +120,15 @@ font-size: 11px;
   box-shadow: 10px 10px 20px rgb(70, 70, 70);
   border-radius: 10px;
   overflow-y: auto;
-  overflow-x: auto;
 }
 
 .schedules{
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  overflow-x: auto;
-  width: 400px;
   height: 800px;
   background-color: rgb(39, 42, 51);
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-right: 5;
+  padding: 10px;
 }
 .system-title{
   color: white;
@@ -142,8 +137,18 @@ font-size: 11px;
   padding-bottom: 10px;
 }
 .schedules-list{
+  padding: 10px;
+  overflow-y: auto;
+  /* overflow-x: auto; */
   color: white;
+  /* width: 400px; */
   font-size: 18px;
+  
+}
+.tree-item{
+  width: 400px;
+  /* border-bottom: 0.1px solid white; */
+  border-top: 0.1px solid white;
 }
 
 .boc-form-panel{
@@ -151,15 +156,15 @@ font-size: 11px;
   align-items: center;
   justify-content: center;
   width: 1200px;
-  height: 800px;
-  background-color: white;
+  height: 90vh;
+  background-color: rgb(255, 255, 255);
 }
 .create-button-panel{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 1200px;
-  height: 800px;
+  height: 90vh;
   background-color: white;
 }
 .profile-panel{
