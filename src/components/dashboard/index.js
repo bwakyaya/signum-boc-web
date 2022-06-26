@@ -8,8 +8,8 @@ const Dashboard = (token) => {
   return (
     <div className="home-page">
       <Schedules />
-      <NewBOCButton />
-      {/* <Profile /> */}
+      {/* <NewBOCButton /> */}
+      <BOCForm />
     </div>
   );
 };

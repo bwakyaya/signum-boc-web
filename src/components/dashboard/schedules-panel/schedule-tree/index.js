@@ -107,7 +107,7 @@ const Scheduledata = {
             },
             {
               id: "dfvdfghng876e4wedfg",
-              name: "PARAGRAPH 12: The fee on a single debenture of any nature where the debenture does not ' create a security, shall be calculated under the Fifth Schedule taking into account the time, complexity and responsibility",
+              name: "PARAGRAPH 12: The fee on a single debenture of any nature where the debenture does not create a security, shall be calculated under the Fifth Schedule taking into account the time, complexity and responsibility",
             },
             {
               id: "78iufaswe4h",
