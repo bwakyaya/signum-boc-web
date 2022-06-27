@@ -2,7 +2,6 @@ import "./App.css";
 import React, { useState } from "react";
 import Login from "./components/login";
 import Dashboard from "./components/dashboard";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [token, setToken] = useState();

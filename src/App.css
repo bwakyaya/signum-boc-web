@@ -5,8 +5,7 @@
   background: rgb(123, 123, 123);
   height: 100vh;
   width: 100vw;
-  margin: auto;
-}
+  margin: auto;}
 .login-page {
   display: flex;
   align-items: center;
@@ -14,21 +13,18 @@
   background: rgb(123, 123, 123);
   height: 100vh;
   width: 100vw;
-  margin: auto;
-}
+  margin: auto;}
 .login{
   font-weight: bold;
   font-size: 26px;
-  color: rgb(215, 129, 21);;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+  color: rgb(215, 129, 21);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;}
 .login-panel{
   background: whitesmoke;
   height: 600px;
   width: 400px;
   border-radius: 8px;
-  box-shadow: 10px 10px 20px rgb(70, 70, 70);
-}
+  box-shadow: 10px 10px 20px rgb(70, 70, 70);}
 .login-logo{
   background-color: rgb(215, 129, 21);
   border-top-left-radius: 5px;
@@ -36,29 +32,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-}
+  height: 100px;}
 .username-section{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 40px;
-  padding-top: 50px;
-}
+  padding-top: 50px;}
 .password-section{
   padding-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-}
+  height: 40px;}
 .button-section{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 40px;
-  padding-top: 30px;
-}
+  padding-top: 30px;}
 .username-field{
   text-align: center;
   width: 200px;
@@ -66,8 +58,7 @@
   font-size: 10pt;
   font-weight: bolder;
   border-radius: 15px;
-  border-style: none;
-}
+  border-style: none;}
 .password-field{
   text-align: center;
   width: 200px;
@@ -75,8 +66,7 @@
   font-size: 10pt;
   font-weight: bolder;
   border-radius: 15px;
-  border-style: none;
-  }
+  border-style: none;}
 .login-button{
   width: 150px;
   height: 35px;
@@ -85,94 +75,87 @@
   border-style: none;
   color: white;
   font-weight: bolder;
-  background-color: rgb(158, 183, 252);
-  opacity: 1;
-  transition: 10ms;
-}
-.login-button:hover{
   background-color: rgb(57, 82, 151);
   opacity: 1;
-}
+  transition: 10ms;}
+.login-button:hover{
+  background-color: rgb(158, 183, 252);
+  opacity: 1;}
 .account-options{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-}
+  height: 80px;}
 .sign-up-label{
 padding-right: 40px;
-font-size: 11px;
-}
+font-size: 11px;}
 .forgot-password-label{
   font-size: 11px;
-  padding-left: 40px;
-}
+  padding-left: 40px;}
 .system-name{
-  color: white;
-}
-
+  color: white;}
 .home-page{
   display: flex;
   flex-direction: row;
   height: 90vh;
   width: 90vw;
-  background-color: white;
+  background-color: rgb(123, 123, 123);
   box-shadow: 10px 10px 20px rgb(70, 70, 70);
   border-radius: 10px;
-  overflow-y: auto;
-}
-
+  overflow-y: auto;}
 .schedules{
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: 800px;
-  background-color: rgb(39, 42, 51);
-  padding: 10px;
-}
+  height: 90vh;
+  width: 21%;
+  background-color: rgb(145, 85, 11);
+  border-radius: 10px;} 
+.profile-icon{
+  border: white;
+  border-style: solid;
+  border-width: 0.1px;
+  border-radius: 100px;}
 .system-title{
   color: white;
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 10px;
-}
+  padding-left: 10px;}
 .schedules-list{
-  padding: 10px;
-  overflow-y: auto;
-  /* overflow-x: auto; */
+  height: 90vh;
+  width: 100%;
   color: white;
-  /* width: 400px; */
-  font-size: 18px;
-  
-}
+  font-size: 18px;}
 .tree-item{
-  width: 400px;
-  /* border-bottom: 0.1px solid white; */
+  width: 100%;
   border-top: 0.1px solid white;
-}
-
+  word-wrap: break-word;}
 .boc-form-panel{
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: 1200px;
+  width: 78%;
   height: 90vh;
   background-color: rgb(255, 255, 255);
-}
+  border-radius: 10px;}
 .create-button-panel{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1200px;
+  width: 80%;
   height: 90vh;
-  background-color: white;
-}
+  background-color: white;}
 .profile-panel{
-  width: 400px;
-  height: 800px;
+  width: 10%;
+  height: 90vh;
   background-color: rgb(39, 42, 51);
-}
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;}
+.divider-div{
+  height: 100%;
+  width: 1%;
+  background-color: rgb(123, 123, 123); }
 .new-bill-button{
   width: 150px;
   height: 150px;
@@ -183,9 +166,9 @@ font-size: 11px;
   transition: 0.3s;
   font-weight: bold;
   background-color: coral;
-  color: rgb(39, 42, 51);;
-}
+  color: rgb(39, 42, 51);;}
 .new-bill-button:hover{opacity: 0.8;
   background-color: rgb(158, 183, 252);
-color: white;
-}
+color: white;}
+
+/* Styles for the Data Capture Form */
