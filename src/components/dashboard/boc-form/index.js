@@ -1,10 +1,12 @@
 import React from "react";
+// import PostAddSharpIcon from "@mui/icons-material/PostAddSharp";
 
 export default function BOCForm() {
   return (
     <div className="boc-form-panel">
       <div className="options-panel">
-        <figure>
+        <figure className="new-bill-fig">
+          {/* <PostAddSharpIcon className="new-bill-icon" /> */}
           <img className="new-bill-icon" alt="icon" src="newbill.png"></img>
           <figcaption className="new-bill-label">New Bill</figcaption>
         </figure>
@@ -17,7 +19,7 @@ export default function BOCForm() {
           <figcaption className="archive-label">My Bills</figcaption>
         </figure>
         <figure>
-          <img className="profile-icon" alt="icon" src="profile.png"></img>
+          <img className="profile-icon" alt="icon" src="images.png"></img>
           <figcaption className="profile-label">Profile</figcaption>
         </figure>
       </div>

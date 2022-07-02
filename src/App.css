@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(123, 123, 123);
+  background: grey;
   height: 100vh;
   width: 100vw;
   margin: auto;}
@@ -101,7 +101,7 @@ font-size: 11px;}
   width: 90vw;
   background-color: rgb(123, 123, 123);
   box-shadow: 10px 10px 20px rgb(70, 70, 70);
-  /* border-radius: 10px; */
+  border-radius: 5px;
   overflow-y: auto;}
 .schedules{
   display: flex;
@@ -109,7 +109,9 @@ font-size: 11px;}
   flex-direction: column;
   height: 90vh;
   width: 21%;
-  background-color: #950018;
+  border-radius: 5px;
+  /* background-color: #950018; */
+  background-color: #04203A;;
   border: white;
   border-width: 1px; 
   border-style: solid;
@@ -123,18 +125,18 @@ font-size: 11px;}
   padding-bottom: 10px;
   width: 100%;
   height: 10%;
-  border: white;
+  border-bottom: white;
   border-width: 1px; 
-  border-style: solid; }
+  border-bottom-style: solid; }
 .logo-div{
   width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     height: 15%;
-    border: white;
-    border-width: 1px; 
-    border-style: solid; }
+    border-top: white;
+    border-top-width: 1px; 
+    border-top-style: solid; }
 .logo{   
     height: 100%;
     width: 80;}
@@ -155,9 +157,8 @@ font-size: 11px;}
   width: 78%;
   height: 90vh;
   background-color: rgb(255, 255, 255);
-  border: #950018;
   border-width: 1px; 
-  border-style: solid;}
+  border-radius: 5px;}
 .create-button-panel{
   display: flex;
   align-items: center;
@@ -196,36 +197,80 @@ color: white;}
 .options-panel{
   display: flex;
   flex-direction: row;
-  height: 150px;
-  width: 99.9%;
-  background-color: rgb(57, 82, 151);
-  border: white;
+  height: 120px;
+  width: 100%;
+  background-color: rgb(215, 129, 21) ;
   border-width: 1px; 
-  border-style: solid;}
+  border-style: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;}
 .new-bill-icon{
-  opacity: 1px;
-  transition: 10ms;
-  height: 80px;
-  width: 80px;}
-  .new-bill-icon :hover{
-    opacity: 0.1;
-  }
+  transition: all .3s ease-in-out;
+  border: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;}
+.new-bill-icon:hover{
+    cursor: grabbing;
+    transform: scale(1.4);}
 .draft-icon{
-  height: 80px;
+  transition: all .3s ease-in-out;
+  height: 60px;
   width: 60px;
-  /* padding-top: 20px; */}
+  border: white;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;}
+.draft-icon:hover{
+    cursor: grabbing;
+    transform: scale(1.4);}
 .archive-icon{
-  height: 80px;
-  width: 80px;}
+  transition: all .3s ease-in-out;
+  border: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;}.archive-icon:hover{
+    cursor: grabbing;
+    transform: scale(1.4);}
 .profile-icon{
-  height: 80px;
-  width: 70px;}
+  border: white;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  height: 60px;
+  transition: all .3s ease-in-out; 
+  width: 60px;}.profile-icon:hover{
+    cursor: grabbing;
+    transform: scale(1.4);}
 .new-bill-label{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;}
 .draft-label{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;}
 .archive-label{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;}
 .profile-label{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;}
-/* Styles for the Data Capture Form */
