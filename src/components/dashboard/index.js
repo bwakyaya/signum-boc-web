@@ -1,10 +1,10 @@
 import React from "react";
 import BOCForm from "./boc-form";
-import Schedules from "./schedules-panel";
+import LeftPanel from "./left-panel";
 const Dashboard = (token) => {
   return (
-    <div className="home-page">
-      <Schedules />
+    <div className="home-plate">
+      <LeftPanel />
       <div className="divider-div"></div>
       <BOCForm />
     </div>

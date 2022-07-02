@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Schedules() {
+export default function LeftPanel() {
   return (
-    <div className="schedules">
+    <div className="left-panel">
       <div className="system-title"> Bill of Costs</div>
       <div className="divider2"></div>
       <div className="logo-div">
