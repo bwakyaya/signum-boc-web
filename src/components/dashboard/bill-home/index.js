@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-// import NewBillForm from "../new-bill-form";
-// import Drafts from "../drafts-home";
-// import Archives from "../archive-home";
+import NewBillForm from "../new-bill-form";
+import Drafts from "../drafts-home";
+import Archives from "../archive-home";
+import Profile from "../profile-panel";
 
 export default function BOCHome() {
   const [launcher, setLauncher] = useState(null);
@@ -9,16 +10,16 @@ export default function BOCHome() {
     let Component;
     switch (launcher) {
       case "new-bill":
-        Component = <>New Bill</>;
+        Component = <NewBillForm />;
         break;
       case "drafts":
-        Component = <>Drafts</>;
+        Component = <Drafts />;
         break;
       case "archives":
-        Component = <>Archive</>;
+        Component = <Archives />;
         break;
       case "profile":
-        Component = <>Profile</>;
+        Component = <Profile />;
         break;
       default:
         Component = <></>;
