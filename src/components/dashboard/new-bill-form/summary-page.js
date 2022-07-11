@@ -8,25 +8,33 @@ const courtsList = [
   "Court of Appeal",
   "Supreme Court",
   "Jinja High Court",
-  "Mbale High Court",
-];
+  "Mbale High Court",];
+const divisions =["Divisions", "Civil Division", "Criminal Division"];
 export default function SummaryPage() {
   //   const [courtsData, setCourtsData] = useState([]);
   //   setCourtsData(courtsList);
   return (
     <div>
-      <div>
-        <SimpleListMenu courts={courtsList} />
-      </div>
-      <div>Division</div>
-      <div>Taxation Number... of...</div>
-      <div>From Civil Suit Number... of ...</div>
-      <div>Plaintiff(s)</div>
-      <div>Defendant(s)</div>
-      <div>Dated at</div>
-      <div>Counsel for the Plaintif|Defendant</div>
-      <div>Drawn and Filed By</div>
-      <div>To Be Served Upon</div>
+      <form>
+      <label>Court</label>
+      <SimpleListMenu courts={courtsList} />
+      <label>Division</label>
+      <br><SimpleListMenu courts={divisions} orther={"Select Division"} /></br>
+      <br><label>Taxation No.</label></br>
+      <br><input type="number" placeholder="Number"></input> of <input type="number" placeholder="Year"></input></br>
+      <br><label>From Civil Suit No.</label></br>
+      <br><input type="number" placeholder="Number"></input> of <input type="number" placeholder="Year"></input></br>
+      <br><label>Plaintiff(s)</label></br>
+      <br><input type="text"></input></br>
+      <br><label>Defendant(s)</label></br>
+      <br><input type="text"></input></br>
+      <br><label>Dated at</label></br>
+      <br><input type="text" placeholder="Location"></input> <input type="date"></input></br>
+      {/* <br><label>Counsel for the Plaintif|Defendant</label></br>
+      <br><label>Drawn and Filed By</label></br>
+      <br><label>To Be Served Upon</label></br> */}
+      <br><input type="submit" value="Save and Continue"></input></br>  
+      </form>
     </div>
   );
 }

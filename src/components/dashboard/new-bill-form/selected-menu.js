@@ -5,7 +5,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
-export default function SimpleListMenu({ courts }) {
+export default function SimpleListMenu({courts}) {
   let options = courts;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -40,7 +40,7 @@ export default function SimpleListMenu({ courts }) {
           onClick={handleClickListItem}
         >
           <ListItemText
-            primary="Select Court"
+            primary="Select Option"
             secondary={options[selectedIndex]}
           />
         </ListItem>

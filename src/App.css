@@ -52,21 +52,25 @@
   height: 40px;
   padding-top: 30px;}
 .username-field{
+  border:rgb(215, 129, 21);
+  border-width: thin;
+  border-style: solid;
+  border-radius: 15px;
   text-align: center;
   width: 200px;
   height: 40px;
   font-size: 10pt;
-  font-weight: bolder;
-  border-radius: 15px;
-  border-style: none;}
+  font-weight: bolder;}
 .password-field{
+  border:rgb(215, 129, 21);
+  border-width: thin;
+  border-style: solid;
+  border-radius: 15px;
   text-align: center;
   width: 200px;
   height: 40px;
   font-size: 10pt;
-  font-weight: bolder;
-  border-radius: 15px;
-  border-style: none;}
+  font-weight: bolder;}
 .login-button{
   width: 150px;
   height: 35px;
@@ -245,7 +249,8 @@ color: white;}
   border-style: solid;
   border-radius: 10px;
   height: 60px;
-  width: 60px;}.archive-icon:hover{
+  width: 60px;}
+.archive-icon:hover{
     -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0 0 8px #fff;
     opacity: 0.6;
@@ -258,7 +263,8 @@ color: white;}
   border-width: 1px;
   height: 60px;
   transition: all .3s ease-in-out; 
-  width: 60px;}.profile-icon:hover{
+  width: 60px;}
+.profile-icon:hover{
     -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0 0 8px #fff;
     opacity: 0.6;
