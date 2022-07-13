@@ -40,7 +40,7 @@ export default function SimpleListMenu({courts}) {
           onClick={handleClickListItem}
         >
           <ListItemText
-            primary="Select Option"
+            // primary="Select Option"
             secondary={options[selectedIndex]}
           />
         </ListItem>

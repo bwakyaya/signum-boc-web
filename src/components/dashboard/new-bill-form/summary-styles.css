@@ -1,0 +1,91 @@
+
+.taxation-label{}
+.suit-label{}
+.plaintiff-label{}
+.defendant-label{}
+.dated-label{}
+.taxation-field{
+border: rgb(145, 122, 94);
+border-style: solid;
+border-width: 1px;
+border-radius: 5px;
+height: 25px;
+margin-left:5.3em;
+width: 150px;}
+.taxation-year{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;}
+.suit-field{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 25px;
+    margin-left:2em;
+    width: 150px;}
+.suit-year{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 25px;   
+    width: 150px; }
+.plaintiff-field{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 40px;
+    margin-left:6.8em;
+    font-family: sans-serif;
+    width: 150px;}
+.defendant-field{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-left:5.2em;
+    height: 40px;
+    font-family: sans-serif;
+    width: 150px;}
+.location-field{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-left:7.75em;
+    height: 25px;
+    width: 150px;}
+.date-picker{
+    border: rgb(145, 122, 94);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;}
+.submit-button{
+    background-color: cornflowerblue;
+    height: 25px;
+    border-style: none;
+    color: aliceblue;
+    height: 40px;
+    border-radius: 5px;
+    font-size: medium;}
+.submit-button:hover{
+    opacity: 0.7;}
+.button-div{
+    padding: 5px;}
+.dated-div{
+    padding: 5px;}
+.defendant-div{
+    padding: 5px;}
+.plaintiff-div{
+    padding: 5px;}
+.suit-div{
+    padding: 5px;}
+.taxation-div{
+    padding: 5px;}
