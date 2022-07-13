@@ -4,7 +4,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
 
-export default function RichObjectTreeView() {
+export default function ScheduleTree() {
   const renderTree = (nodes) => (
     <TreeItem
       key={nodes.id}

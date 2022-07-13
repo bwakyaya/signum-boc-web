@@ -1,6 +1,6 @@
 import { height } from "@mui/system";
 import SimpleListMenu from "./selected-menu";
-import './summary-styles.css';
+import './summary.css';
 
 const courtsList = [
   "Courts",
