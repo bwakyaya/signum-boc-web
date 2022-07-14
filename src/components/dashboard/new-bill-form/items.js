@@ -14,7 +14,6 @@ export default function CostItems() {
           <th className="amount">AMOUNT</th>
           <th className="tax">TAXED OFF</th>
         </tr>
-        {addRow(tableData)}
       </table>
       <div className="add-button-div">
         <button
@@ -35,7 +34,7 @@ export default function CostItems() {
   );
 }
 
-function addRow(a, b, c, d, e) {
+function addCells(a, b, c, d, e) {
   return (
     <tr className="data-row">
       <th>{a}</th>
