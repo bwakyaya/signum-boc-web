@@ -54,6 +54,7 @@ export default function VerticalTabs() {
         bgcolor: "background.paper",
         display: "flex",
         height: "100%",
+        width: "100%",
       }}
     >
       <Tabs
@@ -69,13 +70,13 @@ export default function VerticalTabs() {
         <Tab label="Disbursements" {...a11yProps(2)} />
         <Tab label="Finish" {...a11yProps(3)} />
       </Tabs>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} className="summary">
         <SummaryPage />
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={1} className="cost-items">
         <CostItems />
       </TabPanel>
-      <TabPanel value={value} index={2}>
+      <TabPanel value={value} index={2} className="disbursements">
         Disbursements
       </TabPanel>
       <TabPanel value={value} index={3} className="finish">

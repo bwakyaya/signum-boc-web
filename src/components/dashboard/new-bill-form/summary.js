@@ -1,6 +1,5 @@
 import SimpleListMenu from "./selected-menu";
 import "./summary.css";
-
 const courtsList = [
   "Courts",
   "The Chief Magistrate's Court of Mengo",
@@ -17,10 +16,14 @@ export default function SummaryPage() {
   //   setCourtsData(courtsList);
   return (
     <div>
-      <label>Court</label>
-      <SimpleListMenu courts={courtsList} />
-      <label>Division</label>
-      <SimpleListMenu courts={divisions} orther={"Select Division"} />
+      <div className="court-div">
+        <label>Court</label>
+        <SimpleListMenu courts={courtsList} />
+      </div>
+      <div className="division-div">
+        <label>Division</label>
+        <SimpleListMenu courts={divisions} orther={"Select Division"} />
+      </div>
       <div className="taxation-div">
         <label className="taxation-label">Taxation No.</label>
         <input

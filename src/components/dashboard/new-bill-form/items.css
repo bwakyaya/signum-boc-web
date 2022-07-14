@@ -1,0 +1,55 @@
+.add-button-div{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.add-button{
+    border-radius: 5px;
+    border-width: 1px;
+    height: 35px;
+    width: 80px;
+}
+.add-button:hover{
+    opacity: 0.6;
+}
+table, tr, th{
+    border: 1px solid rgb(215, 129, 21);
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+.data-row{color: darkgray;}
+.item{
+width: 50px;
+}
+.date{
+width: 100px;
+}
+.particulars{
+width: 250;
+}
+.amount{
+width: 100px;
+}
+.tax{
+width: 100px;
+}
+.finish{
+    background-color: cornflowerblue;
+    height: 560px;
+    width: 100%;
+  }
+  .summary{
+    height: 560px;
+    width: 100%;
+  }
+  .cost-items{
+    height: 560px;
+    width: 100%;
+  }
+  .disbursements{
+    height: 560px;
+    width: 100%;
+  }

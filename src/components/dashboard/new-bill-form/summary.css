@@ -10,7 +10,7 @@ border-style: solid;
 border-width: 1px;
 border-radius: 5px;
 height: 25px;
-margin-left:5.3em;
+margin-left:3.3em;
 width: 70px;}
 .taxation-year{
     border: rgb(145, 122, 94);
@@ -25,7 +25,7 @@ width: 70px;}
     border-width: 1px;
     border-radius: 5px;
     height: 25px;
-    margin-left:2em;
+    /* margin-left:2em; */
     width: 70px;}
 .suit-year{
     border: rgb(145, 122, 94);
@@ -40,7 +40,7 @@ width: 70px;}
     border-width: 1px;
     border-radius: 5px;
     height: 40px;
-    margin-left:6.8em;
+    margin-left:4.8em;
     font-family: sans-serif;
     width: 200px;}
 .defendant-field{
@@ -48,7 +48,7 @@ width: 70px;}
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    margin-left:5.2em;
+    margin-left:3.2em;
     height: 40px;
     font-family: sans-serif;
     width: 200px;}
@@ -57,16 +57,16 @@ width: 70px;}
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    margin-left:7.75em;
+    margin-left:5.75em;
     height: 25px;
-    width: 150px;}
+    width: 110px;}
 .date-picker{
     border: rgb(145, 122, 94);
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
     height: 25px;
-    width: 120px;}
+    width: 100px;}
 .submit-button{
     background-color: cornflowerblue;
     height: 25px;
@@ -78,14 +78,50 @@ width: 70px;}
 .submit-button:hover{
     opacity: 0.7;}
 .button-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
     padding: 5px;}
 .dated-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
     padding: 5px;}
 .defendant-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
     padding: 5px;}
 .plaintiff-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
     padding: 5px;}
 .suit-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
     padding: 5px;}
 .taxation-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
     padding: 5px;}
+.court-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
+}
+.division-div{
+    /* display:flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%; */
+}
