@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import SummaryPage from "./summary";
 import CostItems from "./items";
+import Disbursements from "./disbursements";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -77,7 +78,7 @@ export default function VerticalTabs() {
         <CostItems />
       </TabPanel>
       <TabPanel value={value} index={2} className="disbursements">
-        Disbursements
+        <Disbursements />
       </TabPanel>
       <TabPanel value={value} index={3} className="finish">
         Finish

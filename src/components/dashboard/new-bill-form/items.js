@@ -1,20 +1,13 @@
 import React, { useState } from "react";
 import "./items.css";
+import ITable from "./items-table";
 
-let data = [];
+const myData=[[]];
 export default function CostItems() {
-  const [tableData, setTableData] = useState([]);
+  const [data, setData]=useState();
   return (
-    <div>
-      <table>
-        <tr>
-          <th className="item">ITEM</th>
-          <th className="date">DATE</th>
-          <th className="particulars">PARTICULARS</th>
-          <th className="amount">AMOUNT</th>
-          <th className="tax">TAXED OFF</th>
-        </tr>
-      </table>
+    <div>    
+      {data}
       <div className="add-button-div">
         <button
           width="30px"
@@ -22,26 +15,13 @@ export default function CostItems() {
           alt="Add Button"
           className="add-button"
           onClick={() => {
-            data.push(["hfdfdfv", "nghdgf", "LKSDJF", "LDJF", "kdjfgkljdf"]);
-            setTableData(data);
-            console.log(tableData);
+            myData.push(["gdfg", "gdfff", "hdfgsd", "hfjfggr", "tgdfgdf"])
+          setData(<ITable tableData={myData}/>)        
           }}
         >
           ADD
         </button>
       </div>
     </div>
-  );
-}
-
-function addCells(a, b, c, d, e) {
-  return (
-    <tr className="data-row">
-      <th>{a}</th>
-      <th>{b}</th>
-      <th>{c}</th>
-      <th>{d}</th>
-      <th>{e}</th>
-    </tr>
   );
 }

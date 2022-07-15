@@ -13,8 +13,8 @@
 .add-button:hover{
     opacity: 0.6;
 }
-table, tr, th{
-    border: 1px solid rgb(215, 129, 21);
+table, tr, th, td{
+    border: 1px solid rgb(200, 198, 194);
     border-collapse: collapse;
 }
 table{
@@ -22,19 +22,19 @@ table{
 }
 .data-row{color: darkgray;}
 .item{
-width: 50px;
+width: 5%;
 }
 .date{
-width: 100px;
+width: 15%;
 }
 .particulars{
-width: 250;
+width: 50%;
 }
 .amount{
-width: 100px;
+width: 15%;
 }
 .tax{
-width: 100px;
+width: 15%;
 }
 .finish{
     background-color: cornflowerblue;
@@ -48,8 +48,14 @@ width: 100px;
   .cost-items{
     height: 560px;
     width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
   }
   .disbursements{
     height: 560px;
     width: 100%;
+  }
+  thead{
+    color: brown;
+    font-weight: bold;
   }

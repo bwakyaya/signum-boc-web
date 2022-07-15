@@ -198,7 +198,7 @@ color: white;}
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;}
 .canvas{
-  height: fit-content;
+  height: 100%;
   overflow-y: auto;
   overflow-x: auto;
   width: 100%;}
