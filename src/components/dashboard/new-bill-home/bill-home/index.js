@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import NewBillForm from "../new-bill-form";
-import Drafts from "../drafts-home";
-import Archives from "../archive-home";
-import Profile from "../profile-panel";
+import NewBillForm from "..";
+import Drafts from "../../drafts-home";
+import Archives from "../../archive-home";
+import Profile from "../../profile-home";
 
 export default function BOCHome() {
   const [launcher, setLauncher] = useState(null);
@@ -22,7 +22,7 @@ export default function BOCHome() {
         Component = <Profile />;
         break;
       default:
-        Component = <></>;
+        Component = null;
         break;
     }
     return Component;
@@ -76,20 +76,7 @@ export default function BOCHome() {
           <figcaption className="profile-label">Profile</figcaption>
         </figure>
       </div>
-      {getComponent()}
+      <div className="form-widgets">{getComponent()}</div>
     </div>
   );
 }
-
-// function handleNewBillClick() {
-//   console.log("Create New Bill");
-// }
-// function handleDraftsClick() {
-//   console.log("Create New Bill");
-// }
-// function handleArchivesClick() {
-//   console.log("Create New Bill");
-// }
-// function handleProfileClick() {
-//   console.log("Create New Bill");
-// }

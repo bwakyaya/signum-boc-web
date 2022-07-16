@@ -1,6 +1,6 @@
 .summary{
     height: 100%;
-    width: 1000px;
+    width: 100%;
 }
 .taxation-label{}
 .suit-label{}
@@ -70,8 +70,6 @@ width: 70px;}
     border-radius: 5px;
     height: 25px;
     width: 100px;}
-.submit-button:hover{
-    opacity: 0.7;}
 .dated-div{
     padding: 5px;}
 .defendant-div{

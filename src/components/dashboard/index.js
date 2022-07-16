@@ -1,5 +1,5 @@
 import React from "react";
-import BOCHome from "./bill-home";
+import BOCHome from "./new-bill-home/bill-home";
 import LeftPanel from "./left-panel";
 const Dashboard = (token) => {
   return (

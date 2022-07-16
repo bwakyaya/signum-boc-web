@@ -1,6 +1,6 @@
 
 .finish{
-    height: 560px;
+    height: 100%;
     width: 100%;
     display:flex;
     align-items: center;
@@ -16,7 +16,7 @@
         color: aliceblue;
         border-radius: 5px;
         box-shadow: darkgray 20px 20px 20px;
-        font-size: medium;}
+        }
         .save-button:hover{
             opacity: 0.9;
             transform: scale(1.2);

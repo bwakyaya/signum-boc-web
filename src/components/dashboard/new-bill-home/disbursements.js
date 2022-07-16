@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import "./items.css";
 import ITable from "./items-table";
+import React, { useState } from "react";
 
 const myData = [[]];
-export default function CostItems() {
-  const [data, setData] = useState();
+export default function Disbursements() {
+  const [disbursement, setDisbursement] = useState();
   return (
     <div>
       <div className="add-button-div">
@@ -15,13 +15,13 @@ export default function CostItems() {
           className="add-button"
           onClick={() => {
             myData.push(["gdfg", "gdfff", "hdfgsd", "hfjfggr", "tgdfgdf"]);
-            setData(<ITable tableData={myData} />);
+            setDisbursement(<ITable tableData={myData} />);
           }}
         >
-          ADD
+          Add Item
         </button>
       </div>
-      {data}
+      {disbursement}
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import VerticalTabs from "./tabs";
+import FormTabs from "./form-tabs";
 
 export default function NewBillForm() {
   return (
     <div>
-      <VerticalTabs />
+      <FormTabs />
     </div>
   );
 }
