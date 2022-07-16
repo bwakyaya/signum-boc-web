@@ -36,30 +36,13 @@ width: 15%;
 .tax{
 width: 15%;
 }
-.finish{
-  height: 560px;
-  width: 100%;
-  margin: auto;
-  overflow-y: auto;
-  overflow-x: auto;
-  }
-  .summary{
-    height: 560px;
-    width: 100%;
-  }
   .cost-items{
-    height: 560px;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: auto;
-  }
-  .disbursements{
-    height: 560px;
+    height: 100%;
     width: 100%;
     overflow-y: auto;
     overflow-x: auto;
   }
   thead{
-    color: brown;
+    color: #04203A;
     font-weight: bold;
   }

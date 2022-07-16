@@ -1,12 +1,11 @@
 import React, { Component } from "react";
+import "./finish.css";
 
 class Finish extends Component {
   render() {
     return (
-      <div>
-        <div className="button-div">
-          <input type="submit" value="Save" className="save-button"></input>
-        </div>
+      <div className="save-button-div">
+        <input type="submit" value="Save" className="save-button"></input>
       </div>
     );
   }

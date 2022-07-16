@@ -8,10 +8,10 @@ import SummaryPage from "./summary";
 import CostItems from "./items";
 import Disbursements from "./disbursements";
 import Finish from "./finish";
+import "./summary.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -60,6 +60,7 @@ export default function VerticalTabs() {
       }}
     >
       <Tabs
+        className="tab-panel"
         orientation="vertical"
         variant="scrollable"
         value={value}

@@ -4,7 +4,6 @@ import Drafts from "../drafts-home";
 import Archives from "../archive-home";
 import Profile from "../profile-panel";
 
-
 export default function BOCHome() {
   const [launcher, setLauncher] = useState(null);
   function getComponent() {
@@ -77,7 +76,7 @@ export default function BOCHome() {
           <figcaption className="profile-label">Profile</figcaption>
         </figure>
       </div>
-      <div>{getComponent()}</div>
+      {getComponent()}
     </div>
   );
 }

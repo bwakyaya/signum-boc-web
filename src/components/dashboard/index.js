@@ -5,7 +5,6 @@ const Dashboard = (token) => {
   return (
     <div className="home-plate">
       <LeftPanel />
-      <div className="divider-div"></div>
       <BOCHome />
     </div>
   );
