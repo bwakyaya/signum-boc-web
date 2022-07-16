@@ -74,13 +74,6 @@ export default function SummaryPage() {
         ></input>{" "}
         <input type="date" className="date-picker"></input>
       </div>
-      <div className="button-div">
-        <input
-          type="submit"
-          value="Save and Continue"
-          className="submit-button"
-        ></input>
-      </div>
     </div>
   );
 }
