@@ -156,7 +156,7 @@ font-size: 11px;}
 .options-panel{
   display: flex;
   flex-direction: row;
-  height: 20%;
+  height: 15%;
   width: 100%;
   background-color: rgb(215, 129, 21) ;
   border-width: 1px; 
@@ -164,7 +164,7 @@ font-size: 11px;}
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;}
 .form-widgets{
-  height: 80%;
+  height: 85%;
   /* overflow-y: auto;
   overflow-x: auto; */
   width: 100%;}

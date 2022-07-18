@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./finish.css";
+import ScheduleTree from "./schedule-tree";
 
 class Finish extends Component {
   render() {
@@ -13,6 +14,7 @@ class Finish extends Component {
             alert("Hey guys, I have just been ");
           }}
         ></input>
+        <ScheduleTree />
       </div>
     );
   }

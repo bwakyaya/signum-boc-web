@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./items.css";
 import ITable from "./items-table";
+import NewItem from "./new-item"
 
 const myData = [[]];
 export default function CostItems() {
   const [data, setData] = useState();
   return (
     <div>
+      <NewItem />
       <div className="add-button-div">
         <button
           width="30px"
@@ -21,6 +23,7 @@ export default function CostItems() {
           Add Item
         </button>
       </div>
+      
       {data}
     </div>
   );
