@@ -11,7 +11,9 @@ export default function ScheduleTree() {
       nodeId={nodes.id}
       label={nodes.name}
       className="tree-item"
-      onClick={()=>{console.log(nodes.label)}}
+      onClick={() => {
+        console.log(nodes.label);
+      }}
     >
       {Array.isArray(nodes.children)
         ? nodes.children.map((node) => renderTree(node))
@@ -26,7 +28,7 @@ export default function ScheduleTree() {
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpanded={["root"]}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{ height: 600, flexGrow: 1, maxWidth: 1000, overflowY: "auto" }}
+      sx={{ height: 400, flexGrow: 1, maxWidth: 1000, overflowY: "auto" }}
     >
       {renderTree(Scheduledata)}
     </TreeView>

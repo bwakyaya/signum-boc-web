@@ -2,4 +2,33 @@
     display: flex;
     flex-direction: row;
     overflow-y: auto;
+    height: 85%;
+    width: 100%;}
+.form-control-buttons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;}
+.prev-div{
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%}
+.next-div{
+    padding-top: 8px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;}
+.rest-of-the-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;}
+.prev-button{
+    box-shadow: gray 3px 3px 10px;
+}
+.next-button{
+    box-shadow: gray 3px 3px 10px;
 }

@@ -5,8 +5,8 @@
     display:flex;
     align-items: center;
     justify-content: center;}
-    .save-button{
-        background-color: rgb(215, 129, 21);
+.save-button{
+        background-color: #04203A;
         height: 60px;
         width: 150px;
         font-size: 20pt;
@@ -17,8 +17,15 @@
         border-radius: 5px;
         box-shadow: darkgray 20px 20px 20px;
         }
-        .save-button:hover{
+.save-button:hover{
             opacity: 0.9;
             transform: scale(1.2);
         }
+.save-button-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
         

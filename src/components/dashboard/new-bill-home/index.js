@@ -4,6 +4,10 @@ import SummaryPage from "./summary";
 import CostItems from "./items";
 import Disbursements from "./disbursements";
 import Finish from "./finish";
+import "./body.css";
+import Button from "@mui/material/Button";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export default function NewBillForm() {
   const [activeStep, setActiveStep] = useState(0);
@@ -63,44 +67,57 @@ export default function NewBillForm() {
     }
     return hiddenValue;
   }
+  const myMteps = [
+    { label: "Summary Detail" },
+    { label: "Primary Cost Items" },
+    { label: "Disbursements" },
+    { label: "Finish" },
+  ];
   return (
     <div className="body">
-      <Stepper
-        className="form-steps"
-        steps={[
-          { label: "Summary Detail" },
-          { label: "Primary Cost Items" },
-          { label: "Disbursements" },
-          { label: "Finish" },
-        ]}
-        activeStep={activeStep}
-        connectorStateColors={true}
-        hideConnectors={false}
-        connectorStyleConfig={ConnectorStyleProps}
-        styleConfig={StepStyleDTO}
-      />
-      {switchFormParts(activeStep)}
-      <div>
-        <button
-          hidden={previousHidden(activeStep)}
-          onClick={() => {
-            if (activeStep > 0) {
-              setActiveStep(activeStep - 1);
-            }
-          }}
-        >
-          Previous
-        </button>
-        <button
-          hidden={nextHidden(activeStep)}
-          onClick={() => {
-            if (activeStep < 3) {
-              setActiveStep(activeStep + 1);
-            }
-          }}
-        >
-          Next
-        </button>
+      <div className="rest-of-the-form">
+        <div className="form-control-buttons">
+          <div className="prev-div">
+            <Button
+              variant="outlined"
+              startIcon={<ArrowBackIosNewIcon />}
+              className="prev-button"
+              hidden={previousHidden(activeStep)}
+              onClick={() => {
+                if (activeStep > 0) {
+                  setActiveStep(activeStep - 1);
+                }
+              }}
+            >
+              Previous
+            </Button>
+          </div>
+          <div className="next-div">
+            <Button
+              variant="outlined"
+              endIcon={<ArrowForwardIosIcon />}
+              className="next-button"
+              hidden={nextHidden(activeStep)}
+              onClick={() => {
+                if (activeStep < 3) {
+                  setActiveStep(activeStep + 1);
+                }
+              }}
+            >
+              Next
+            </Button>
+          </div>
+        </div>
+        <Stepper
+          className="form-steps"
+          steps={myMteps}
+          activeStep={activeStep}
+          connectorStateColors={true}
+          hideConnectors={false}
+          connectorStyleConfig={ConnectorStyleProps}
+          styleConfig={StepStyleDTO}
+        />
+        {switchFormParts(activeStep)}
       </div>
     </div>
   );
