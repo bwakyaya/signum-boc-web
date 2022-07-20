@@ -1,29 +1,27 @@
 .add-button-div{
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 5%;
 }
+
 .add-button{
-    border-radius: 5px;
+    border-radius: 50px;
     border-width: 1px;
     height: 35px;
-    width: 150px;
 }
 .add-button:hover{
     opacity: 0.6;
 }
 tr, th, td{
-    border: 1px solid rgb(200, 198, 194);
+    border: 1px solid rgb(167, 205, 241);
     border-collapse: collapse;
 }
-table{
-    width: 100%;
-    border: 1px solid rgb(200, 198, 194);
+.dataTable{
+    width: 95%;
+    margin-left: 2em;
+    color: rgb(94, 89, 89);
+    border: 1px solid rgb(167, 205, 241);
     border-collapse: collapse;
-  
+    box-shadow: rgb(167, 205, 241) 3px 3px 10px; 
 }
-.data-row{color: darkgray;}
 .item{
 width: 5%;
 }
@@ -47,6 +45,11 @@ width: 15%;
     width: 100%;
   }
 thead{
-    color: #04203A;
+    color: #0762b6;
     font-weight: bold;
   }
+.items-contens{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+}

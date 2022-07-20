@@ -6,16 +6,11 @@
     align-items: center;
     justify-content: center;}
 .save-button{
-        background-color: #04203A;
-        height: 60px;
+        height: 80px;
         width: 150px;
         font-size: 20pt;
-        border: darkgray;
-        border-style: solid;
-        border-width: 1px;
-        color: aliceblue;
         border-radius: 5px;
-        box-shadow: darkgray 20px 20px 20px;
+        box-shadow: darkgray 20px 20px 20px 20px;
         }
 .save-button:hover{
             opacity: 0.9;

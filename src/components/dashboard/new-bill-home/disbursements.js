@@ -1,6 +1,7 @@
 import "./items.css";
 import ITable from "./items-table";
 import React, { useState } from "react";
+import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 
 const myData = [["", "", "", "", ""]];
 export default function Disbursements() {
@@ -8,12 +9,10 @@ export default function Disbursements() {
     <ITable tableData={myData} />
   );
   return (
-    <div>
+    <div className="items-contens">
+      {disbursement}
       <div className="add-button-div">
-        <button
-          width="30px"
-          height="30px"
-          alt="Add Button"
+        <AddCircleRoundedIcon
           className="add-button"
           onClick={() => {
             myData.push([
@@ -25,11 +24,8 @@ export default function Disbursements() {
             ]);
             setDisbursement(<ITable tableData={myData} />);
           }}
-        >
-          Add Item
-        </button>
+        ></AddCircleRoundedIcon>
       </div>
-      {disbursement}
     </div>
   );
 }

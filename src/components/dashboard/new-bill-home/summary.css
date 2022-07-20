@@ -1,4 +1,7 @@
 .summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;}
 .taxation-label{margin-left: 1em; }
@@ -142,3 +145,25 @@
     flex-direction: column;
     width: 300px;
     padding: 5px;}
+.court-div{
+    margin-left: 1em;
+    margin-bottom: 1em;
+    width: 40%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.division-div{
+    margin-left: 1em;
+    margin-bottom: 1em;
+    width: 40%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}

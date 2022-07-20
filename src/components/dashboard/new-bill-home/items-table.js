@@ -4,11 +4,7 @@ import React, { Component } from "react";
 class ITable extends Component {
   render() {
     let body = this.props.tableData;
-    return (
-      <div>
-        <Table body={body} />
-      </div>
-    );
+    return <Table body={body} />;
   }
 }
 
@@ -16,7 +12,7 @@ class Table extends Component {
   render() {
     var body = this.props.body;
     return (
-      <table>
+      <table className="dataTable">
         <thead>
           <tr>
             <th className="item">ITEM </th>

@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import "./items.css";
 import ITable from "./items-table";
-import NewItem from "./new-item";
-import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
+// import NewItem from "./new-item";
+import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 
 const myData = [["", "", "", "", ""]];
 export default function CostItems() {
   const [data, setData] = useState(<ITable tableData={myData} />);
   return (
-    <div>
+    <div className="items-contens">
       {/* <NewItem /> */}
+
+      {data}
       <div className="add-button-div">
-        <Button
-          variant="contained"
-          startIcon={<AddIcon />}
+        <AddCircleRoundedIcon
+          // variant="contained"
+          // startIcon={<AddIcon />}
           className="add-button"
           onClick={() => {
             myData.push([
@@ -26,11 +27,8 @@ export default function CostItems() {
             ]);
             setData(<ITable tableData={myData} />);
           }}
-        >
-          Add Item
-        </Button>
+        ></AddCircleRoundedIcon>
       </div>
-      {data}
     </div>
   );
 }
