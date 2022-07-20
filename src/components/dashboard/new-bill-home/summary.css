@@ -1,86 +1,144 @@
 .summary{
     height: 100%;
-    width: 100%;
-}
-.taxation-label{}
-.suit-label{}
-.plaintiff-label{}
-.defendant-label{}
-.dated-label{}
+    width: 100%;}
+.taxation-label{margin-left: 1em; }
+.suit-label{margin-left: 1em;}
+.plaintiff-label{margin-left: 1em;}
+.defendant-label{margin-left: 1em;}
+.location-label{margin-left: 1em;}
+.date-label{margin-left: 1em;}
+.court-label{margin-left: 1em;}
+.division-label{margin-left: 1em;}
+.suit-year-label{margin-left: 1em;}
+.taxation-year-label{margin-left: 1em;}
 .taxation-field{
-border: rgb(145, 122, 94);
-border-style: solid;
-border-width: 1px;
-border-radius: 5px;
-height: 25px;
-margin-left:3.3em;
-width: 70px;}
+    border: rgb(145, 122, 94);
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 25px;
+    margin-left:1em;
+    width: 40%;}
 .taxation-year{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 1em;
     height: 25px;
-    width: 100px;}
+    width: 40%;}
 .suit-field{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     height: 25px;
-    /* margin-left:2em; */
-    width: 70px;}
+    margin-left:1em;
+    width: 40%;}
 .suit-year{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 1em;
     height: 25px;   
-    width: 100px; }
+    width: 40%; }
 .plaintiff-field{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    height: 40px;
-    margin-left:4.8em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    height: 50px;
+    margin-left:1em;
     font-family: sans-serif;
-    width: 200px;}
+    width: 40%;}
 .defendant-field{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-left:3.2em;
-    height: 40px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left:1em;
+    height: 50px;
     font-family: sans-serif;
-    width: 200px;}
+    width: 40%;}
 .location-field{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-left:5.75em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left:1em;
     height: 25px;
-    width: 110px;}
+    width: 40%;}
 .date-picker{
-    border: rgb(145, 122, 94);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+    color: cadetblue;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 1em;
     height: 25px;
-    width: 100px;}
+    width: 40%}
 .dated-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 5px;}
 .defendant-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 5px;}
 .plaintiff-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 5px;}
 .suit-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 5px;}
 .taxation-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     padding: 5px;}
 .tab-panel{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
     width: 300px;
-    padding: 5px;
-}
+    padding: 5px;}

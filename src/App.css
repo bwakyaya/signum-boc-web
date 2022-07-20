@@ -113,7 +113,6 @@ font-size: 11px;}
   flex-direction: column;
   height: 100%;
   width: 21%;
-  border-radius: 5px;
   background-color: #04203A;
   border: white;
   border-width: 1px; 
@@ -159,22 +158,33 @@ font-size: 11px;}
   height: 15%;
   width: 100%;
   background-color: rgb(215, 129, 21) ;
-  border-width: 1px; 
-  border-style: none;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;}
+  border: none;}
 .form-widgets{
   height: 85%;
-  /* overflow-y: auto;
-  overflow-x: auto; */
   width: 100%;}
+.body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;}
+.form-control-buttons{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;}
+.rest-of-the-form{
+height: 90%;
+display: flex;
+overflow-y: auto;
+flex-direction: column;
+width: 100%;}
 .new-bill-icon{
   transition: all .3s ease-in-out;
-  border: white;
+  /* border: white; */
   background-image: url('/public/newbill.png');
-  border-style: solid;
+  /* border-style: solid;
   border-width: 1px;
-  border-radius: 10px;
+  border-radius: 10px; */
   height: 60px;
   width: 60px;}
 .new-bill-icon:hover{
@@ -187,10 +197,10 @@ font-size: 11px;}
   transition: all .3s ease-in-out;
   height: 60px;
   width: 60px;
-  border: white;
+  /* border: white;
   border-style: solid;
   border-radius: 10px;
-  border-width: 1px;}
+  border-width: 1px; */}
 .draft-icon:hover{
     -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0 0 8px #fff;
@@ -199,10 +209,10 @@ font-size: 11px;}
     transform: scale(1.4);}
 .archive-icon{
   transition: all .3s ease-in-out;
-  border: white;
+  /* border: white;
   border-width: 1px;
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 10px; */
   height: 60px;
   width: 60px;}
 .archive-icon:hover{
@@ -242,10 +252,10 @@ font-size: 11px;}
   font-weight: bold;
   color: white;}
 .profile-icon{
-    border: white;
+    /* border: white;
     border-style: solid;
     border-radius: 10px;
-    border-width: 1px;
+    border-width: 1px; */
     height: 60px;
     transition: all .3s ease-in-out; 
     width: 60px;}

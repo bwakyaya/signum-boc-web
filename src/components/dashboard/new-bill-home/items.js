@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 import "./items.css";
 import ITable from "./items-table";
-import NewItem from "./new-item"
+import NewItem from "./new-item";
+import Button from "@mui/material/Button";
+import AddIcon from "@mui/icons-material/Add";
 
-const myData = [[]];
+const myData = [["", "", "", "", ""]];
 export default function CostItems() {
-  const [data, setData] = useState();
+  const [data, setData] = useState(<ITable tableData={myData} />);
   return (
     <div>
-      <NewItem />
+      {/* <NewItem /> */}
       <div className="add-button-div">
-        <button
-          width="30px"
-          height="30px"
-          alt="Add Button"
+        <Button
+          variant="contained"
+          startIcon={<AddIcon />}
           className="add-button"
           onClick={() => {
-            myData.push(["gdfg", "gdfff", "hdfgsd", "hfjfggr", "tgdfgdf"]);
+            myData.push([
+              "gdfg",
+              "gdfff",
+              "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
+              "hfjfggr",
+              "tgdfgdf",
+            ]);
             setData(<ITable tableData={myData} />);
           }}
         >
           Add Item
-        </button>
+        </Button>
       </div>
-      
       {data}
     </div>
   );

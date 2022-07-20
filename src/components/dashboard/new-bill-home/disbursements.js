@@ -2,9 +2,11 @@ import "./items.css";
 import ITable from "./items-table";
 import React, { useState } from "react";
 
-const myData = [[]];
+const myData = [["", "", "", "", ""]];
 export default function Disbursements() {
-  const [disbursement, setDisbursement] = useState();
+  const [disbursement, setDisbursement] = useState(
+    <ITable tableData={myData} />
+  );
   return (
     <div>
       <div className="add-button-div">
@@ -14,7 +16,13 @@ export default function Disbursements() {
           alt="Add Button"
           className="add-button"
           onClick={() => {
-            myData.push(["gdfg", "gdfff", "hdfgsd", "hfjfggr", "tgdfgdf"]);
+            myData.push([
+              "gdfg",
+              "gdfff",
+              "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
+              "hfjfggr",
+              "tgdfgdf",
+            ]);
             setDisbursement(<ITable tableData={myData} />);
           }}
         >

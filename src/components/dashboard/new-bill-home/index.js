@@ -76,38 +76,6 @@ export default function NewBillForm() {
   return (
     <div className="body">
       <div className="rest-of-the-form">
-        <div className="form-control-buttons">
-          <div className="prev-div">
-            <Button
-              variant="outlined"
-              startIcon={<ArrowBackIosNewIcon />}
-              className="prev-button"
-              hidden={previousHidden(activeStep)}
-              onClick={() => {
-                if (activeStep > 0) {
-                  setActiveStep(activeStep - 1);
-                }
-              }}
-            >
-              Previous
-            </Button>
-          </div>
-          <div className="next-div">
-            <Button
-              variant="outlined"
-              endIcon={<ArrowForwardIosIcon />}
-              className="next-button"
-              hidden={nextHidden(activeStep)}
-              onClick={() => {
-                if (activeStep < 3) {
-                  setActiveStep(activeStep + 1);
-                }
-              }}
-            >
-              Next
-            </Button>
-          </div>
-        </div>
         <Stepper
           className="form-steps"
           steps={myMteps}
@@ -118,6 +86,38 @@ export default function NewBillForm() {
           styleConfig={StepStyleDTO}
         />
         {switchFormParts(activeStep)}
+      </div>
+      <div className="form-control-buttons">
+        <div className="prev-div">
+          <Button
+            variant="outlined"
+            startIcon={<ArrowBackIosNewIcon />}
+            className="prev-button"
+            hidden={previousHidden(activeStep)}
+            onClick={() => {
+              if (activeStep > 0) {
+                setActiveStep(activeStep - 1);
+              }
+            }}
+          >
+            Previous
+          </Button>
+        </div>
+        <div className="next-div">
+          <Button
+            variant="outlined"
+            endIcon={<ArrowForwardIosIcon />}
+            className="next-button"
+            hidden={nextHidden(activeStep)}
+            onClick={() => {
+              if (activeStep < 3) {
+                setActiveStep(activeStep + 1);
+              }
+            }}
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </div>
   );
