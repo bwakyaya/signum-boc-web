@@ -24,27 +24,11 @@ export default function CostItems() {
   const [data, setData] = useState(<ITable tableData={myData} />);
   return (
     <div className="items-contens">
-      {/* <NewItem /> */}
-
       {data}
       <div className="add-button-div">
         <AddCircleRoundedIcon
-          // variant="contained"
-          // startIcon={<AddIcon />}
           className="add-button"
-          onClick={
-            handleClickOpen
-            //   () => {
-            //   myData.push([
-            //     "gdfg",
-            //     "gdfff",
-            //     "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
-            //     "hfjfggr",
-            //     "tgdfgdf",
-            //   ]);
-            //   setData(<ITable tableData={myData} />);
-            // }
-          }
+          onClick={handleClickOpen}
         ></AddCircleRoundedIcon>
       </div>
       <Dialog open={open} onClose={handleClose}>
@@ -54,7 +38,21 @@ export default function CostItems() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Add</Button>
+          <Button
+            onClick={() => {
+              myData.push([
+                "gdfg",
+                "gdfff",
+                "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
+                "hfjfggr",
+                "tgdfgdf",
+              ]);
+              setData(<ITable tableData={myData} />);
+              handleClose();
+            }}
+          >
+            Add
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

@@ -230,7 +230,6 @@ width: 100%;}
 .profile-icon:hover{
     /* -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0 0 8px #fff; */
-    opacity: 0.6;
     cursor: grabbing;
     transform: scale(1.4);}
 .new-bill-label{

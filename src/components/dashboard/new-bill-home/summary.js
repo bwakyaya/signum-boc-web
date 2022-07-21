@@ -16,7 +16,7 @@ export default function SummaryPage() {
   //   const [courtsData, setCourtsData] = useState([]);
   //   setCourtsData(courtsList);
   return (
-    <div>
+    <div className="summary-component">
       <div className="court-div">
         <label className="court-label">Court</label>
         <SimpleListMenu courts={courtsList} />

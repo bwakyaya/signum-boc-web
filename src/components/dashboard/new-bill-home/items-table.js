@@ -38,7 +38,7 @@ class TableRow extends Component {
     return (
       <tr>
         {row.map((val) => (
-          <td>{val}</td>
+          <td contenteditable="true">{val}</td>
         ))}
       </tr>
     );

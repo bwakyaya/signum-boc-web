@@ -6,7 +6,6 @@ import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
@@ -28,19 +27,7 @@ export default function Disbursements() {
       <div className="add-button-div">
         <AddCircleRoundedIcon
           className="add-button"
-          onClick={
-            handleClickOpen
-            //   () => {
-            //   myData.push([
-            //     "gdfg",
-            //     "gdfff",
-            //     "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
-            //     "hfjfggr",
-            //     "tgdfgdf",
-            //   ]);
-            //   setDisbursement(<ITable tableData={myData} />);
-            // }
-          }
+          onClick={handleClickOpen}
         ></AddCircleRoundedIcon>
       </div>
       <Dialog open={open} onClose={handleClose}>
@@ -50,7 +37,21 @@ export default function Disbursements() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Add</Button>
+          <Button
+            onClick={() => {
+              myData.push([
+                "gdfg",
+                "gdfff",
+                "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
+                "hfjfggr",
+                "tgdfgdf",
+              ]);
+              setDisbursement(<ITable tableData={myData} />);
+              handleClose();
+            }}
+          >
+            Add
+          </Button>
         </DialogActions>
       </Dialog>
     </div>
