@@ -53,3 +53,66 @@ thead{
     flex-direction: row;
     width: 95%;
 }
+
+/* New Item Styles */
+.new-item-form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.new-item-date-label{
+
+}
+.new-item-date-field{
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: rgb(145, 122, 94);
+border-bottom-width: 1px;
+border-bottom-style: solid;
+height: 40px;
+font-size: 12pt;
+margin-bottom: 2em;
+}
+.new-item-particulars-label{
+
+}
+.new-item-particulars-field{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 40px;
+    font-size: 12pt;
+    margin-bottom: 2em;
+}
+.new-item-amount-label{
+
+}
+.new-item-amount-field{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 40px;
+    font-size: 12pt;
+    margin-bottom: 2em;
+}
+.new-item-tax-label{
+
+}
+.new-item-tax-field{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: rgb(145, 122, 94);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 40px;
+    font-size: 12pt;
+    margin-bottom: 2em;
+}
