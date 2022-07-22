@@ -1,0 +1,19 @@
+.list-item{border-left: none;
+border-right: none;
+border-top: none;
+border-bottom: rgb(145, 122, 94);
+border-bottom-width: 0.5px;
+border-bottom-style: solid;}
+.list{
+    width: 100%;  
+}
+.list-div{
+    width: 90%;
+}
+.edit-icon{
+color: cornflowerblue;
+margin-right: 1em;
+}
+.delete-icon{
+    color: red;
+}

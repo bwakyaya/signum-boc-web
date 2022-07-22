@@ -164,6 +164,8 @@ font-size: 11px;}
   background-color: rgb(215, 129, 21) ;
   border: none;}
 .form-widgets{
+  display: flex;
+  justify-content: center;
   height: 85%;
   width: 100%;}
 .body{
@@ -191,8 +193,8 @@ width: 100%;}
   /* border-style: solid;
   border-width: 1px;
   border-radius: 10px; */
-  height: 50px;
-  width: 60px;}
+  height: 60%;
+  width: 100%;}
 .new-bill-icon:hover{
     /* -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0 0 8px #fff; */
@@ -201,8 +203,8 @@ width: 100%;}
     transform: scale(1.4);}
 .draft-icon{
   transition: all .3s ease-in-out;
-  height: 50px;
-  width: 60px;
+  height: 60%;
+  width: 100%;
   /* border: white;
   border-style: solid;
   border-radius: 10px;
@@ -215,12 +217,8 @@ width: 100%;}
     transform: scale(1.4);}
 .archive-icon{
   transition: all .3s ease-in-out;
-  /* border: white;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 10px; */
-  height: 50px;
-  width: 60px;}
+  height: 60%;
+  width: 100%;}
 .archive-icon:hover{
     /* -webkit-box-shadow: 0 0 8px #fff;
     box-shadow: 0 0 8px #fff; */
@@ -257,13 +255,9 @@ width: 100%;}
   font-weight: bold;
   color: white;}
 .profile-icon{
-    /* border: white;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 1px; */
-    height: 50px;
+    height: 60%;
     transition: all .3s ease-in-out; 
-    width: 60px;}
+    width: 100%;}
 .profile-label{
   display: flex;
   justify-content: center;
