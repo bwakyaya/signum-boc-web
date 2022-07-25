@@ -2,19 +2,18 @@
     width: 2%;
 }
 
-/* .add-button{
-    border-radius: 50px;
-    border-width: 1px;
-    height: 35px;
+.add-button{
+    color: cornflowerblue;
 }
 .add-button:hover{
     opacity: 0.6;
-} */
+}
 tr, th, td{
     border: 1px solid rgb(167, 205, 241);
     border-collapse: collapse;
     font-size: 13.5pt;
 }
+
 .dataTable{
     
     width: 98%;
@@ -39,6 +38,12 @@ width: 15%;
 .tax{
 width: 15%;
 }
+.all-elements{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
 .cost-items{
     display:flex;
     align-items: center;
@@ -50,10 +55,10 @@ thead{
     color: #0762b6;
     font-weight: bold;
   }
-.items-contens{
+.table-button{
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 85%;
 }
 
 /* New Item Styles */
@@ -70,7 +75,7 @@ border-top: none;
 border-left: none;
 border-right: none;
 border-bottom: rgb(145, 122, 94);
-border-bottom-width: 0.2px;
+border-bottom-width: 1px;
 border-bottom-style: solid;
 height: 40px;
 font-size: 12pt;

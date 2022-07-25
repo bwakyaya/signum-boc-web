@@ -23,7 +23,8 @@ export default function CostItems() {
 
   const [data, setData] = useState(<ITable tableData={myData} />);
   return (
-    <div className="items-contens">
+    <div className="all-elements">
+    <div className="table-button">
       {data}
       <div className="add-button-div">
         <AddCircleRoundedIcon
@@ -55,6 +56,7 @@ export default function CostItems() {
           </Button>
         </DialogActions>
       </Dialog>
+    </div>
     </div>
   );
 }

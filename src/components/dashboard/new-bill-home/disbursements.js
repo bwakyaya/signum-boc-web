@@ -22,7 +22,8 @@ export default function Disbursements() {
     <ITable tableData={myData} />
   );
   return (
-    <div className="items-contens">
+    <div className="all-elements">
+    <div className="table-button">
       {disbursement}
       <div className="add-button-div">
         <AddCircleRoundedIcon
@@ -54,6 +55,7 @@ export default function Disbursements() {
           </Button>
         </DialogActions>
       </Dialog>
+    </div>
     </div>
   );
 }

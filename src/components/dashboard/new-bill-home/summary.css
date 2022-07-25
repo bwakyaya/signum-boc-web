@@ -1,108 +1,19 @@
 .summary{
     height: 100%;
     width: 100%;}
-.taxation-label{}
-.suit-label{}
-.plaintiff-label{}
-.defendant-label{}
-.location-label{}
-.date-label{}
-.court-label{}
-.division-label{}
-.suit-year-label{}
-.taxation-year-label{}
-.taxation-field{
-    border: rgb(145, 122, 94);
+.label{}
+
+.taxation-field, .taxation-year,  .location-field, .defendant-field, .plaintiff-field, .suit-year, .suit-field, .date-picker{
     margin-bottom: 1em;
     margin-top: 1em;
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: rgb(145, 122, 94);
+    border-bottom: rgb(208, 197, 184);
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
     height: 25px;
     width: 100%;}
-.taxation-year{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 25px;
-    width: 100%;}
-.suit-field{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 25px;
-    width: 100%;}
-.suit-year{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 25px;   
-    width: 100%; }
-.plaintiff-field{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 50px;
-    font-family: sans-serif;
-    width: 100%;}
-.defendant-field{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 50px;
-    font-family: sans-serif;
-    width: 100%;}
-.location-field{
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 25px;
-    width: 100%;}
-.date-picker{
-    color: cadetblue;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(145, 122, 94);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-    height: 25px;
-    width: 100%}
 .dated-div{
     display: flex;
     align-items: flex-start;
@@ -146,7 +57,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: rgb(145, 122, 94);
+    border-bottom: rgb(208, 197, 184);
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
 }
@@ -156,7 +67,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: rgb(145, 122, 94);
+    border-bottom: rgb(208, 197, 184);
     border-bottom-style: solid;
     border-bottom-width: 0.5px;
 }
