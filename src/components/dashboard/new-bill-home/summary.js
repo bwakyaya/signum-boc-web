@@ -31,6 +31,7 @@ export default function SummaryPage() {
           type="number"
           placeholder="Number"
           className="taxation-field"
+          required
         ></input>
         <label className="taxation-year-label">Taxation Year</label>
         <input
