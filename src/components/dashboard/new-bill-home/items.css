@@ -1,15 +1,15 @@
 .add-button-div{
-    width: 5%;
+    width: 2%;
 }
 
-.add-button{
+/* .add-button{
     border-radius: 50px;
     border-width: 1px;
     height: 35px;
 }
 .add-button:hover{
     opacity: 0.6;
-}
+} */
 tr, th, td{
     border: 1px solid rgb(167, 205, 241);
     border-collapse: collapse;
@@ -17,7 +17,7 @@ tr, th, td{
 }
 .dataTable{
     
-    width: 95%;
+    width: 98%;
     margin-left: 2em;
     color: rgb(94, 89, 89);
     border: 1px solid rgb(167, 205, 241);
@@ -70,7 +70,7 @@ border-top: none;
 border-left: none;
 border-right: none;
 border-bottom: rgb(145, 122, 94);
-border-bottom-width: 1px;
+border-bottom-width: 0.2px;
 border-bottom-style: solid;
 height: 40px;
 font-size: 12pt;

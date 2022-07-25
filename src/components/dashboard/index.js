@@ -4,7 +4,7 @@ import LeftPanel from "./left-panel";
 const Dashboard = (token) => {
   return (
     <div className="home-plate">
-      <LeftPanel />
+      {/* <LeftPanel /> */}
       <BOCHome />
     </div>
   );

@@ -1,17 +1,17 @@
 
 .prev-div{
-    padding-left: 15px;
     padding-bottom: 15px;
     padding-top: 8px;
+    padding-right: 5px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 50%}
 .next-div{
     padding-top: 8px;
-    padding-right: 15px;
     padding-bottom: 15px;
+    padding-left:5px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 50%;}
 .prev-button{
     box-shadow: rgb(167, 205, 241) 3px 3px 10px;

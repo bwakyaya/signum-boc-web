@@ -49,24 +49,7 @@ export default function NewBillForm() {
     circleFontSize: "1rem",
     borderRadius: "50%",
   };
-  function nextHidden(x) {
-    let hiddenValue;
-    if (x === 3) {
-      hiddenValue = true;
-    } else {
-      hiddenValue = false;
-    }
-    return hiddenValue;
-  }
-  function previousHidden(y) {
-    let hiddenValue;
-    if (y === 0) {
-      hiddenValue = true;
-    } else {
-      hiddenValue = false;
-    }
-    return hiddenValue;
-  }
+
   const myMteps = [
     { label: "Summary Detail" },
     { label: "Primary Cost Items" },
@@ -93,7 +76,6 @@ export default function NewBillForm() {
             variant="outlined"
             startIcon={<ArrowBackIosNewIcon />}
             className="prev-button"
-            hidden={previousHidden(activeStep)}
             onClick={() => {
               if (activeStep > 0) {
                 setActiveStep(activeStep - 1);
@@ -108,7 +90,6 @@ export default function NewBillForm() {
             variant="outlined"
             endIcon={<ArrowForwardIosIcon />}
             className="next-button"
-            hidden={nextHidden(activeStep)}
             onClick={() => {
               if (activeStep < 3) {
                 setActiveStep(activeStep + 1);

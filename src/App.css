@@ -149,7 +149,7 @@ font-size: 11px;}
 .boc-form-panel{
   display: flex;
   flex-direction: column;
-  width: 79%;
+  width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
   border-width: 1px; 
