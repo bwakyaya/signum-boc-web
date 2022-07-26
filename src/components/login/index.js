@@ -1,8 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import App from "../../App";
+import axios from "axios";
 
 export default function Login({ setToken }) {
+  async function handleLogin(userName, password) {
+    const url = "http://localhost:5000/authenticate";
+    const formData = new FormData();
+    formData.append("username", userName);
+    formData.append("password", password);
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+    return await axios
+      .post(url, formData, config)
+      .then((data) => data)
+      .then((Data) => {
+        if (Data.data === "Incorrect Username or Password") {
+          alert("Incorrect Username or Password");
+        } else if (Data.data === "Success!!!") {
+          setToken(Data.data);
+        }
+      });
+  }
   return (
     <div className="login-page">
       <div className="login-panel">
@@ -20,6 +42,7 @@ export default function Login({ setToken }) {
             type={"text"}
             placeholder="Username"
             className="username-field"
+            id="usernameField"
           ></input>
         </div>
         <div className="password-section">
@@ -27,12 +50,16 @@ export default function Login({ setToken }) {
             type={"password"}
             placeholder="Password"
             className="password-field"
+            id="passwordField"
           ></input>
         </div>
         <div className="button-section">
           <button
             className="login-button"
             onClick={() => {
+              const userName = document.getElementById("usernameField").value;
+              const passWord = document.getElementById("passwordField").value;
+              handleLogin(userName, passWord);
               setToken("dkjfngkdsfjngj878435kjnbsf984");
               <App />;
             }}

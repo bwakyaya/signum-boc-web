@@ -29,7 +29,12 @@ export default function Archive() {
     <div className="list-div">
       <Box sx={{ flexGrow: 1 }} className="list">
         <Grid item xs={12} md={6}>
-          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+          <Typography
+            sx={{ mt: 4, mb: 2 }}
+            variant="h6"
+            component="div"
+            className="typography"
+          >
             Bills Archive
           </Typography>
           <Demo>

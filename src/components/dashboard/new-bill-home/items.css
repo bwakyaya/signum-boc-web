@@ -9,19 +9,21 @@
     opacity: 0.6;
 }
 tr, th, td{
-    border: 1px solid rgb(167, 205, 241);
+    border: 1px solid rgb(94, 89, 89);
+    border-width: 0.2px;
     border-collapse: collapse;
+    border-style: solid;
     font-size: 13.5pt;
 }
 
 .dataTable{
     
     width: 98%;
-    margin-left: 2em;
     color: rgb(94, 89, 89);
-    border: 1px solid rgb(167, 205, 241);
+    border: rgb(94, 89, 89);
+    border-width: 0.2px;
+    border-style: solid;
     border-collapse: collapse;
-    box-shadow: rgb(167, 205, 241) 3px 3px 10px; 
 }
 .item{
 width: 5%;
@@ -52,7 +54,7 @@ width: 15%;
     width: 100%;
   }
 thead{
-    color: #0762b6;
+    color: #04203A;
     font-weight: bold;
   }
 .table-button{
