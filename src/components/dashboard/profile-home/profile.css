@@ -9,6 +9,9 @@ width: 50%;
 height: 100%;
 }
 .profile-details-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     height: 100%;
     border-top: none;
@@ -16,14 +19,25 @@ height: 100%;
     border-right: none;
     border-left: rgb(208, 197, 184);
     border-left-style: solid;
-    border-left-width: slim;
-}
-.editIcon{
-    color: cornflowerblue;
-    }
-    .deleteIcon{
-        color: red;
-    }
-.viewIcon{
-    color:lightseagreen;
-}
+    border-left-width: slim;}
+.profile-component{height: 80%; width: 80%;}
+.editIcon{color: cornflowerblue;}
+.deleteIcon{color: red;}
+.viewIcon{color:lightseagreen;}
+.Item:hover{background-color: lightslategray; cursor: grab;}
+.profile-component{display: flex;
+     flex-direction: column; 
+     width: 100%; 
+     height: 100%; 
+     align-items: center; 
+     justify-content: center;}
+.profile-field{height: 40px;
+    width: 200px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:lightslategray;
+    border-bottom-style: solid;
+    border-bottom-width: slim;
+    border-radius: 8px;
+    margin-bottom: 1em;}

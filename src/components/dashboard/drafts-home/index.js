@@ -43,7 +43,7 @@ export default function Drafts() {
               {generate(
                 <ListItem className="list-item">
                   <ListItemText
-                    primary="Bill Name"
+                    primary="Kristof versus UAP - Bill of costs.docx 12-04-19-165"
                     secondary={secondary ? "Secondary text" : null}
                   />
                   <EditIcon className="edit-icon" />

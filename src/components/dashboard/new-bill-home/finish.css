@@ -6,11 +6,10 @@
     align-items: center;
     justify-content: center;}
 .save-button{
-        height: 60px;
+        height: 50px;
         width: 150px;
         font-size: 20pt;
-        border-radius: 5px;
-        box-shadow: darkgray 20px 20px 20px 20px;
+        border-radius: 8px;
         }
 .save-button:hover{
             opacity: 0.9;

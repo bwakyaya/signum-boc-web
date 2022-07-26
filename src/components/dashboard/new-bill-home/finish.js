@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./finish.css";
 import Button from "@mui/material/Button";
-import FileUploadIcon from "@mui/icons-material/FileUpload";
+import SaveIcon from "@mui/icons-material/Save";
 
 class Finish extends Component {
   render() {
@@ -10,7 +10,7 @@ class Finish extends Component {
         <Button
           className="save-button"
           variant="contained"
-          startIcon={<FileUploadIcon />}
+          startIcon={<SaveIcon />}
           onClick={() => {
             alert("Hey guys, I have just been ");
           }}

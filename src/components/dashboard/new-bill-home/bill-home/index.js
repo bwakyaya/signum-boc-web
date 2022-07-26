@@ -5,29 +5,7 @@ import Archives from "../../archive-home";
 import Profile from "../../profile-home";
 
 export default function BOCHome() {
-  const [launcher, setLauncher] = useState(null);
-  function getComponent() {
-    let Component;
-    switch (launcher) {
-      case "new-bill":
-        Component = <NewBillForm />;
-        break;
-      case "drafts":
-        Component = <Drafts />;
-        break;
-      case "archives":
-        Component = <Archives />;
-        break;
-      case "profile":
-        Component = <Profile />;
-        break;
-      default:
-        Component = null;
-        break;
-    }
-    return Component;
-  }
-
+  const [launcher, setLauncher] = useState(<Profile />);
   return (
     <div className="boc-form-panel">
       <div className="margin"></div>
@@ -38,7 +16,7 @@ export default function BOCHome() {
             alt="icon"
             src="newbill.png"
             onClick={() => {
-              setLauncher("new-bill");
+              setLauncher(<NewBillForm />);
             }}
           ></img>
           <figcaption className="new-bill-label">New Bill</figcaption>
@@ -49,7 +27,7 @@ export default function BOCHome() {
             alt="icon"
             src="draft.png"
             onClick={() => {
-              setLauncher("drafts");
+              setLauncher(<Drafts />);
             }}
           ></img>
           <figcaption className="draft-label">Drafts</figcaption>
@@ -60,7 +38,7 @@ export default function BOCHome() {
             alt="icon"
             src="archive.png"
             onClick={() => {
-              setLauncher("archives");
+              setLauncher(<Archives />);
             }}
           ></img>
           <figcaption className="archive-label">My Bills</figcaption>
@@ -71,13 +49,13 @@ export default function BOCHome() {
             alt="icon"
             src="images.png"
             onClick={() => {
-              setLauncher("profile");
+              setLauncher(<Profile />);
             }}
           ></img>
           <figcaption className="profile-label">Profile</figcaption>
         </figure>
       </div>
-      <div className="form-widgets">{getComponent()}</div>
+      <div className="form-widgets">{launcher}</div>
     </div>
   );
 }
