@@ -23,39 +23,39 @@ export default function Disbursements() {
   );
   return (
     <div className="all-elements">
-    <div className="table-button">
-      {disbursement}
-      <div className="add-button-div">
-        <AddCircleRoundedIcon
-          className="add-button"
-          onClick={handleClickOpen}
-        ></AddCircleRoundedIcon>
+      <div className="table-button">
+        {disbursement}
+        <div className="add-button-div">
+          <AddCircleRoundedIcon
+            className="add-button"
+            onClick={handleClickOpen}
+          ></AddCircleRoundedIcon>
+        </div>
+        <Dialog open={open} onClose={handleClose}>
+          <DialogTitle>Disbursement</DialogTitle>
+          <DialogContent>
+            <NewItem />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Cancel</Button>
+            <Button
+              onClick={() => {
+                myData.push([
+                  "gdfg",
+                  "gdfff",
+                  "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
+                  "hfjfggr",
+                  "tgdfgdf",
+                ]);
+                setDisbursement(<ITable tableData={myData} />);
+                handleClose();
+              }}
+            >
+              Add
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Disbursement</DialogTitle>
-        <DialogContent>
-          <NewItem />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button
-            onClick={() => {
-              myData.push([
-                "gdfg",
-                "gdfff",
-                "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
-                "hfjfggr",
-                "tgdfgdf",
-              ]);
-              setDisbursement(<ITable tableData={myData} />);
-              handleClose();
-            }}
-          >
-            Add
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
     </div>
   );
 }

@@ -51,7 +51,7 @@
   justify-content: center;
   height: 40px;
   padding-top: 30px;}
-.username-field{
+.login-field{
   border-bottom:rgb(145, 122, 94);
   border-bottom-width: thin;
   border-bottom-style: solid;
@@ -59,18 +59,7 @@
   border-left: none;
   border-right: none;
   text-align: center;
-  width: 200px;
-  height: 40px;
-  font-size: 10pt;
-  font-weight: bolder;}
-.password-field{
-  border-bottom:rgb(145, 122, 94);
-  border-bottom-width: thin;
-  border-bottom-style: solid;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  text-align: center;
+  border-radius: 8px;
   width: 200px;
   height: 40px;
   font-size: 10pt;

@@ -1,0 +1,29 @@
+.userProfileDiv{
+    display: flex;
+    flex-direction: row;   
+    width: 90%;
+    height: 100%;
+}
+.profile-list-box{
+width: 50%;
+height: 100%;
+}
+.profile-details-box{
+    width: 50%;
+    height: 100%;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: rgb(208, 197, 184);
+    border-left-style: solid;
+    border-left-width: slim;
+}
+.editIcon{
+    color: cornflowerblue;
+    }
+    .deleteIcon{
+        color: red;
+    }
+.viewIcon{
+    color:lightseagreen;
+}

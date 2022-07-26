@@ -41,7 +41,7 @@ export default function Login({ setToken }) {
           <input
             type={"text"}
             placeholder="Username"
-            className="username-field"
+            className="login-field"
             id="usernameField"
           ></input>
         </div>
@@ -49,7 +49,7 @@ export default function Login({ setToken }) {
           <input
             type={"password"}
             placeholder="Password"
-            className="password-field"
+            className="login-field"
             id="passwordField"
           ></input>
         </div>
