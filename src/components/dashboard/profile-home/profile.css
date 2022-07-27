@@ -19,7 +19,7 @@ height: 100%;
     border-right: none;
     border-left: rgb(208, 197, 184);
     border-left-style: solid;
-    border-left-width: slim;}
+    border-left-width: thin;}
 .profile-component{height: 80%; width: 80%;}
 .editIcon{color: cornflowerblue;}
 .deleteIcon{color: red;}
@@ -38,6 +38,6 @@ height: 100%;
     border-right: none;
     border-bottom:lightslategray;
     border-bottom-style: solid;
-    border-bottom-width: slim;
+    border-bottom-width:thin;
     border-radius: 8px;
     margin-bottom: 1em;}
