@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Login from "./components/login";
 import Dashboard from "./components/dashboard";
 
@@ -15,7 +15,7 @@ function App() {
   } else {
     return (
       <div className="App">
-        <Dashboard token={token} />
+        <Dashboard token={token} setToken={setToken}/>
       </div>
     );
   }

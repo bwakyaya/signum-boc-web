@@ -20,7 +20,8 @@ const Demo = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
-export default function Profile() {
+export default function Profile(props) {
+  
   const [ProfileComponent, setProfileComponent] = useState();
   return (
     <div className="userProfileDiv">
@@ -39,7 +40,7 @@ export default function Profile() {
               <List dense={false}>
                 <ListItem
                   onClick={() => {
-                    setProfileComponent();
+                    props.setToken(undefined);
                   }}
                   className="Item"
                 >

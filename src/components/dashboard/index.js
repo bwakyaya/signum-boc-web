@@ -1,11 +1,10 @@
 import React from "react";
 import BOCHome from "./new-bill-home/bill-home";
-import LeftPanel from "./left-panel";
-const Dashboard = (token) => {
+const Dashboard = (props) => {
   return (
     <div className="home-plate">
       {/* <LeftPanel /> */}
-      <BOCHome />
+      <BOCHome token={props.token} setToken={props.setToken}/>
     </div>
   );
 };

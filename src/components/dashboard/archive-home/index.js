@@ -22,9 +22,7 @@ const Demo = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
-export default function Archive() {
-  const [secondary, setSecondary] = React.useState(false);
-
+export default function Archive(props) {
   return (
     <div className="list-div">
       <Box sx={{ flexGrow: 1 }} className="list">
@@ -50,7 +48,6 @@ export default function Archive() {
                 >
                   <ListItemText
                     primary="Kristof versus UAP - Bill of costs.docx 12-04-19-165"
-                    secondary={secondary ? "Secondary text" : null}
                   />
                 </ListItem>
               )}

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import App from "../../App";
 import axios from "axios";
 
-export default function Login({ setToken }) {
+export default function Login(props) {
   async function handleLogin(userName, password) {
     const url = "http://localhost:5000/authenticate";
     const formData = new FormData();
@@ -21,7 +21,7 @@ export default function Login({ setToken }) {
         if (Data.data === "Incorrect Username or Password") {
           alert("Incorrect Username or Password");
         } else if (Data.data === "Success!!!") {
-          setToken(Data.data);
+          props.setToken(Data.data);
         }
       });
   }
@@ -60,7 +60,7 @@ export default function Login({ setToken }) {
               const userName = document.getElementById("usernameField").value;
               const passWord = document.getElementById("passwordField").value;
               handleLogin(userName, passWord);
-              setToken("dkjfngkdsfjngj878435kjnbsf984");
+              props.setToken("dkjfngkdsfjngj878435kjnbsf984");
               <App />;
             }}
           >
@@ -89,6 +89,6 @@ export default function Login({ setToken }) {
     </div>
   );
 }
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
-};
+// Login.propTypes = {
+//   setToken: PropTypes.func.isRequired,
+// };
