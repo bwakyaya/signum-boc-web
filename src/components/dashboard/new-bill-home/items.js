@@ -9,7 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
-const myData = [["f", "h", "s", "v", "z"]];
+const myData = [[]];
 export default function CostItems(props) {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -26,10 +26,16 @@ export default function CostItems(props) {
     props.setItems(data);
   });
 
+  function testTable() {
+    if (myData) {
+      return data;
+    }
+  }
+
   return (
     <div className="all-elements">
       <div className="table-button">
-        {data}
+        {testTable()}
         <div className="add-button-div">
           <AddCircleRoundedIcon
             className="add-button"

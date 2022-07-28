@@ -1,6 +1,6 @@
 import "./items.css";
 import ITable from "./items-table";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
@@ -9,7 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
-const myData = [["6", "", "5", "4", "3"]];
+const myData = [[]];
 export default function Disbursements(props) {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -21,11 +21,18 @@ export default function Disbursements(props) {
   const [disbursement, setDisbursement] = useState(
     <ITable tableData={myData} />
   );
-  props.setDisbursements(disbursement);
+  useEffect(() => {
+    props.setDisbursements(disbursement);
+  });
+  function testTable() {
+    if (myData) {
+      return disbursement;
+    }
+  }
   return (
     <div className="all-elements">
       <div className="table-button">
-        {disbursement}
+        {testTable()}
         <div className="add-button-div">
           <AddCircleRoundedIcon
             className="add-button"
