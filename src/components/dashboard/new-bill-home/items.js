@@ -10,18 +10,16 @@ import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
 const myData = [["", "", "", "", ""]];
-export default function CostItems() {
+export default function CostItems(props) {
   const [open, setOpen] = React.useState(false);
-
   const handleClickOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
-
   const [data, setData] = useState(<ITable tableData={myData} />);
+  props.setItems(data);
   return (
     <div className="all-elements">
     <div className="table-button">

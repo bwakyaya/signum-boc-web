@@ -10,17 +10,14 @@ import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
 const myData = [["", "", "", "", ""]];
-export default function Disbursements() {
+export default function Disbursements(props) {
   const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClickOpen = () => {setOpen(true);};
+  const handleClose = () => {setOpen(false);};
   const [disbursement, setDisbursement] = useState(
     <ITable tableData={myData} />
   );
+  props.setDisbursements(disbursement);
   return (
     <div className="all-elements">
       <div className="table-button">

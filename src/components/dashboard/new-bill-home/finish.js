@@ -15,7 +15,7 @@ class Finish extends Component {
             alert("Hey guys, I have just been ");
           }}
         >
-          Save Bill
+          Complete
         </Button>
       </div>
     );

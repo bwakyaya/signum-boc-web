@@ -5,8 +5,9 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
-export default function SimpleListMenu({courts}) {
-  let options = courts;
+export default function SimpleListMenu(props) {
+  let options = props.items;
+  let caller = props.parent;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const open = Boolean(anchorEl);
@@ -15,6 +16,12 @@ export default function SimpleListMenu({courts}) {
   };
 
   const handleMenuItemClick = (event, index) => {
+    if(caller==="courts"){
+      props.setCourt(options[index])
+    }
+    else if(caller==="divisions"){
+      props.setDivision(options[index])
+    }
     setSelectedIndex(index);
     setAnchorEl(null);
   };

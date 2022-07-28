@@ -39,7 +39,9 @@ width: 15%;
 }
 .all-elements{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
 }
@@ -122,3 +124,15 @@ margin-bottom: 2em;
     font-size: 12pt;
     margin-bottom: 2em;
 }
+
+.save-parts{
+    height: 40px;
+    width: 150px;
+    font-size: 20pt;
+    border-radius: 8px;
+    margin-top: 2em;
+    }
+.save-parts:hover{
+        opacity: 0.9;
+        transform: scale(1.2);
+    }
