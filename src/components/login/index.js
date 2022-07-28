@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import App from "../../App";
 import axios from "axios";
 
@@ -89,6 +88,3 @@ export default function Login(props) {
     </div>
   );
 }
-// Login.propTypes = {
-//   setToken: PropTypes.func.isRequired,
-// };

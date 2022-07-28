@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Stepper } from "react-form-stepper";
 import SummaryPage from "./summary";
 import CostItems from "./items";
@@ -11,20 +11,40 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 export default function NewBillForm() {
   const [activeStep, setActiveStep] = useState(0);
+  const [summary, setSummary] = useState();
+  const [items, setItems] = useState();
+  const [disbursements, setDisbursements] = useState();
+
+  function check() {
+    if (summary) {
+      console.log(summary);
+    }
+  }
+
+  useEffect(() => {
+    check();
+  });
+
   function switchFormParts(step) {
     let Component;
     switch (step) {
       case 0:
-        Component = <SummaryPage />;
+        Component = <SummaryPage setSummary={setSummary} />;
         break;
       case 1:
-        Component = <CostItems />;
+        Component = <CostItems setItems={setItems} />;
         break;
       case 2:
-        Component = <Disbursements />;
+        Component = <Disbursements setDisbursements={setDisbursements} />;
         break;
       case 3:
-        Component = <Finish />;
+        Component = (
+          <Finish
+            summary={summary}
+            items={items}
+            disbursements={disbursements}
+          />
+        );
         break;
       default:
     }

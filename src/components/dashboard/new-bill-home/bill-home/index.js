@@ -5,7 +5,9 @@ import Archives from "../../archive-home";
 import Profile from "../../profile-home";
 
 export default function BOCHome(props) {
-  const [launcher, setLauncher] = useState(<Profile token={props.token} setToken={props.setToken} />);
+  const [launcher, setLauncher] = useState(
+    <Profile token={props.token} setToken={props.setToken} />
+  );
   return (
     <div className="boc-form-panel">
       <div className="margin"></div>
@@ -49,7 +51,9 @@ export default function BOCHome(props) {
             alt="icon"
             src="images.png"
             onClick={() => {
-              setLauncher(<Profile token={props.token} setToken={props.setToken} />);
+              setLauncher(
+                <Profile token={props.token} setToken={props.setToken} />
+              );
             }}
           ></img>
           <figcaption className="profile-label">Profile</figcaption>

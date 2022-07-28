@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./items.css";
 import ITable from "./items-table";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
@@ -9,7 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
-const myData = [["", "", "", "", ""]];
+const myData = [["f", "h", "s", "v", "z"]];
 export default function CostItems(props) {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -18,43 +18,49 @@ export default function CostItems(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  const [data, setData] = useState(<ITable tableData={myData} />);
-  props.setItems(data);
+  const [data, setData] = useState(
+    <ITable tableData={myData} caller={"items"} />
+  );
+
+  useEffect(() => {
+    props.setItems(data);
+  });
+
   return (
     <div className="all-elements">
-    <div className="table-button">
-      {data}
-      <div className="add-button-div">
-        <AddCircleRoundedIcon
-          className="add-button"
-          onClick={handleClickOpen}
-        ></AddCircleRoundedIcon>
+      <div className="table-button">
+        {data}
+        <div className="add-button-div">
+          <AddCircleRoundedIcon
+            className="add-button"
+            onClick={handleClickOpen}
+          ></AddCircleRoundedIcon>
+        </div>
+        <Dialog open={open} onClose={handleClose}>
+          <DialogTitle>Cost Item</DialogTitle>
+          <DialogContent>
+            <NewItem />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Cancel</Button>
+            <Button
+              onClick={() => {
+                myData.push([
+                  "gdfg",
+                  "gdfff",
+                  "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
+                  "hfjfggr",
+                  "tgdfgdf",
+                ]);
+                setData(<ITable tableData={myData} />);
+                handleClose();
+              }}
+            >
+              Add
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Cost Item</DialogTitle>
-        <DialogContent>
-          <NewItem />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button
-            onClick={() => {
-              myData.push([
-                "gdfg",
-                "gdfff",
-                "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
-                "hfjfggr",
-                "tgdfgdf",
-              ]);
-              setData(<ITable tableData={myData} />);
-              handleClose();
-            }}
-          >
-            Add
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
     </div>
   );
 }

@@ -1,48 +1,51 @@
 import "./items.css";
-import React, { Component } from "react";
+import React from "react";
 
-class ITable extends Component {
-  render() {
-    let body = this.props.tableData;
-    return <Table body={body} />;
-  }
+function ITable(props) {
+  let caller = props.caller;
+  let body = props.tableData;
+  return <Table body={body} caller={caller} />;
 }
 
-class Table extends Component {
-  render() {
-    var body = this.props.body;
-    return (
-      <table className="dataTable">
-        <thead>
-          <tr>
-            <th className="item">ITEM </th>
-            <th className="date">DATE</th>{" "}
-            <th className="particulars">PARTICULARS </th>
-            <th className="amount">AMOUNT</th>{" "}
-            <th className="tax">TAXED OFF</th>
-          </tr>
-        </thead>
-        <tbody>
-          {body.map((row) => (
-            <TableRow row={row} />
-          ))}
-        </tbody>
-      </table>
-    );
-  }
-}
-
-class TableRow extends Component {
-  render() {
-    var row = this.props.row;
-    return (
-      <tr>
-        {row.map((val) => (
-          <td contenteditable="true">{val}</td>
+function Table(props) {
+  let caller = props.caller;
+  let body = props.body;
+  return (
+    <table className="dataTable">
+      <thead>
+        <tr>
+          <th className="item">ITEM </th>
+          <th className="date">DATE</th>
+          <th className="particulars">PARTICULARS </th>
+          <th className="amount">AMOUNT</th>
+          <th className="tax">TAXED OFF</th>
+        </tr>
+      </thead>
+      <tbody>
+        {body.map((row) => (
+          <TableRow
+            row={row}
+            caller={caller}
+            body={body}
+            key={`key$-${row}-${body.indexOf(row)}`}
+          />
         ))}
-      </tr>
-    );
-  }
+      </tbody>
+    </table>
+  );
+}
+
+function TableRow(props) {
+  let caller = props.caller;
+  let body = props.body;
+  let row = props.row;
+  return (
+    <tr key={`$-${caller}-${body.indexOf(row)}`}>
+      {row.map((val) => (
+        <td key={`key-${row}-${row.indexOf(val)}`}>{val}</td>
+      ))}
+    </tr>
+  );
 }
 
 export default ITable;

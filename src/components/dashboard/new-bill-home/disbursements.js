@@ -9,11 +9,15 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import NewItem from "./new-item";
 
-const myData = [["", "", "", "", ""]];
+const myData = [["6", "", "5", "4", "3"]];
 export default function Disbursements(props) {
   const [open, setOpen] = React.useState(false);
-  const handleClickOpen = () => {setOpen(true);};
-  const handleClose = () => {setOpen(false);};
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   const [disbursement, setDisbursement] = useState(
     <ITable tableData={myData} />
   );
@@ -44,7 +48,9 @@ export default function Disbursements(props) {
                   "hfjfggr",
                   "tgdfgdf",
                 ]);
-                setDisbursement(<ITable tableData={myData} />);
+                setDisbursement(
+                  <ITable tableData={myData} caller={"disbursements"} />
+                );
                 handleClose();
               }}
             >
