@@ -1,10 +1,18 @@
 import * as React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import TreeView from "@mui/lab/TreeView";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
 
-export default function ScheduleTree() {
+let paragraphItem = "";
+export default function ScheduleTree(props) {
+  const [paragraph, setParagraph] = useState(paragraphItem);
+  useEffect(() => {
+    paragraphItem = paragraph;
+    props.setParagraph(paragraphItem);
+  });
   const renderTree = (nodes) => (
     <TreeItem
       key={nodes.id}
@@ -12,7 +20,9 @@ export default function ScheduleTree() {
       label={nodes.name}
       className="tree-item"
       onClick={() => {
-        console.log(nodes.label);
+        if (!nodes.children) {
+          setParagraph(nodes.name);
+        }
       }}
     >
       {Array.isArray(nodes.children)
@@ -24,11 +34,10 @@ export default function ScheduleTree() {
   return (
     <TreeView
       className="schedules-list"
-      aria-label="rich object"
       defaultCollapseIcon={<ExpandMoreIcon />}
       defaultExpanded={["root"]}
       defaultExpandIcon={<ChevronRightIcon />}
-      sx={{ height: 400, flexGrow: 1, maxWidth: 1000, overflowY: "auto" }}
+      sx={{ flexGrow: 1, overflowY: "auto" }}
     >
       {renderTree(Scheduledata)}
     </TreeView>
@@ -36,7 +45,7 @@ export default function ScheduleTree() {
 }
 const Scheduledata = {
   id: "root",
-  name: "SCHEDULES",
+  name: "Schedule",
   children: [
     {
       id: "ngjhn23fski8",

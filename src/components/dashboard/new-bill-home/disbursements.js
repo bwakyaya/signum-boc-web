@@ -41,9 +41,7 @@ export default function Disbursements(props) {
         </div>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Disbursement</DialogTitle>
-          <DialogContent>
-            <NewItem />
-          </DialogContent>
+          <DialogContent>{/* <NewItem /> */}</DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
             <Button

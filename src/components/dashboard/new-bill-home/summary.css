@@ -3,7 +3,7 @@
     width: 100%;}
 .label{}
 
-.taxation-field, .taxation-year,  .location-field, .defendant-field, .plaintiff-field, .suit-year, .suit-field, .date-picker{
+.taxation-field, .taxation-year,  .location-field, .defendant-field, .plaintiff-field, .suit-year, .suit-field, .date-picker, .input-field{
     margin-bottom: 1em;
     margin-top: 1em;
     border-top: none;

@@ -11,6 +11,7 @@ import NewItem from "./new-item";
 
 const myData = [[]];
 export default function CostItems(props) {
+  const [items, setItems] = useState();
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -45,19 +46,12 @@ export default function CostItems(props) {
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Cost Item</DialogTitle>
           <DialogContent>
-            <NewItem />
+            <NewItem setItem={setItems} />
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
             <Button
               onClick={() => {
-                myData.push([
-                  "gdfg",
-                  "gdfff",
-                  "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
-                  "hfjfggr",
-                  "tgdfgdf",
-                ]);
                 setData(<ITable tableData={myData} />);
                 handleClose();
               }}
