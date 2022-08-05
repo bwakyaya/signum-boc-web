@@ -24,7 +24,8 @@ export default function CostItems(props) {
   );
 
   useEffect(() => {
-    props.setItems(data);
+    // props.setItems(data);
+    console.log(items);
   });
 
   function testTable() {
@@ -46,13 +47,22 @@ export default function CostItems(props) {
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Cost Item</DialogTitle>
           <DialogContent>
-            <NewItem setItem={setItems} />
+            <NewItem setItems={setItems} />
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
             <Button
               onClick={() => {
+                // myData.push([
+                //   "#",
+                //   "20th/06/2022",
+                //   "To the advocate for filing a plaint skdjfksjbfke nskdfks",
+                //   "200000",
+                //   "80000",
+                // ]);
+                myData.push(items);
                 setData(<ITable tableData={myData} />);
+                testTable();
                 handleClose();
               }}
             >

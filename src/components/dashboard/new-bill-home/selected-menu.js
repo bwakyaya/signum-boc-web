@@ -9,18 +9,17 @@ export default function SimpleListMenu(props) {
   let options = props.items;
   let caller = props.parent;
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
   const open = Boolean(anchorEl);
   const handleClickListItem = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleMenuItemClick = (event, index) => {
-    if(caller==="courts"){
-      props.setCourt(options[index])
-    }
-    else if(caller==="divisions"){
-      props.setDivision(options[index])
+    if (caller === "courts") {
+      props.setCourt(options[index]);
+    } else if (caller === "divisions") {
+      props.setDivision(options[index]);
     }
     setSelectedIndex(index);
     setAnchorEl(null);
@@ -32,11 +31,7 @@ export default function SimpleListMenu(props) {
 
   return (
     <div>
-      <List
-        component="nav"
-        aria-label="Device settings"
-        sx={{ bgcolor: "background.paper" }}
-      >
+      <List component="nav" sx={{ bgcolor: "background.paper" }}>
         <ListItem
           button
           id="lock-button"
@@ -65,8 +60,8 @@ export default function SimpleListMenu(props) {
         {options.map((option, index) => (
           <MenuItem
             key={option}
-            disabled={index === 0}
-            selected={index === selectedIndex}
+            // disabled={index === 0}
+            // selected={index === selectedIndex}
             onClick={(event) => handleMenuItemClick(event, index)}
           >
             {option}

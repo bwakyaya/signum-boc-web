@@ -22,12 +22,12 @@ function Table(props) {
         </tr>
       </thead>
       <tbody>
-        {body.map((row) => (
+        {body.map((row, index) => (
           <TableRow
             row={row}
             caller={caller}
             body={body}
-            key={`key$-${row}-${body.indexOf(row)}`}
+            key={`key-${index}-${caller}-row`}
           />
         ))}
       </tbody>
@@ -41,8 +41,8 @@ function TableRow(props) {
   let row = props.row;
   return (
     <tr key={`$-${caller}-${body.indexOf(row)}`}>
-      {row.map((val) => (
-        <td key={`key-${row}-${row.indexOf(val)}`}>{val}</td>
+      {row.map((val, index) => (
+        <td key={`key-${caller}-${index}-cell`}>{val}</td>
       ))}
     </tr>
   );

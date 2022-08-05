@@ -13,18 +13,12 @@ let itemData = [];
 export default function NewItem(props) {
   const [open, setOpen] = React.useState(false);
   const [paragraph, setParagraph] = useState(paragraphItem);
+  const [amount, setAmount] = useState();
+  const [tax, setTax] = useState();
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
-    itemData.push(
-      "#",
-      document.getElementById("paragraph").value,
-      document.getElementById("item-date").value,
-      document.getElementById("item-amount").value,
-      document.getElementById("item-tax").value
-    );
-    props.setItem(itemData);
     setOpen(false);
   };
   useEffect(() => {
@@ -36,6 +30,7 @@ export default function NewItem(props) {
     <div className="new-item-form">
       <label className="new-item-date-label">Date</label>
       <input type="date" className="new-item-date-field" id="item-date"></input>
+
       <label className="new-item-particulars-label">Particulars</label>
       <Button onClick={handleClickOpen} startIcon={<ListIcon />}>
         Schedule
@@ -47,15 +42,41 @@ export default function NewItem(props) {
         value={paragraphItem}
         onChange={() => {}}
       ></textarea>
+
       <label className="new-item-amount-label">Considetation</label>
       <input
         type="number"
         className="new-item-amount-field"
         id="item-amount"
+        onChange={() => {
+          setAmount(document.getElementById("item-amount").value);
+        }}
       ></input>
-      <label className="new-item-tax-label">Taxed Off</label>
-      <input type="number" className="new-item-tax-field" id="item-tax"></input>
 
+      <label className="new-item-tax-label">Taxed Off</label>
+      <input
+        type="number"
+        className="new-item-tax-field"
+        id="item-tax"
+        onChange={() => {
+          setTax(document.getElementById("item-tax").value);
+          // console.log();
+        }}
+      ></input>
+      <button
+        onClick={() => {
+          itemData.push(
+            "#",
+            document.getElementById("item-date").value,
+            document.getElementById("paragraph").value,
+            amount,
+            tax
+          );
+          props.setItems(itemData);
+        }}
+      >
+        Add Item
+      </button>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Cost Item</DialogTitle>
         <DialogContent>

@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import "./summary.css";
 
 const courtsList = [
-  "Courts",
+  "",
   "The Chief Magistrate's Court of Mengo",
   "Buganda Road Court",
   "Nakawa High Court",
@@ -15,7 +15,7 @@ const courtsList = [
   "Jinja High Court",
   "Mbale High Court",
 ];
-const divisions = ["Divisions", "Civil Division", "Criminal Division"];
+const divisions = ["", "Civil Division", "Criminal Division"];
 const billSummary = {
   court: "",
   division: "",
@@ -69,7 +69,7 @@ export default function SummaryPage(props) {
         <input
           id="taxationNumberId"
           type="number"
-          placeholder="Number"
+          // placeholder="Number"
           className="taxation-field"
           required
         ></input>
@@ -77,7 +77,7 @@ export default function SummaryPage(props) {
         <input
           id="taxationNumberYear"
           type="number"
-          placeholder="Year"
+          // placeholder="Year"
           className="taxation-year"
         ></input>
       </div>
@@ -86,37 +86,33 @@ export default function SummaryPage(props) {
         <input
           id="suit-field"
           type="number"
-          placeholder="Number"
+          // placeholder="Number"
           className="suit-field"
         ></input>
         <label className="suit-year-label">Civil Suit Year</label>
         <input
           type="number"
-          placeholder="Year"
+          // placeholder="Year"
           className="suit-year"
           id="suit-year"
         ></input>
       </div>
       <div className="plaintiff-div">
-        <label className="plaintiff-label">
-          Plaintiff(Each Entitu Name on a new line)
-        </label>
+        <label className="plaintiff-label">Plaintiff(s)</label>
         <textarea
           id="Plaintiffs"
           type="text"
           className="plaintiff-field"
-          placeholder="Plaintiff(s)"
+          // placeholder="Plaintiff(s)"
         ></textarea>{" "}
       </div>
       <div className="defendant-div">
-        <label className="defendant-label">
-          Defendant(Each Entitu Name on a new line)
-        </label>
+        <label className="defendant-label">Defendant(s)</label>
         <textarea
           id="defendants"
           type="text"
           className="defendant-field"
-          placeholder="Defendant(s)"
+          // placeholder="Defendant(s)"
         ></textarea>
       </div>
       <div className="dated-div">
@@ -124,7 +120,7 @@ export default function SummaryPage(props) {
         <input
           id="location"
           type="text"
-          placeholder="Location"
+          // placeholder="Location"
           className="location-field"
         ></input>
         <label className="date-label">Date</label>
