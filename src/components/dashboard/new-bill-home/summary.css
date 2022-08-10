@@ -3,7 +3,7 @@
     width: 100%;}
 .label{}
 
-.taxation-field, .taxation-year,  .location-field, .defendant-field, .plaintiff-field, .suit-year, .suit-field, .date-picker, .input-field{
+.taxation-field, .taxation-year,  .location-field, .defendant-field, .plaintiff-field, .suit-year, .suit-field, .date-picker, .input-field, select, option{
     margin-bottom: 1em;
     margin-top: 1em;
     border-top: none;
@@ -14,63 +14,13 @@
     border-bottom-width: 0.5px;
     height: 25px;
     width: 100%;}
-.dated-div{
+.dated-div, .defendant-div, .plaintiff-div, .suit-div, .taxation-div, .court-div, .division-div{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 40%;
     }
-.defendant-div{
-    width: 40%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    }
-.plaintiff-div{
-    width: 40%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    }
-.suit-div{
-    width: 40%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    }
-.taxation-div{
-    width: 40%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-   }
-.tab-panel{
-    width: 40%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 300px;
-    padding: 5px;}
-.court-div{
-    width: 40%;
-    margin-bottom: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(208, 197, 184);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-}
-.division-div{
-    margin-bottom: 1em;
-    width: 40%;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: rgb(208, 197, 184);
-    border-bottom-style: solid;
-    border-bottom-width: 0.5px;
-}
+
 .summary-component{display: flex;
 flex-direction: column;
 align-items: center;}

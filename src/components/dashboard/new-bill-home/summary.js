@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./summary.css";
-import SimpleListMenu from "./selected-menu";
 import SaveIcon from "@mui/icons-material/Save";
 import Button from "@mui/material/Button";
 import "./summary.css";
@@ -35,9 +34,9 @@ export default function SummaryPage(props) {
 
   useEffect(() => {
     document.getElementById("taxationNumberId").value =
-      billSummary.taxationNumber;
+    billSummary.taxationNumber;
     document.getElementById("taxationNumberYear").value =
-      billSummary.taxationYear;
+    billSummary.taxationYear;
     document.getElementById("suit-field").value = billSummary.suitNumber;
     document.getElementById("suit-year").value = billSummary.suitYear;
     document.getElementById("Plaintiffs").value = billSummary.plaintiffs;
@@ -46,23 +45,25 @@ export default function SummaryPage(props) {
     document.getElementById("dateSelector").value = billSummary.date;
   });
 
+  function dropdown(arr){ 
+    return(
+      arr.map((item)=>{return(<option>{item}</option>);})
+      );
+  }
+
   return (
     <div className="summary-component">
       <div className="court-div">
         <label className="court-label">Court</label>
-        <SimpleListMenu
-          items={courtsList}
-          parent={"courts"}
-          setCourt={setCourt}
-        />
+        <select onChange={()=>{setCourt(document.getElementById("courts").value)}} id="courts">
+        {dropdown(courtsList)}
+        </select>
       </div>
       <div className="division-div">
         <label className="division-label">Division</label>
-        <SimpleListMenu
-          items={divisions}
-          parent={"divisions"}
-          setDivision={setDivision}
-        />
+        <select onChange={()=>{setDivision(document.getElementById("divisions").value)}} id="divisions">
+        {dropdown(divisions)}
+        </select>
       </div>
       <div className="taxation-div">
         <label className="taxation-label">Taxation Number</label>
