@@ -48,81 +48,81 @@ const Scheduledata = {
   name: "Schedule",
   children: [
     {
-      id: "ngjhn23fski8",
+      id: "s1",
       name: "FIRST SCHEDULE: Sales, Purchases, Mortgages, and Debentures",
       children: [
         {
-          id: "2nfgbcfgbdfbgbfgngggdg",
+          id: "s1s1",
           name: "FIRST SCALE: Scale of fees for advocate for the 1 end or or purchaser on sale and purchase of land",
           children: [
             {
-              id: "dgsdf",
+              id: "s1s1p1",
               name: "PARAGRAPH 1: To the advocate for negotiating. preparing or completing a sale or purchase agreement for registered land ",
             },
             {
-              id: "dfr3",
+              id: "s1s1p2",
               name: "PARAGRAPH 2: To the advocate for effecting conveyance in a land registry or processing a certificate of title ",
             },
             {
-              id: "5tfdf",
+              id: "s1s1p3",
               name: "PARAGRAPH 3: For purposes of items I and 2 of this scale, where the advocate has not h and led the negotiation , preparation or completion for registration",
             },
           ],
         },
         {
-          id: "3mhgfnfhh",
+          id: "s1s2",
           name: "SECOND SCALE: ScaLe of fees for charges affecting land such as debentures and mortgages",
           children: [
             {
-              id: "gvfdr",
+              id: "s1s2p1",
               name: "PARAGRAPH 1: The fees payable to the advocate of the chargee for negotiating and  preparing to completion, of a security shall be calculated cumulatively on the basis of the consideration or the value of the subject matter",
             },
             {
-              id: "876hkjg",
+              id: "s1s2p2",
               name: "PARAGRAPH 2: To the same advocate of the chargee referred to in item I, for negotiating, preparing and completing a further charge in addition to the charge in item l ",
             },
             {
-              id: "bdfggt87t",
+              id: "s1s2p3",
               name: "PARAGRAPH 3: To the advocate tor the charger for negotiating, preparing and completing a security",
             },
             {
-              id: "cdsfdg76",
+              id: "s1s2p4",
               name: "PARAGRAPH 4: To advocate referred to in item 3 for negotiating. preparing and completing a further charge in addition to the charge in item 3",
             },
             {
-              id: "mbnkksff89",
+              id: "s1s2p5",
               name: "PARAGRAPH 5: To the advocate tor the chargee or charger. for negotiating and preparing to completion. an assignment, redemption or discharge of a security",
             },
             {
-              id: "gt443drfge",
+              id: "s1s2p6",
               name: "PARAGRAPH 6: To the advocate tor the chargee for negotiating and preparing to completion, an equitable mortgage or memorandum of charge",
             },
             {
-              id: "67urthdf5",
+              id: "s1s2p7",
               name: "PARAGRAPH 7: To t e advocate for then charger for negotiating. preparing and completing an equitable mortgage or memorandum of charge by deposit of title",
             },
             {
-              id: "5fefrgr6ervbf",
+              id: "s1s2p8",
               name: "PARAGRAPH 8: Where two or more securities are created, whether contemporaneously or subsequently, in favour of the same chargee to secure the same or a lower amount",
             },
             {
-              id: "654ehfgfsfre",
+              id: "s1s2p9",
               name: "PARAGRAPH 9: Where a mortgage or charge comprises more than one immoveable property",
             },
             {
-              id: "23rdfsdfgdfg54rw4ht",
+              id: "s1s2p10",
               name: "PARAGRAPH 10: Where a security is created in favour of two or more chargees",
             },
             {
-              id: "788utyhsddq4tghg",
+              id: "s1s2p11",
               name: "PARAGRAPH 11: Where the advocate has not handled the negotiation and preparation to completion of a transaction",
             },
             {
-              id: "dfvdfghng876e4wedfg",
+              id: "s1s2p12",
               name: "PARAGRAPH 12: The fee on a single debenture of any nature where the debenture does not create a security, shall be calculated under the Fifth Schedule taking into account the time, complexity and responsibility",
             },
             {
-              id: "78iufaswe4h",
+              id: "s1s2p13",
               name: "PARAGRAPH 13: Where a security is created by more than one charger, no addition shall be made to the prescribed fee",
             },
           ],
@@ -130,33 +130,33 @@ const Scheduledata = {
       ],
     },
     {
-      id: "4bcfxg566ef",
+      id: "s2",
       name: "SECOND SCHEDULE: Scales o f charges for leases and agreements of leases at rack rent and for building leases, reserving rent, etc.",
       children: [
         {
-          id: "5xffsfs323",
+          id: "s2s1",
           name: "FIRST SCALE: Scale of charges for leases and agreements for leases at rack rent",
           children: [
             {
-              id: "78ijfdvsdsgfnj6r5er",
+              id: "s2s1p1",
               name: "PARAGRAPH 1: To the advocate for preparing. settling and completing a lease or agreement for a lease and counterpart lease or agreement for a lease",
             },
             {
-              id: "8yighhfe55656",
+              id: "s2s1p2",
               name: "PARAGRAPH 2: To the advocate for registering a lease or agreement for a lease",
             },
           ],
         },
         {
-          id: "6fsddbhny6e5",
+          id: "s2s2",
           name: "SECOND SCALE: Scale of charges for building leases, agreements for building leases and other long leases not at rack rent",
           children: [
             {
-              id: "cvbnfdsdvfdg676er",
+              id: "s2s2p1",
               name: "PARAGRAPH 1: To the advocate for preparing, settling, completing a lease and a counterpart lease",
             },
             {
-              id: "45tdfvdfhtyu7855",
+              id: "s2s2p2",
               name: "PARAGRAPH 2: To the advocate registering a lease or agreement for a lease ",
             },
           ],
@@ -164,55 +164,55 @@ const Scheduledata = {
       ],
     },
     {
-      id: "7bfbgghjmjk745scsd",
+      id: "s3",
       name: "THIRD SCHEDULE: Floatation of Companies",
       children: [
         {
-          id: "8jdsbnsbnsjhdsflk8976",
+          id: "s3s1",
           name: "FIRST SCALE: Registration of new Companies",
           children: [
             {
-              id: "bfdgdhgdf67564sdf",
+              id: "s3s1p1",
               name: "PARAGRAPH 1: Instruction fees for the formation and incorporation of a private company with limited liability and share capital",
             },
             {
-              id: "786ugbvzdsfg5",
+              id: "s3s1p2",
               name: "PARAGRAPH 2: Fees for the formation and incorporation of a public company",
             },
             {
-              id: "xzfsdgnghmmkj845asfhhgvdgn",
+              id: "s3s1p3",
               name: "PARAGRAPH 3: Fees for the formation and incorporation of a new company without share capital",
             },
             {
-              id: "bcgbfghvmjgncdfgdsf4545",
+              id: "s3s1p4",
               name: "PARAGRAPH 4: Fees for registering a foreign company",
             },
           ],
         },
         {
-          id: "9bccssdfgnhjhjksdwa56",
+          id: "s3s2",
           name: "SECOND SCALE: Debentures",
           children: [
             {
-              id: "bcgdgsdbvhjkijlgder",
+              id: "s3s2p1",
               name: "PARAGRAPH 1: Fees for preparing a single debenture or series of debentures",
             },
             {
-              id: "fgbdfbgh6886y",
+              id: "s3s2p2",
               name: "PARAGRAPH 2: Where security is given by way of a mortgage or other form of charge of immovable property, in addition to a floating charge",
             },
           ],
         },
         {
-          id: "ffbdfhhsjhjse94874858",
+          id: "s3s3",
           name: "THIRD SCALE: Other Company Work",
           children: [
             {
-              id: "7t645fgbvdfw4",
+              id: "s3s3p1",
               name: "PARAGRAPH 1: The fees for preparing a prospectus on issue of equity or debt instruments, obtaining regulatory approval, obtaining securities exchange listing, drafting and adjusting press advertisements, the reconstruction or amalgamating of companies or any other non-litigious work in relation to company matters not otherwise provided for",
             },
             {
-              id: "mxnbcfbvhsdhfkhdiuyruweu87",
+              id: "s3s3p2",
               name: "PARAGRAPH 2: All work relating to company matters for which fees are specifically prescribed in a Schedule to these Regulations",
             },
           ],
@@ -220,105 +220,118 @@ const Scheduledata = {
       ],
     },
     {
-      id: "10jhsdjdfgdfjhfgku",
+      id: "s4",
       name: "FOURTH SCHEDULE: Trademarks, Inventions, and Designs",
       children: [
         {
-          id: "11043958uoijjewru34",
+          id: "s4s1",
           name: "FIRST SCALE: Trademarks",
           children: [
             {
-              id: "8097iyukjmvsderty",
+              id: "s4s1p1",
               name: "PARAGRAPH 1: Applications",
+              children : [
+              {id:"s4s1p1x1",
+              name: "Instructions to register one trademark in one class and drawing form of authorization"
+              },
+              {
+                id: "s4s1p1x2",
+                name:"Instructions to register second and further trademarks in the name of the same propriator simultaneously per trademark in one class"
+              },
+              {
+                id:"s4s1p1x3",
+                name:"Drawing application for registeration and copies of representation on mark"
+              }]
             },
             {
-              id: "cbfghyhjtyjuty643446u7",
+              id: "s4s1p2",
               name: "PARAGRAPH 2: Registered Users",
+
             },
             {
-              id: "23r4thgxde6yjuyhgg",
+              id: "s4s1p3",
               name: "PARAGRAPH 3: Assignments",
             },
             {
-              id: "fghdhsdrty7655tgf",
+              id: "s4s1p4",
               name: "PARAGRAPH 4: Renewals",
             },
             {
-              id: "bfbgfhytyuui0978656t5ref",
+              id: "s4s1p5",
               name: "PARAGRAPH 5: Change of Name",
             },
             {
-              id: "23456tyfgxdfrtytui9o78i",
+              id: "s4s1p6",
               name: "PARAGRAPH 6: Change of Address",
             },
             {
-              id: "dfgndfbnhgyfgjyt",
+              id: "s4s1p7",
               name: "PARAGRAPH 7: Alterations of Ammendments",
             },
             {
-              id: "2345yr6u79oityhbxfvxfvbb",
+              id: "s4s1p8",
               name: "PARAGRAPH 8: Searches ",
             },
             {
-              id: "234tgdfvdgtyhegttr",
+              id: "s4s1p9",
               name: "PARAGRAPH 9:Opposition and rectification proceedings",
             },
             {
-              id: "234t56876hfvfgr",
+              id: "s4s1p10",
               name: "PARAGRAPH 10: Miscellaneous Matters",
             },
           ],
         },
         {
-          id: "125443fyrhbjfetirkpu",
+          id: "s4s2",
           name: "SECOND SCALE: Patents, utility models, industrial designs, geographical indications, plant varieties and other intellectual property rights",
           children: [
             {
-              id: "234tyt7utybgfsdfsrert",
+              id: "s4s2p1",
               name: "PARAGRAPH 1: Instructions to register",
             },
             {
-              id: "78uyhdfbdfsfvfet54y",
+              id: "s4s2p2",
               name: "PARAGRAPH 2: Processing Applications",
             },
             {
-              id: "uyuyhcvvdsfrtytu6tgbrerfgfg",
+              id: "s4s2p3",
               name: "PARAGRAPH 3: Licenses",
             },
             {
-              id: "3456trgftryjuytgryu8756",
+              id: "s4s2p4",
               name: "PARAGRAPH 4: Instructions to file an application to register a subsequent proprietor of a pending application or registered right ",
             },
             {
-              id: "2345tdfgnghjfyjki8uewedrv",
+              id: "s4s2p5",
               name: "PARAGRAPH 5: Instructions to pay the annual maintenance fee",
             },
             {
-              id: "2345erfdggfhjyju76",
+              id: "s4s2p6",
               name: "PARAGRAPH 6: Applications for extension of term of registration ",
             },
             {
-              id: "5678oynbxcdfcerfgerte",
+              id: "s4s2p7",
               name: "PARAGRAPH 7: Instructions to file an application to restore a registration",
             },
             {
-              id: "24tr6hydvdfvnhfnhfjutj",
+              id: "s4s2p8",
               name: "PARAGRAPH 8: Instruction to register a change of name or change of address of the registered proprietor and reviewing all the supporting documents",
             },
             {
-              id: "245t56789i78kjyhjykyh",
+              id: "s4s2p9",
               name: "PARAGRAPH 9: Searches at the registry and advice on the search ",
             },
             {
-              id: "234rtsdvffgnjyy6yh657y",
+              id: "s4s2p10",
               name: "PARAGRAPH 10: Instructions to obtain from the registry certified copies of documents",
             },
             {
-              id: "5y6789i8yytgergtrty75",
+              id: "s4s2p11",
               name: "PARAGRAPH 11: Infringement, expungement, rectification, opposition proceedings and applications and appeals ",
             },
             {
-              id: "234t5rsgtfhyjuiu76u",
+              id: "s4s2p12",
               name: "PARAGRAPH 12: Miscellaneous Matters",
             },
           ],
