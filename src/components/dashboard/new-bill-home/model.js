@@ -386,17 +386,17 @@ export function s4s1p9x1(amount) {
   }
   return 3000000;
 }
-export function s4s1p9x2a() {
-  return 400000;
+export function s4s1p9x2a(numberOfDays) {
+  return numberOfDays * 400000;
 }
 export function s4s1p9x2b() {
   return 200000;
 }
-export function s4s1p9x3() {
-  return 100000;
+export function s4s1p9x3(numberOfHours) {
+  return numberOfHours * 100000;
 }
-export function s4s1p10x1() {
-  return 100000;
+export function s4s1p10x1(numberOfHours) {
+  return numberOfHours * 100000;
 }
 export function s4s1p10x2() {
   return 75000;
@@ -481,11 +481,11 @@ export function s4s2p12x3() {
 export function s4s2p12x4() {
   return 500000;
 }
-export function s4s2p12x5a() {
-  return 300000;
+export function s4s2p12x5a(numberOfDays) {
+  return numberOfDays * 300000;
 }
-export function s4s2p12x5b() {
-  return 200000;
+export function s4s2p12x5b(numberofHalfDays) {
+  return numberofHalfDays * 200000;
 }
 export function s4s2p12x6a(numberOfLetters) {
   return 100000 * numberOfLetters;
@@ -499,8 +499,8 @@ export function s4s2p12x7a(numberOfLetters) {
 export function s4s2p12x7b(folio) {
   return 50000 * folio;
 }
-export function s4s2p12x8() {
-  return 50000;
+export function s4s2p12x8(numberOfFolio) {
+  return numberOfFolio * 50000;
 }
 export function s4s2p12x9() {
   return 500000;
@@ -775,51 +775,51 @@ export function s6p5b(grossCapitalValue) {
   return 1000000;
 }
 //Need Clarification : add more tree children
-export function s6p5c1(amount) {
-  let Amount = (4 / 5) * s6p1x1(amount);
+export function s6p5c(feesFromParagraphOne) {
+  let Amount = (4 / 5) * feesFromParagraphOne;
   return Amount;
 }
-export function s6p5c2(amount) {
-  let Amount = (4 / 5) * s6p1x2(amount);
-  return Amount;
-}
-export function s6p5c3(amount) {
-  let Amount = (4 / 5) * s6p1x3(amount);
-  return Amount;
-}
-export function s6p5c4(amount) {
-  let Amount = (4 / 5) * s6p1x4(amount);
-  return Amount;
-}
+// export function s6p5c2(amount) {
+//   let Amount = (4 / 5) * s6p1x2(amount);
+//   return Amount;
+// }
+// export function s6p5c3(amount) {
+//   let Amount = (4 / 5) * s6p1x3(amount);
+//   return Amount;
+// }
+// export function s6p5c4(amount) {
+//   let Amount = (4 / 5) * s6p1x4(amount);
+//   return Amount;
+// }
 //add more tree children
-export function s6p5d1a(amount, negotiatedAmount) {
-  let tempAmount = 2 * s6p3x1a(amount);
+export function s6p5d(amountUnderParagraph3, negotiatedAmount) {
+  let tempAmount = 2 * amountUnderParagraph3;
   if (negotiatedAmount > tempAmount) {
     return negotiatedAmount;
   }
   return tempAmount;
 }
-export function s6p5d1b(amount, negotiatedAmount) {
-  let tempAmount = 2 * s6p3x1b(amount);
-  if (negotiatedAmount > tempAmount) {
-    return negotiatedAmount;
-  }
-  return tempAmount;
-}
-export function s6p5d2a(amount, negotiatedAmount) {
-  let tempAmount = 2 * s6p3x2a(amount);
-  if (negotiatedAmount > tempAmount) {
-    return negotiatedAmount;
-  }
-  return tempAmount;
-}
-export function s6p5d2b(amount, negotiatedAmount) {
-  let tempAmount = 2 * s6p3x2b(amount);
-  if (negotiatedAmount > tempAmount) {
-    return negotiatedAmount;
-  }
-  return tempAmount;
-}
+// export function s6p5d1b(amount, negotiatedAmount) {
+//   let tempAmount = 2 * s6p3x1b(amount);
+//   if (negotiatedAmount > tempAmount) {
+//     return negotiatedAmount;
+//   }
+//   return tempAmount;
+// }
+// export function s6p5d2a(amount, negotiatedAmount) {
+//   let tempAmount = 2 * s6p3x2a(amount);
+//   if (negotiatedAmount > tempAmount) {
+//     return negotiatedAmount;
+//   }
+//   return tempAmount;
+// }
+// export function s6p5d2b(amount, negotiatedAmount) {
+//   let tempAmount = 2 * s6p3x2b(amount);
+//   if (negotiatedAmount > tempAmount) {
+//     return negotiatedAmount;
+//   }
+//   return tempAmount;
+// }
 export function s6p5e(amount) {
   if (amount > 500000) {
     return amount;
@@ -922,8 +922,8 @@ export function s6p11x1() {
   let Amount = 100000;
   return Amount;
 }
-export function s6p11x2() {
-  let Amount = 20000;
+export function s6p11x2(numberOfCopies) {
+  let Amount = 20000 * numberOfCopies;
   return Amount;
 }
 //extra children needed

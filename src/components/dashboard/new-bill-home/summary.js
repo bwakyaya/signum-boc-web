@@ -34,9 +34,9 @@ export default function SummaryPage(props) {
 
   useEffect(() => {
     document.getElementById("taxationNumberId").value =
-    billSummary.taxationNumber;
+      billSummary.taxationNumber;
     document.getElementById("taxationNumberYear").value =
-    billSummary.taxationYear;
+      billSummary.taxationYear;
     document.getElementById("suit-field").value = billSummary.suitNumber;
     document.getElementById("suit-year").value = billSummary.suitYear;
     document.getElementById("Plaintiffs").value = billSummary.plaintiffs;
@@ -45,24 +45,34 @@ export default function SummaryPage(props) {
     document.getElementById("dateSelector").value = billSummary.date;
   });
 
-  function dropdown(arr){ 
-    return(
-      arr.map((item)=>{return(<option>{item}</option>);})
-      );
+  function dropdown(arr) {
+    return arr.map((item) => {
+      return <option key={item}>{item}</option>;
+    });
   }
 
   return (
     <div className="summary-component">
       <div className="court-div">
         <label className="court-label">Court</label>
-        <select onChange={()=>{setCourt(document.getElementById("courts").value)}} id="courts">
-        {dropdown(courtsList)}
+        <select
+          onChange={() => {
+            setCourt(document.getElementById("courts").value);
+          }}
+          id="courts"
+        >
+          {dropdown(courtsList)}
         </select>
       </div>
       <div className="division-div">
         <label className="division-label">Division</label>
-        <select onChange={()=>{setDivision(document.getElementById("divisions").value)}} id="divisions">
-        {dropdown(divisions)}
+        <select
+          onChange={() => {
+            setDivision(document.getElementById("divisions").value);
+          }}
+          id="divisions"
+        >
+          {dropdown(divisions)}
         </select>
       </div>
       <div className="taxation-div">
