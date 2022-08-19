@@ -52,14 +52,14 @@ export default function NewBillForm() {
   }
   const ConnectorStyleProps = {
     disabledColor: "#bdbdbd",
-    activeColor: "#4494df",
+    activeColor: "#1976d2",
     completedColor: "rgb(215, 129, 21)",
     size: 1,
     stepSize: "1.5em",
     style: "solid",
   };
   const StepStyleDTO = {
-    activeBgColor: "#4494df",
+    activeBgColor: "#1976d2",
     activeTextColor: "#ffffff",
     completedBgColor: "rgb(215, 129, 21)",
     completedTextColor: "#ffffff",
