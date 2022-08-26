@@ -21,19 +21,32 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;}
 .login-panel{
   background: whitesmoke;
-  height: 600px;
-  width: 400px;
+  display:flex;
+  flex-direction: row;
+  height: 50%;
+  width: 50%;
   border-radius: 8px;
   box-shadow: 10px 10px 20px rgb(70, 70, 70);}
 .login-logo{
-  /* background-color: rgb(215, 129, 21); */
-  background-color: #1976d2;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background-color: #950018;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;}
+  flex-direction: column;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 50%;
+  height: 100%;}
+  .login-options{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(240, 232, 222);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 .username-section{
   display: flex;
   align-items: center;
@@ -90,7 +103,9 @@ font-size: 11px;}
   font-size: 11px;
   padding-left: 40px;}
 .system-name{
-  color: white;}
+  color: #950018;
+  text-align: center;
+}
 .home-plate{
   display: flex;
   flex-direction: row;
@@ -134,8 +149,8 @@ font-size: 11px;}
     border-top-width: 1px; 
     border-top-style: solid; }
 .logo{
-  height: 100%;
-  width: 80;}
+  height: 30%;
+  width: 100;}
 .boc-form-panel{
   display: flex;
   flex-direction: column;
@@ -158,8 +173,8 @@ font-size: 11px;}
   border-top-right-radius: 8px;
   height: 12%;
   width: 100%;
-  /* background-color: rgb(215, 129, 21) ; */
-  background-color: #1976d2;
+  background-color: #950018 ;
+  /* background-color: #1976d2; */
   border: none;}
 .form-widgets{
   border-style: none;
