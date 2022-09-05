@@ -13,19 +13,18 @@ const myData = [[]];
 export default function CostItems(props) {
   const [items, setItems] = useState();
   const [open, setOpen] = React.useState(false);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
-  const [data, setData] = useState(
-    <ITable tableData={myData} caller={"items"} />
-  );
+  const [data, setData] = useState(<ITable tableData={myData} />);
 
   useEffect(() => {
-    // props.setItems(data);
-    console.log(items);
+    props.setItems(data);
+    // console.log(items);
   });
 
   function testTable() {
@@ -53,16 +52,10 @@ export default function CostItems(props) {
             <Button onClick={handleClose}>Cancel</Button>
             <Button
               onClick={() => {
-                // myData.push([
-                //   "#",
-                //   "20th/06/2022",
-                //   "To the advocate for filing a plaint skdjfksjbfke nskdfks",
-                //   "200000",
-                //   "80000",
-                // ]);
                 myData.push(items);
+                console.log(myData);
                 setData(<ITable tableData={myData} />);
-                testTable();
+                // testTable();
                 handleClose();
               }}
             >

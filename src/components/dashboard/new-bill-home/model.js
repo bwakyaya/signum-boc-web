@@ -870,7 +870,6 @@ export function s6p7(amount) {
   }
   return 3000000;
 }
-//add more children to the tree
 export function s6p8x1(amount) {
   if (amount > 2000000) {
     return amount;
@@ -883,7 +882,6 @@ export function s6p8x2(amount) {
   }
   return 500000;
 }
-//add more children
 export function s6p9x1(amount) {
   if (amount > 2000000) {
     return amount;
@@ -896,7 +894,6 @@ export function s6p9x2(amount) {
   }
   return 300000;
 }
-//Extra Children needed
 export function s6p10x1(numberOfCopies) {
   let Amount = 300000 + 50000 * numberOfCopies;
   return Amount;
@@ -917,7 +914,6 @@ export function s6p10x5(numberOfCopies) {
   let Amount = 200000 + 50000 * numberOfCopies;
   return Amount;
 }
-//extra children needed
 export function s6p11x1() {
   let Amount = 100000;
   return Amount;
@@ -926,7 +922,6 @@ export function s6p11x2(numberOfCopies) {
   let Amount = 20000 * numberOfCopies;
   return Amount;
 }
-//extra children needed
 export function s6p12x1(numberOfHours) {
   let Amount = numberOfHours * 100000;
   return Amount;
