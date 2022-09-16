@@ -903,7 +903,8 @@ export default function ScheduleTree(props) {
           setParagraph(nodes.name);
           setId(nodes.id);
           import("./model").then((model) => {
-            let amount = model.s4s2p12x9();
+            let nodeId = nodes.id;
+            let amount = model.getAmount(nodeId);
             setAmount(amount);
           });
         }
