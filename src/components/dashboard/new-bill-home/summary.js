@@ -3,6 +3,7 @@ import "./summary.css";
 import SaveIcon from "@mui/icons-material/Save";
 import Button from "@mui/material/Button";
 import "./summary.css";
+import axios from "axios";
 
 const courtsList = [
   "",
@@ -28,6 +29,38 @@ const billSummary = {
   date: "",
 };
 export default function SummaryPage(props) {
+  async function getCourts(token) {
+    const url = "http://localhost:5000/courts";
+    const formData = new FormData();
+    formData.append("token", props.token);
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+    return await axios
+      .post(url, formData, config)
+      .then((data) => data)
+      .then((Data) => {
+        console.log(Data);
+      });
+  }
+  async function getDivisions(token) {
+    const url = "http://localhost:5000/divisions";
+    const formData = new FormData();
+    formData.append("token", props.token);
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+    return await axios
+      .post(url, formData, config)
+      .then((data) => data)
+      .then((Data) => {
+        console.log(Data);
+      });
+  }
   // const [summaryData, setSummaryData] = useState(billSummary);
   const [court, setCourt] = useState();
   const [division, setDivision] = useState();

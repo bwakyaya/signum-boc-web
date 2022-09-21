@@ -44,11 +44,11 @@ function Table(props) {
     <table className="dataTable">
       <thead>
         <tr>
-          <th className="item">ITEM </th>
-          <th className="date">DATE</th>
-          <th className="particulars">PARTICULARS </th>
-          <th className="amount">AMOUNT</th>
-          <th className="tax">TAXED OFF</th>
+          <th className="item">Item </th>
+          <th className="date">Date</th>
+          <th className="particulars">Particulars </th>
+          <th className="amount">Amount</th>
+          <th className="tax">Taxed off</th>
         </tr>
       </thead>
       <tbody>
@@ -65,11 +65,11 @@ function TableRow(props) {
   return (
     <TableErrorBoundary>
       <tr>
-        <td>{row[0]}</td>
-        <td>{row[1]}</td>
-        <td>{row[2]}</td>
-        <td>{row[3]}</td>
-        <td>{row[4]}</td>
+        <td className="item">{row[0]}</td>
+        <td className="date">{row[1]}</td>
+        <td className="particulars">{row[2]}</td>
+        <td className="amount">{row[3]}</td>
+        <td className="tax">{row[4]}</td>
         {/* {row.map((val, index) => (
           <td key={`key-${Date.now()}-${index}-cell`}>{val}</td>
       ))} */}

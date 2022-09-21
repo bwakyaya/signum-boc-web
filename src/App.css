@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(123, 123, 123);
+  /* background: rgb(123, 123, 123); */
+  background-color: lightslategray;
   height: 100vh;
   width: 100vw;
   margin: auto;}
@@ -10,7 +11,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(123, 123, 123);
+  /* background: rgb(123, 123, 123); */
+  background-color: lightslategray;
   height: 100vh;
   width: 100vw;
   margin: auto;}
@@ -26,9 +28,10 @@
   height: 50%;
   width: 50%;
   border-radius: 8px;
-  box-shadow: 10px 10px 20px rgb(70, 70, 70);}
+  /* box-shadow: 10px 10px 20px rgb(215, 129, 21); */
+}
 .login-logo{
-  background-color: #950018;
+  background-color: rgb(145, 122, 94);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,20 +54,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  padding-top: 50px;}
+  height: 15%;
+  
+}
 .password-section{
   padding-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;}
+  height: 15%;
+}
 .button-section{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  padding-top: 30px;}
+  height: 15%;
+  /* padding-top: 30px; */
+}
 .login-field{
   border-bottom:rgb(145, 122, 94);
   border-bottom-width: thin;
@@ -74,15 +80,15 @@
   border-right: none;
   text-align: center;
   border-radius: 8px;
-  width: 200px;
-  height: 40px;
+  width: 65%;
+  height: 80%;
   font-size: 10pt;
   font-weight: bolder;}
 .login-button{
-  width: 150px;
-  height: 35px;
+  width: 40%;
+  height: 70%;
   font-size: 10pt;
-  border-radius: 50px;
+  border-radius: 8px;
   border-style: none;
   color: white;
   font-weight: bolder;
@@ -95,7 +101,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;}
+  height: 15%;
+}
 .sign-up-label{
 padding-right: 40px;
 font-size: 11px;}
@@ -110,8 +117,8 @@ font-size: 11px;}
   display: flex;
   flex-direction: row;
   height: 100%;
-  width: 90%;
-  background-color: rgb(123, 123, 123);
+  width: 100%;
+  background-color: #20232a;
   /* box-shadow: 10px 10px 20px rgb(70, 70, 70); */
   /* border-radius: 5px; */
   /* overflow-y: auto; */}
@@ -156,7 +163,7 @@ font-size: 11px;}
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background-color: rgb(123, 123, 123);
+  background-color: rgb(145, 122, 94);
   border-width: 1px; 
   border-radius: 5px;}
 .divider2{
@@ -169,21 +176,21 @@ font-size: 11px;}
   flex-direction: row;
   justify-content: center;
   border-style: none;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  /* border-top-left-radius: 8px;
+  border-top-right-radius: 8px; */
   height: 12%;
   width: 100%;
-  background-color: #950018 ;
+  background-color: rgb(145, 122, 94) ;
   /* background-color: #1976d2; */
   border: none;}
 .form-widgets{
   border-style: none;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  /* border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px; */
   display: flex;
   justify-content: center;
   background-color: #ffffff;
-  height: 82%;
+  height: 88%;
   width: 100%;}
 .body{
     display: flex;

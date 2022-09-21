@@ -3,39 +3,43 @@
 }
 
 .add-button{
-    color: #1976d2;
+    color: rgb(145, 122, 94);
 }
 .add-button:hover{
     opacity: 0.6;
 }
 tr, th, td, .dataTable{
-    border:  rgb(94, 89, 89);
-    border-style: solid;
-    border-width: thin;
-    border-collapse: collapse;
-    
-    font-size: 13.5pt;
+    border-left:none;
+    border-right: none;
+    border-bottom:  rgb(145, 122, 94);
+    border-bottom-style: solid;
+    border-bottom-width: 0.5pt;
+    border-collapse: collapse;  
+    /* font-size: 12pt; */
 }
 
-.dataTable{
-    
+.dataTable{   
     width: 98%;
-    color: rgb(94, 89, 89);
+    /* color: #000000; */
 }
 .item{
 width: 5%;
+text-align: center;
 }
 .date{
 width: 15%;
+text-align: center;
 }
 .particulars{
 width: 50%;
 }
 .amount{
 width: 15%;
+text-align: center;
 }
 .tax{
 width: 15%;
+text-align: center;
 }
 .all-elements{
     display: flex;
@@ -53,8 +57,10 @@ width: 15%;
     width: 100%;
   }
 thead{
-    color: #13395e;
+    color: #ffffff;
     font-weight: bold;
+    background-color: lightslategray;
+
   }
 .table-button{
     display: flex;
@@ -68,9 +74,6 @@ thead{
     display: flex;
     flex-direction: column;
 }
-.new-item-date-label{
-
-}
 .new-item-date-field{
 border-top: none;
 border-left: none;
@@ -81,9 +84,6 @@ border-bottom-style: solid;
 height: 40px;
 font-size: 12pt;
 margin-bottom: 2em;
-}
-.new-item-particulars-label{
-
 }
 .new-item-particulars-field{
     border-top: none;
@@ -96,9 +96,6 @@ margin-bottom: 2em;
     font-size: 12pt;
     margin-bottom: 2em;
 }
-.new-item-amount-label{
-
-}
 .new-item-amount-field{
     border-top: none;
     border-left: none;
@@ -109,9 +106,6 @@ margin-bottom: 2em;
     height: 40px;
     font-size: 12pt;
     margin-bottom: 2em;
-}
-.new-item-tax-label{
-
 }
 .new-item-tax-field{
     border-top: none;
@@ -136,3 +130,6 @@ margin-bottom: 2em;
         opacity: 0.9;
         transform: scale(1.2);
     }
+.form-steps{
+    color: rgb(145, 122, 94);
+}

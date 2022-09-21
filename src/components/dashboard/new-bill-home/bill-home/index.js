@@ -10,7 +10,6 @@ export default function BOCHome(props) {
   );
   return (
     <div className="boc-form-panel">
-      <div className="margin"></div>
       <div className="options-panel">
         <figure className="new-bill-fig">
           <img
