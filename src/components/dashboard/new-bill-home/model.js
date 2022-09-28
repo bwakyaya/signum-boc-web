@@ -1,3 +1,6 @@
+import React from "react";
+
+
 //Schedule 1
 function s1s1p1(amount, numberOfItemsNotHandled) {
   let Amount = null;
@@ -941,6 +944,7 @@ function s6p12x3(numberOfHours) {
 
 export function getAmount(id) {
   let amount;
+  Prompt();
   switch (id) {
     case "s1s1p1":
       amount = s1s1p1();
@@ -1517,3 +1521,13 @@ export function getAmount(id) {
   }
   return amount;
 }
+
+export function Prompt(){
+
+  return <div>
+    <label>Amount:</label>
+    <input type="number"></input>
+  </div>
+
+}
+

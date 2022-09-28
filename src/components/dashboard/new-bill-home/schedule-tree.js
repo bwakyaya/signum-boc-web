@@ -5,9 +5,21 @@ import TreeView from "@mui/lab/TreeView";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
+import {Prompt} from "./model"
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
 
 let paragraphItem = "";
 export default function ScheduleTree(props) {
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const [open, setOpen] = React.useState(false);
   const Scheduledata = {
     id: "root",
     name: "Schedule",
@@ -902,6 +914,7 @@ export default function ScheduleTree(props) {
         if (!nodes.children) {
           setParagraph(nodes.name);
           setId(nodes.id);
+          handleClickOpen();
           import("./model").then((model) => {
             let nodeId = nodes.id;
             let amount = model.getAmount(nodeId);
@@ -917,6 +930,7 @@ export default function ScheduleTree(props) {
   );
 
   return (
+  <>
     <TreeView
       className="schedules-list"
       defaultCollapseIcon={<ExpandMoreIcon />}
@@ -926,5 +940,14 @@ export default function ScheduleTree(props) {
     >
       {renderTree(Scheduledata)}
     </TreeView>
+    <Dialog open={open} onClose={handleClose}>
+        <DialogContent>
+        <Prompt />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Ok</Button>
+        </DialogActions>
+      </Dialog>
+  </>
   );
 }
