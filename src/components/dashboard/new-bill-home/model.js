@@ -1,38 +1,42 @@
-import React from "react";
 
 
-//Schedule 1
-function s1s1p1(amount, numberOfItemsNotHandled) {
-  let Amount = null;
-  switch (amount) {
-    case amount < 10000000:
-      Amount = 0.05 * amount;
-      break;
-    case (amount = 10000000):
-      Amount = 500000;
-      break;
-    case amount > 10000000 && amount <= 20000000:
-      Amount = 500000 + 0.03 * (amount - 10000000);
-      break;
-    case amount > 20000000:
-      Amount = 500000 + 300000 + 0.02 * (amount - 20000000);
-      break;
-    default:
-      break;
+function getInput(message){
+  let amount;
+  let input = prompt(`Enter ${message}`);
+  let isnum = /^\d+$/.test(input);
+  if(isnum){
+    amount = Number(input);
+    return amount;
   }
+  else{
+    alert(`Invalid input for ${message}. It Should be a valid number.`);
+    getInput(message);
+  }
+  
+}
+//Schedule 1
+function s1s1p1() {
+  const amount = getInput("Consideration");
+  console.log(amount)
+  let numberOfItemsNotHandled = getInput("Items not Handled");   
+  let Amount ;
+  if (amount < 10000000){
+    console.log("Hooray")
+    Amount =  0.05 * amount;}
+  if(amount === 10000000){
+    Amount =   500000;}
+  if (amount > 10000000 && amount <= 20000000){
+    Amount =   500000 + 0.03 * (amount - 10000000);}
+  if(amount > 20000000){
+    Amount =   500000 + 300000 + 0.02 * (amount - 20000000);}
+  
   return Amount - numberOfItemsNotHandled * 0.3 * Amount;
 }
-function s1s1p2(amount, numberOfItemsNotHandled) {
-  let Amount = null;
-  let itemOneFee = s1s1p1(amount);
-  Amount =
-    0.05 * itemOneFee - numberOfItemsNotHandled * 0.3 * 0.05 * itemOneFee;
-  return Amount;
+function s1s1p2() {
+  return 0.5 * s1s1p1();
 }
-function s1s1p3(amount) {
-  let Amount = null;
-
-  return Amount;
+function s1s1p3() {
+  return 1;
 }
 function s1s2p1(amount) {
   let Amount = null;
@@ -947,8 +951,7 @@ export function getAmount(id) {
   Prompt();
   switch (id) {
     case "s1s1p1":
-      amount = s1s1p1();
-
+      amount = s1s1p1();   
       break;
     case "s1s1p2":
       amount = s1s1p2();
@@ -1522,12 +1525,7 @@ export function getAmount(id) {
   return amount;
 }
 
-export function Prompt(){
-
-  return <div>
-    <label>Amount:</label>
-    <input type="number"></input>
-  </div>
+function Prompt(){
 
 }
 
