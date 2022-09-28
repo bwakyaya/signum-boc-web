@@ -30,7 +30,7 @@ export default function Login(props) {
         <div className="login-logo">
           <img
             className="logo"
-            src="signum-logo.png"
+            src="balance.png"
             height="100px"
             width="130px"
             alt="logo-here"
