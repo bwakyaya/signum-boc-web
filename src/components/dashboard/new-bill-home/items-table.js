@@ -47,8 +47,8 @@ function Table(props) {
           <th className="item">Item </th>
           <th className="date">Date</th>
           <th className="particulars">Particulars </th>
-          <th className="amount">Amount</th>
-          <th className="tax">Taxed off</th>
+          <th className="amount">Amount(UGX)</th>
+          <th className="tax">Taxed off 18%(UGX)</th>
         </tr>
       </thead>
       <tbody>
@@ -68,14 +68,20 @@ function TableRow(props) {
         <td className="item">{row[0]}</td>
         <td className="date">{row[1]}</td>
         <td className="particulars">{row[2]}</td>
-        <td className="amount">{row[3]}</td>
-        <td className="tax">{row[4]}</td>
+        <td className="amount">{formatAmount(row[3])}</td>
+        <td className="tax">{formatAmount(row[4])}</td>
         {/* {row.map((val, index) => (
           <td key={`key-${Date.now()}-${index}-cell`}>{val}</td>
       ))} */}
       </tr>
     </TableErrorBoundary>
   );
+}
+function formatAmount(amount) {
+  if (!amount) {
+    return amount;
+  }
+  return amount.toLocaleString();
 }
 
 export default ITable;
