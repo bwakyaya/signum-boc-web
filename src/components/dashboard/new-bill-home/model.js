@@ -81,22 +81,20 @@ function s1s2p8() {
   let prescribedFeePerSecurity = getInput("Prescribed Fee Per Security");
   let numberOfSecurities = getInput("Number of Securities");
   let Amount = null;
-  switch (numberOfSecurities) {
-    case (numberOfSecurities = 1):
-      Amount = prescribedFeePerSecurity;
-      break;
-    case (numberOfSecurities = 2):
-      Amount = prescribedFeePerSecurity + 0.25 * prescribedFeePerSecurity;
-      break;
-    case numberOfSecurities > 2:
-      Amount =
-        prescribedFeePerSecurity +
-        0.25 * prescribedFeePerSecurity +
-        0.1 * prescribedFeePerSecurity * (numberOfSecurities - 2);
-      break;
-    default:
-      break;
+
+  if (numberOfSecurities === 1) {
+    Amount = prescribedFeePerSecurity;
   }
+  if (numberOfSecurities === 2) {
+    Amount = prescribedFeePerSecurity + 0.25 * prescribedFeePerSecurity;
+  }
+  if (numberOfSecurities > 2) {
+    Amount =
+      prescribedFeePerSecurity +
+      0.25 * prescribedFeePerSecurity +
+      0.1 * prescribedFeePerSecurity * (numberOfSecurities - 2);
+  }
+
   return Amount;
 }
 //Needs Clarification - Is the first immovable property free of charge?
@@ -104,16 +102,14 @@ function s1s2p9() {
   let numberOfImmovableProperty = getInput("Number of Immovable Property");
   let prescribedFee = getInput("Prescribed Fee");
   let Amount = null;
-  switch (numberOfImmovableProperty) {
-    case (numberOfImmovableProperty = 2):
-      Amount = 0.1 * prescribedFee;
-      break;
-    case numberOfImmovableProperty < 2:
-      Amount = prescribedFee + 0.05 * (numberOfImmovableProperty - 2);
-      break;
-    default:
-      break;
+
+  if (numberOfImmovableProperty === 2) {
+    Amount = 0.1 * prescribedFee;
   }
+  if (numberOfImmovableProperty < 2) {
+    Amount = prescribedFee + 0.05 * (numberOfImmovableProperty - 2);
+  }
+
   return Amount;
 }
 //Needs Clarification - The meaning of the feel shall be divided equally
@@ -121,18 +117,16 @@ function s1s2p10() {
   let prescribedFeePerChargee = getInput("Prescribed Fee per chargee");
   let numberOfChargees = getInput("Number of Chargees");
   let Amount = null;
-  switch (numberOfChargees) {
-    case (numberOfChargees = 1):
-      Amount = prescribedFeePerChargee;
-      break;
-    case numberOfChargees > 1:
-      Amount =
-        prescribedFeePerChargee +
-        0.05 * prescribedFeePerChargee(numberOfChargees - 1);
-      break;
-    default:
-      break;
+
+  if (numberOfChargees === 1) {
+    Amount = prescribedFeePerChargee;
   }
+  if (numberOfChargees > 1) {
+    Amount =
+      prescribedFeePerChargee +
+      0.05 * prescribedFeePerChargee(numberOfChargees - 1);
+  }
+
   return Amount;
 }
 // //Needs Clarification - Is this a paragraph of its own or it is a condition for the above items
@@ -156,22 +150,20 @@ function s1s2p10() {
 function s2s1p1() {
   let amount = getInput("Consideration");
   let Amount = null;
-  switch (amount) {
-    case amount < 20000000:
-      Amount = 0.05 * amount;
-      break;
-    case (amount = 20000000):
-      Amount = 500000;
-      break;
-    case amount > 20000000 && amount <= 50000000:
-      Amount = 0.1 * 20000000 + 0.05 * (amount - 20000000);
-      break;
-    case amount > 20000000:
-      Amount = 0.1 * 20000000 + 0.05 * 30000000 + 0.02 * (amount - 50000000);
-      break;
-    default:
-      break;
+  if (amount < 20000000) {
+    Amount = 0.05 * amount;
   }
+
+  if (amount === 20000000) {
+    Amount = 500000;
+  }
+  if (amount > 20000000 && amount <= 50000000) {
+    Amount = 0.1 * 20000000 + 0.05 * (amount - 20000000);
+  }
+  if (amount > 20000000) {
+    Amount = 0.1 * 20000000 + 0.05 * 30000000 + 0.02 * (amount - 50000000);
+  }
+
   return Amount;
 }
 function s2s1p2() {
@@ -182,23 +174,19 @@ function s2s1p2() {
 function s2s2p1() {
   let amount = getInput("Consideration");
   let Amount = null;
-  switch (amount) {
-    case amount <= 20000000:
-      let temp_amount = 0.1 * amount;
-      if (temp_amount < 500000) {
-        Amount = 500000;
-      } else {
-        Amount = temp_amount;
-      }
-      break;
-    case amount > 20000000 && amount <= 50000000:
-      Amount = 0.1 * 20000000 + 0.05 * (amount - 20000000);
-      break;
-    case amount > 50000000:
-      Amount = 0.1 * 20000000 + 0.05 * 30000000 + 0.02 * (amount - 50000000);
-      break;
-    default:
-      break;
+  if (amount <= 20000000) {
+    let temp_amount = 0.1 * amount;
+    if (temp_amount < 500000) {
+      Amount = 500000;
+    } else {
+      Amount = temp_amount;
+    }
+  }
+  if (amount > 20000000 && amount <= 50000000) {
+    Amount = 0.1 * 20000000 + 0.05 * (amount - 20000000);
+  }
+  if (amount > 50000000) {
+    Amount = 0.1 * 20000000 + 0.05 * 30000000 + 0.02 * (amount - 50000000);
   }
   return Amount;
 }
@@ -210,31 +198,28 @@ function s2s2p2() {
 function s3s1p1() {
   let amount = getInput("nominal capital of the company");
   let Amount = null;
-  switch (amount) {
-    case amount <= 10000000:
-      let temp_amount = 0.1 * amount;
-      if (temp_amount < 500000) {
-        Amount = 500000;
-      } else {
-        Amount = temp_amount;
-      }
-      break;
-    case amount > 10000000 && amount <= 50000000:
+  if (amount <= 10000000) {
+    let temp_amount = 0.1 * amount;
+    if (temp_amount < 500000) {
+      Amount = 500000;
+    } else {
+      Amount = temp_amount;
+    }
+    if (amount > 10000000 && amount <= 50000000) {
       Amount = 0.1 * 10000000 + 0.03 * (amount - 10000000);
-      break;
-    case amount > 50000000 && amount <= 100000000:
-      Amount = 0.1 * 10000000 + 0.03 * 40000000 + 0.02 * (amount - 50000000);
-      break;
-    case amount > 100000000:
-      Amount =
-        0.1 * 10000000 +
-        0.03 * 40000000 +
-        0.02 * 50000000 +
-        0.01 * (amount - 100000000);
-      break;
-    default:
-      break;
+    }
+    if (amount > 50000000 && amount <= 100000000) {
+    }
+    Amount = 0.1 * 10000000 + 0.03 * 40000000 + 0.02 * (amount - 50000000);
   }
+  if (amount > 100000000) {
+    Amount =
+      0.1 * 10000000 +
+      0.03 * 40000000 +
+      0.02 * 50000000 +
+      0.01 * (amount - 100000000);
+  }
+
   return Amount;
 }
 //percentage needs clarification: is it 15% or 150%. we are now using 15%
@@ -611,33 +596,30 @@ function s5p9() {
 function s5p10() {
   let amount = getInput("amount of debt");
   let Amount = null;
-  switch (amount) {
-    case amount <= 5000000:
-      Amount = 0.1 * amount;
-      break;
-    case amount > 5000000 && amount <= 15000000:
-      Amount = 0.1 * 5000000 + 0.075 * (amount - 5000000);
-      break;
-    case amount > 15000000 && amount <= 30000000:
-      Amount = 0.1 * 5000000 + 0.075 * 10000000 + 0.05 * (amount - 15000000);
-      break;
-    case amount > 30000000 && amount <= 50000000:
-      Amount =
-        0.1 * 5000000 +
-        0.075 * 10000000 +
-        0.05 * 15000000 +
-        0.03 * (amount - 30000000);
-      break;
-    case amount > 50000000:
-      Amount =
-        0.1 * 5000000 +
-        0.075 * 10000000 +
-        0.05 * 15000000 +
-        0.03 * 20000000 +
-        0.02 * (amount - 50000000);
-      break;
-    default:
-      break;
+
+  if (amount <= 5000000) {
+    Amount = 0.1 * amount;
+  }
+  if (amount > 5000000 && amount <= 15000000) {
+    Amount = 0.1 * 5000000 + 0.075 * (amount - 5000000);
+  }
+  if (amount > 15000000 && amount <= 30000000) {
+    Amount = 0.1 * 5000000 + 0.075 * 10000000 + 0.05 * (amount - 15000000);
+  }
+  if (amount > 30000000 && amount <= 50000000) {
+    Amount =
+      0.1 * 5000000 +
+      0.075 * 10000000 +
+      0.05 * 15000000 +
+      0.03 * (amount - 30000000);
+  }
+  if (amount > 50000000) {
+    Amount =
+      0.1 * 5000000 +
+      0.075 * 10000000 +
+      0.05 * 15000000 +
+      0.03 * 20000000 +
+      0.02 * (amount - 50000000);
   }
   return Amount;
 }
@@ -645,52 +627,49 @@ function s5p10() {
 function s6p1x1() {
   let amount = getInput("amount");
   let Amount = null;
-  switch (amount) {
-    case amount <= 2000000:
-      Amount = 0.15 * amount;
-      break;
-    case amount > 2000000 && amount <= 5000000:
-      Amount = 0.15 * 2000000 + 0.14 * (amount - 2000000);
-      break;
-    case amount > 5000000 && amount <= 10000000:
-      Amount = 0.15 * 2000000 + 0.14 * 3000000 + 0.12 * (amount - 5000000);
-      break;
-    case amount > 10000000 && amount <= 20000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * (amount - 10000000);
-      break;
-    case amount > 20000000 && amount <= 50000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * 10000000 +
-        0.08 * (amount - 20000000);
-      break;
-    case amount > 50000000 && amount <= 100000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * 10000000 +
-        0.08 * 30000000 +
-        0.05 * (amount - 50000000);
-      break;
-    case amount > 100000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * 10000000 +
-        0.08 * 30000000 +
-        0.05 * 50000000 +
-        0.02(amount - 100000000);
-      break;
-    default:
-      break;
+
+  if (amount <= 2000000) {
+    Amount = 0.15 * amount;
+  }
+  if (amount > 2000000 && amount <= 5000000) {
+    Amount = 0.15 * 2000000 + 0.14 * (amount - 2000000);
+  }
+  if (amount > 5000000 && amount <= 10000000) {
+    Amount = 0.15 * 2000000 + 0.14 * 3000000 + 0.12 * (amount - 5000000);
+  }
+  if (amount > 10000000 && amount <= 20000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * (amount - 10000000);
+  }
+  if (amount > 20000000 && amount <= 50000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * 10000000 +
+      0.08 * (amount - 20000000);
+  }
+  if (amount > 50000000 && amount <= 100000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * 10000000 +
+      0.08 * 30000000 +
+      0.05 * (amount - 50000000);
+  }
+  if (amount > 100000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * 10000000 +
+      0.08 * 30000000 +
+      0.05 * 50000000 +
+      0.02 * (amount - 100000000);
   }
   return Amount;
 }
@@ -710,52 +689,47 @@ function s6p1x4() {
 function s6p2x1() {
   let amount = getInput("amount");
   let Amount = null;
-  switch (amount) {
-    case amount <= 2000000:
-      Amount = 0.15 * amount;
-      break;
-    case amount > 2000000 && amount <= 5000000:
-      Amount = 0.15 * 2000000 + 0.14 * (amount - 2000000);
-      break;
-    case amount > 5000000 && amount <= 10000000:
-      Amount = 0.15 * 2000000 + 0.14 * 3000000 + 0.12 * (amount - 5000000);
-      break;
-    case amount > 10000000 && amount <= 20000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * (amount - 10000000);
-      break;
-    case amount > 20000000 && amount <= 50000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * 10000000 +
-        0.08 * (amount - 20000000);
-      break;
-    case amount > 50000000 && amount <= 100000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * 10000000 +
-        0.08 * 30000000 +
-        0.05 * (amount - 50000000);
-      break;
-    case amount > 100000000:
-      Amount =
-        0.15 * 2000000 +
-        0.14 * 3000000 +
-        0.12 * 5000000 +
-        0.1 * 10000000 +
-        0.08 * 30000000 +
-        0.05 * 50000000 +
-        0.02(amount - 100000000);
-      break;
-    default:
-      break;
+
+  if (amount <= 2000000) Amount = 0.15 * amount;
+  if (amount > 2000000 && amount <= 5000000) {
+    Amount = 0.15 * 2000000 + 0.14 * (amount - 2000000);
+  }
+  if (amount > 5000000 && amount <= 10000000) {
+    Amount = 0.15 * 2000000 + 0.14 * 3000000 + 0.12 * (amount - 5000000);
+  }
+  if (amount > 10000000 && amount <= 20000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * (amount - 10000000);
+  }
+  if (amount > 20000000 && amount <= 50000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * 10000000 +
+      0.08 * (amount - 20000000);
+  }
+  if (amount > 50000000 && amount <= 100000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * 10000000 +
+      0.08 * 30000000 +
+      0.05 * (amount - 50000000);
+  }
+  if (amount > 100000000) {
+    Amount =
+      0.15 * 2000000 +
+      0.14 * 3000000 +
+      0.12 * 5000000 +
+      0.1 * 10000000 +
+      0.08 * 30000000 +
+      0.05 * 50000000 +
+      0.02(amount - 100000000);
   }
   return Amount;
 }
