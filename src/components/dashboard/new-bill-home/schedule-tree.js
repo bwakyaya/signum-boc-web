@@ -28,10 +28,6 @@ export default function ScheduleTree(props) {
                 id: "s1s1p2",
                 name: "PARAGRAPH 2: To the advocate for effecting conveyance in a land registry or processing a certificate of title ",
               },
-              {
-                id: "s1s1p3",
-                name: "PARAGRAPH 3: For purposes of items I and 2 of this scale, where the advocate has not h and led the negotiation , preparation or completion for registration",
-              },
             ],
           },
           {
@@ -917,7 +913,6 @@ export default function ScheduleTree(props) {
   );
 
   return (
-
     <TreeView
       className="schedules-list"
       defaultCollapseIcon={<ExpandMoreIcon />}

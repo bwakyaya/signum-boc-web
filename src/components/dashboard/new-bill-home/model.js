@@ -1,88 +1,85 @@
-
-
-function getInput(message){
+function getInput(message) {
   let amount;
   let input = prompt(`Enter ${message}`);
   let isnum = /^\d+$/.test(input);
-  if(isnum){
+  if (isnum) {
     amount = Number(input);
     return amount;
-  }
-  else{
+  } else {
     alert(`Invalid input for ${message}. It Should be a valid number.`);
     getInput(message);
   }
-  
 }
 //Schedule 1
 function s1s1p1() {
   const amount = getInput("Consideration");
-  console.log(amount)
-  let numberOfItemsNotHandled = getInput("Items not Handled");   
-  let Amount ;
-  if (amount < 10000000){
-    console.log("Hooray")
-    Amount =  0.05 * amount;}
-  if(amount === 10000000){
-    Amount =   500000;}
-  if (amount > 10000000 && amount <= 20000000){
-    Amount =   500000 + 0.03 * (amount - 10000000);}
-  if(amount > 20000000){
-    Amount =   500000 + 300000 + 0.02 * (amount - 20000000);}
-  
+  let numberOfItemsNotHandled = getInput("Items not Handled");
+  let Amount;
+  if (amount < 10000000) {
+    console.log("Hooray");
+    Amount = 0.05 * amount;
+  }
+  if (amount === 10000000) {
+    Amount = 500000;
+  }
+  if (amount > 10000000 && amount <= 20000000) {
+    Amount = 500000 + 0.03 * (amount - 10000000);
+  }
+  if (amount > 20000000) {
+    Amount = 500000 + 300000 + 0.02 * (amount - 20000000);
+  }
+
   return Amount - numberOfItemsNotHandled * 0.3 * Amount;
 }
 function s1s1p2() {
   return 0.5 * s1s1p1();
 }
-function s1s1p3() {
-  return 1;
-}
-function s1s2p1(amount) {
+function s1s2p1() {
+  let amount = getInput("Consideration");
   let Amount = null;
-  switch (amount) {
-    case amount < 10000000:
-      Amount = 0.05 * amount;
-      break;
-    case (amount = 10000000):
-      Amount = 500000;
-      break;
-    case amount > 10000000 && amount <= 20000000:
-      Amount = 500000 + 0.03 * (amount - 10000000);
-      break;
-    case amount > 20000000:
-      Amount = 500000 + 300000 + 0.01 * (amount - 20000000);
-      break;
-    default:
-      break;
+  if (amount < 10000000) {
+    Amount = 0.05 * amount;
+  }
+
+  if (amount === 10000000) {
+    Amount = 500000;
+  }
+
+  if (amount > 10000000 && amount <= 20000000) {
+    Amount = 500000 + 0.03 * (amount - 10000000);
+  }
+  if (amount > 20000000) {
+    Amount = 500000 + 300000 + 0.01 * (amount - 20000000);
   }
   return Amount;
 }
-function s1s2p2(amount) {
-  return s1s2p1(amount) * 0.3;
+function s1s2p2() {
+  return s1s2p1() * 0.3;
 }
-function s1s2p3(amount) {
-  return s1s2p1(amount) * 0.5;
+function s1s2p3() {
+  return s1s2p1() * 0.5;
 }
-function s1s2p4(amount) {
-  return s1s2p1(amount) * 0.3;
+function s1s2p4() {
+  return s1s2p1() * 0.3;
 }
-function s1s2p5(amount) {
-  let Amount = s1s2p1(amount) * 0.15;
+function s1s2p5() {
+  let Amount = s1s2p1() * 0.15;
   if (Amount > 500000) {
     return Amount;
   } else {
     return 500000;
   }
 }
-function s1s2p6(amount) {
-  return s1s2p1(amount) * 0.5;
+function s1s2p6() {
+  return s1s2p1() * 0.5;
 }
-function s1s2p7(amount) {
-  return s1s2p1(amount) * 0.25;
+function s1s2p7() {
+  return s1s2p1() * 0.25;
 }
 //Needs Clarification
-function s1s2p8(prescribedFeePerSecurity, numberOfSecurities) {
+function s1s2p8() {
+  let prescribedFeePerSecurity = getInput("Prescribed Fee Per Security");
+  let numberOfSecurities = getInput("Number of Securities");
   let Amount = null;
   switch (numberOfSecurities) {
     case (numberOfSecurities = 1):
@@ -103,7 +100,9 @@ function s1s2p8(prescribedFeePerSecurity, numberOfSecurities) {
   return Amount;
 }
 //Needs Clarification - Is the first immovable property free of charge?
-function s1s2p9(numberOfImmovableProperty, prescribedFee) {
+function s1s2p9() {
+  let numberOfImmovableProperty = getInput("Number of Immovable Property");
+  let prescribedFee = getInput("Prescribed Fee");
   let Amount = null;
   switch (numberOfImmovableProperty) {
     case (numberOfImmovableProperty = 2):
@@ -118,7 +117,9 @@ function s1s2p9(numberOfImmovableProperty, prescribedFee) {
   return Amount;
 }
 //Needs Clarification - The meaning of the feel shall be divided equally
-function s1s2p10(prescribedFeePerChargee, numberOfChargees) {
+function s1s2p10() {
+  let prescribedFeePerChargee = getInput("Prescribed Fee per chargee");
+  let numberOfChargees = getInput("Number of Chargees");
   let Amount = null;
   switch (numberOfChargees) {
     case (numberOfChargees = 1):
@@ -152,7 +153,8 @@ function s1s2p10(prescribedFeePerChargee, numberOfChargees) {
 //   return Amount;
 // }
 //Schedule 2
-function s2s1p1(amount) {
+function s2s1p1() {
+  let amount = getInput("Consideration");
   let Amount = null;
   switch (amount) {
     case amount < 20000000:
@@ -172,11 +174,13 @@ function s2s1p1(amount) {
   }
   return Amount;
 }
-function s2s1p2(reduction) {
+function s2s1p2() {
+  let reduction = getInput("deduction");
   let Amount = 1000000;
   return Amount - reduction;
 }
-function s2s2p1(amount) {
+function s2s2p1() {
+  let amount = getInput("Consideration");
   let Amount = null;
   switch (amount) {
     case amount <= 20000000:
@@ -198,12 +202,13 @@ function s2s2p1(amount) {
   }
   return Amount;
 }
-function s2s2p2(amount) {
-  let Amount = 0.3 * s2s2p1(amount);
+function s2s2p2() {
+  let Amount = 0.3 * s2s2p1();
   return Amount;
 }
 //Schedule 3
-function s3s1p1(amount) {
+function s3s1p1() {
+  let amount = getInput("nominal capital of the company");
   let Amount = null;
   switch (amount) {
     case amount <= 10000000:
@@ -233,9 +238,9 @@ function s3s1p1(amount) {
   return Amount;
 }
 //percentage needs clarification: is it 15% or 150%. we are now using 15%
-function s3s1p2(amount) {
+function s3s1p2() {
   let Amount = null;
-  let temp = 0.15 * s3s1p1(amount);
+  let temp = 0.15 * s3s1p1();
   if (temp > 1000000) {
     Amount = temp;
   } else {
@@ -243,7 +248,8 @@ function s3s1p2(amount) {
   }
   return Amount;
 }
-function s3s1p3(amount) {
+function s3s1p3() {
+  let amount = getInput("instruction fees");
   let Amount = null;
   if (amount > 500000) {
     Amount = amount;
@@ -253,7 +259,8 @@ function s3s1p3(amount) {
   }
   return Amount;
 }
-function s3s1p4(amount) {
+function s3s1p4() {
+  let amount = getInput("instruction fees");
   let Amount = null;
   if (amount > 1000000) {
     Amount = amount;
@@ -263,14 +270,16 @@ function s3s1p4(amount) {
   }
   return Amount;
 }
-function s3s2p1(amount) {
-  let Amount = s3s1p1(amount);
+function s3s2p1() {
+  let Amount = s3s1p1();
   return Amount;
 }
-function s3s2p2(amount) {
+function s3s2p2() {
+  let amount = getInput("Fees charged by advocate");
   return amount;
 }
-function s3s3p1(amount) {
+function s3s3p1() {
+  let amount = getInput("Fees charged by advocate");
   return amount;
 }
 // function s3s3p2(amount) {
@@ -301,14 +310,15 @@ function s4s1p2x1c() {
 function s4s1p2x1d() {
   return 200000;
 }
-function s4s1p2x2(amount) {
+function s4s1p2x2() {
+  let amount = getInput("Fees charged (Not less than 300,000)");
   if (amount > s4s1p2x1c()) {
     return amount;
   }
   return s4s1p2x1c();
 }
-function s4s1p2x3(amount) {
-  return s4s1p2x2(amount);
+function s4s1p2x3() {
+  return s4s1p2x2();
 }
 function s4s1p2x4a() {
   return s4s1p2x1a();
@@ -322,8 +332,8 @@ function s4s1p2x4c() {
 function s4s1p2x4d() {
   return s4s1p2x1d();
 }
-function s4s1p2x5(amount) {
-  return s4s1p2x2(amount);
+function s4s1p2x5() {
+  return s4s1p2x2();
 }
 function s4s1p2x6() {
   return s4s1p2x1d();
@@ -387,28 +397,33 @@ function s4s1p8x3() {
 function s4s1p8x4() {
   return 300000;
 }
-function s4s1p9x1(amount) {
+function s4s1p9x1() {
+  let amount = getInput("Fees charged by advocate");
   if (amount > 3000000) {
     return amount;
   }
   return 3000000;
 }
-function s4s1p9x2a(numberOfDays) {
+function s4s1p9x2a() {
+  let numberOfDays = getInput("number of days");
   return numberOfDays * 400000;
 }
 function s4s1p9x2b() {
   return 200000;
 }
-function s4s1p9x3(numberOfHours) {
+function s4s1p9x3() {
+  let numberOfHours = getInput("number of hours");
   return numberOfHours * 100000;
 }
-function s4s1p10x1(numberOfHours) {
+function s4s1p10x1() {
+  let numberOfHours = getInput("number of hours");
   return numberOfHours * 100000;
 }
 function s4s1p10x2() {
   return 75000;
 }
-function s4s2p1(amount) {
+function s4s2p1() {
+  let amount = getInput("fees charged by advocate");
   if (amount > 3000000) {
     return amount;
   }
@@ -430,7 +445,8 @@ function s4s2p3x1() {
 function s4s2p3x2() {
   return 1000000;
 }
-function s4s2p3x3(amount) {
+function s4s2p3x3() {
+  let amount = getInput("fees charged by advocate");
   if (amount > 1000000) {
     return amount;
   }
@@ -461,7 +477,8 @@ function s4s2p10x1() {
 function s4s2p10x2() {
   return 50000;
 }
-function s4s2p11x1(amount) {
+function s4s2p11x1() {
+  let amount = getInput("fees charged by advocate");
   if (amount > 5000000) {
     return amount;
   }
@@ -473,7 +490,8 @@ function s4s2p11x2a() {
 function s4s2p11x2b() {
   return 300000;
 }
-function s4s2p12x1(amount) {
+function s4s2p12x1() {
+  let amount = getInput("fees charged by advocate");
   if (amount > 500000) {
     return amount;
   }
@@ -488,38 +506,48 @@ function s4s2p12x3() {
 function s4s2p12x4() {
   return 500000;
 }
-function s4s2p12x5a(numberOfDays) {
+function s4s2p12x5a() {
+  let numberOfDays = getInput("number of days");
   return numberOfDays * 300000;
 }
-function s4s2p12x5b(numberofHalfDays) {
+function s4s2p12x5b() {
+  let numberofHalfDays = getInput("number of half days");
   return numberofHalfDays * 200000;
 }
-function s4s2p12x6a(numberOfLetters) {
+function s4s2p12x6a() {
+  let numberOfLetters = getInput("number of letters");
   return 100000 * numberOfLetters;
 }
-function s4s2p12x6b(folio) {
+function s4s2p12x6b() {
+  let folio = getInput("number of folio");
   return 50000 * folio;
 }
-function s4s2p12x7a(numberOfLetters) {
+function s4s2p12x7a() {
+  let numberOfLetters = getInput("number of letters");
   return 100000 * numberOfLetters;
 }
-function s4s2p12x7b(folio) {
+function s4s2p12x7b() {
+  let folio = getInput("number of folio");
   return 50000 * folio;
 }
-function s4s2p12x8(numberOfFolio) {
+function s4s2p12x8() {
+  let numberOfFolio = getInput("number of folio");
   return numberOfFolio * 50000;
 }
 function s4s2p12x9() {
   return 500000;
 }
 //Schedule 5
-function s5p1(amount) {
+function s5p1() {
+  let amount = getInput("fee charged by advocate (not less than 200,000/=)");
   if (amount > 200000) {
     return amount;
   }
   return 200000;
 }
-function s5p2(amountPerSession, numberOfMinutes) {
+function s5p2() {
+  let amountPerSession = getInput("amount per session");
+  let numberOfMinutes = getInput("number of minutes");
   let Amount = 0;
   let sessions = numberOfMinutes / 15;
   let sessionsRemainder = numberOfMinutes % 15;
@@ -539,10 +567,12 @@ function s5p2(amountPerSession, numberOfMinutes) {
 
   return Amount;
 }
-function s5p3(numberOfDays) {
+function s5p3() {
+  let numberOfDays = getInput("number of days");
   return 300000 * numberOfDays;
 }
-function s5p4(amount) {
+function s5p4() {
+  let amount = getInput("fee charged by advocate");
   if (amount > 100000) {
     return amount;
   }
@@ -551,7 +581,8 @@ function s5p4(amount) {
 function s5p5() {
   return 100000;
 }
-function s5p6(amount) {
+function s5p6() {
+  let amount = getInput("fee charged by advocate");
   if (amount > 100000) {
     return amount;
   }
@@ -563,19 +594,22 @@ function s5p7x1() {
 function s5p7x2() {
   return 100000;
 }
-function s5p8(amount) {
+function s5p8() {
+  let amount = getInput("fee charged by advocate");
   if (amount > 200000) {
     return amount;
   }
   return 200000;
 }
-function s5p9(amount) {
+function s5p9() {
+  let amount = getInput("fee charged by advocate");
   if (amount > 500000) {
     return amount;
   }
   return 500000;
 }
-function s5p10(amount) {
+function s5p10() {
+  let amount = getInput("amount of debt");
   let Amount = null;
   switch (amount) {
     case amount <= 5000000:
@@ -608,7 +642,8 @@ function s5p10(amount) {
   return Amount;
 }
 //Schedule Six
-function s6p1x1(amount) {
+function s6p1x1() {
+  let amount = getInput("amount");
   let Amount = null;
   switch (amount) {
     case amount <= 2000000:
@@ -659,20 +694,21 @@ function s6p1x1(amount) {
   }
   return Amount;
 }
-function s6p1x2(amount) {
-  let Amount = 0.65 * s6p1x1(amount);
+function s6p1x2() {
+  let Amount = 0.65 * s6p1x1();
   return Amount;
 }
-function s6p1x3(amount) {
-  let Amount = 0.75 * s6p1x1(amount);
+function s6p1x3() {
+  let Amount = 0.75 * s6p1x1();
   return Amount;
 }
-function s6p1x4(amount) {
-  let Amount = 0.85 * s6p1x1(amount);
+function s6p1x4() {
+  let Amount = 0.85 * s6p1x1();
   return Amount;
 }
 //Add more items to the tree
-function s6p2x1(amount) {
+function s6p2x1() {
+  let amount = getInput("amount");
   let Amount = null;
   switch (amount) {
     case amount <= 2000000:
@@ -723,58 +759,65 @@ function s6p2x1(amount) {
   }
   return Amount;
 }
-function s6p2x2(amount) {
-  let Amount = 0.65 * s6p2x1(amount);
+function s6p2x2() {
+  let Amount = 0.65 * s6p2x1();
   return Amount;
 }
-function s6p2x3(amount) {
-  let Amount = 0.75 * s6p2x1(amount);
+function s6p2x3() {
+  let Amount = 0.75 * s6p2x1();
   return Amount;
 }
-function s6p2x4(amount) {
-  let Amount = 0.85 * s6p2x1(amount);
+function s6p2x4() {
+  let Amount = 0.85 * s6p2x1();
   return Amount;
 }
 //add more tree children
-function s6p3x1a(amount) {
+function s6p3x1a() {
+  let amount = getInput("fee charged by advocate. Not less than 1,000,000/=");
   if (amount > 1000000) {
     return amount;
   }
   return 1000000;
 }
-function s6p3x1b(amount) {
+function s6p3x1b() {
+  let amount = getInput("fee charged by advocate. Not less than 200,000/=");
   if (amount > 2000000) {
     return amount;
   }
   return 2000000;
 }
-function s6p3x2a(amount) {
+function s6p3x2a() {
+  let amount = getInput("fee charged by advocate. Not less than 100,000/=");
   if (amount > 1000000) {
     return amount;
   }
   return 1000000;
 }
-function s6p3x2b(amount) {
+function s6p3x2b() {
+  let amount = getInput("fee charged by advocate. Not less than 1,500,000/=");
   if (amount > 1500000) {
     return amount;
   }
   return 1500000;
 }
 
-function s6p4(amount) {
+function s6p4() {
+  let amount = getInput("fee charged by advocate. Not less than 500,000/=");
   if (amount > 500000) {
     return amount;
   }
   return 500000;
 }
-function s6p5a(grossCapitalValue) {
+function s6p5a() {
+  let grossCapitalValue = getInput("gross capital value");
   let Amount = 0.01 * grossCapitalValue;
   if (Amount > 1000000) {
     return Amount;
   }
   return 1000000;
 }
-function s6p5b(grossCapitalValue) {
+function s6p5b() {
+  let grossCapitalValue = getInput("gross capital value");
   let Amount = 0.02 * grossCapitalValue;
   if (Amount > 1000000) {
     return Amount;
@@ -782,7 +825,8 @@ function s6p5b(grossCapitalValue) {
   return 1000000;
 }
 //Need Clarification : add more tree children
-function s6p5c(feesFromParagraphOne) {
+function s6p5c() {
+  let feesFromParagraphOne = getInput("fees from paragraph one");
   let Amount = (4 / 5) * feesFromParagraphOne;
   return Amount;
 }
@@ -799,7 +843,9 @@ function s6p5c(feesFromParagraphOne) {
 //   return Amount;
 // }
 //add more tree children
-function s6p5d(amountUnderParagraph3, negotiatedAmount) {
+function s6p5d() {
+  let amountUnderParagraph3 = getInput("amount under paragraph 3");
+  let negotiatedAmount = getInput("negotiated amount");
   let tempAmount = 2 * amountUnderParagraph3;
   if (negotiatedAmount > tempAmount) {
     return negotiatedAmount;
@@ -827,40 +873,45 @@ function s6p5d(amountUnderParagraph3, negotiatedAmount) {
 //   }
 //   return tempAmount;
 // }
-function s6p5e(amount) {
+function s6p5e() {
+  let amount = getInput("fee charged by advocate. Not less than 500,000/=");
   if (amount > 500000) {
     return amount;
   }
   return 500000;
 }
-function s6p5f(amount) {
+function s6p5f() {
+  let amount = getInput("fee charged by advocate. Not less than 500,000/=");
   if (amount > 500000) {
     return amount;
   }
   return 500000;
 }
-function s6p5g(amount) {
-  if (amount > 500000) {
-    return amount;
-  }
-  return 500000;
+function s6p5g() {
+  let amount = getInput("fee charged by advocate. Not less than 500,000/=");
+  return amount;
 }
-function s6p5h(amount) {
+function s6p5h() {
+  let amount = getInput("fee charged by advocate. Not less than 500,000/=");
   if (amount > 1000000) {
     return amount;
   }
   return 1000000;
 }
-function s6p6(amount, act) {
+function s6p6() {
+  let act = prompt(
+    " 1 - for parliamentary act or 2 - for the local governments"
+  );
+  let amount = getInput("fee charged by advocate.");
   let Amount = null;
   switch (act) {
-    case "parliamentary":
+    case 1:
       if (amount > 10000000) {
         Amount = amount;
       }
       Amount = 10000000;
       break;
-    case "local-governments":
+    case 2:
       if (amount > 5000000) {
         Amount = amount;
       }
@@ -871,53 +922,63 @@ function s6p6(amount, act) {
   }
   return Amount;
 }
-function s6p7(amount) {
+function s6p7() {
+  let amount = getInput("fee charged by advocate. Not less than 3,000,000/=");
   if (amount > 3000000) {
     return amount;
   }
   return 3000000;
 }
-function s6p8x1(amount) {
+function s6p8x1() {
+  let amount = getInput("fee charged by advocate. Not less than 2,000,000/=");
   if (amount > 2000000) {
     return amount;
   }
   return 2000000;
 }
-function s6p8x2(amount) {
+function s6p8x2() {
+  let amount = getInput("fee charged by advocate. Not less than 500,000/=");
   if (amount > 500000) {
     return amount;
   }
   return 500000;
 }
-function s6p9x1(amount) {
+function s6p9x1() {
+  let amount = getInput("fee charged by advocate. Not less than 2,000,000/=");
   if (amount > 2000000) {
     return amount;
   }
   return 2000000;
 }
-function s6p9x2(amount) {
+function s6p9x2() {
+  let amount = getInput("fee charged by advocate. Not less than 300,000/=");
   if (amount > 300000) {
     return amount;
   }
   return 300000;
 }
-function s6p10x1(numberOfCopies) {
+function s6p10x1() {
+  let numberOfCopies = getInput("number of copies");
   let Amount = 300000 + 50000 * numberOfCopies;
   return Amount;
 }
-function s6p10x2(numberOfCopies) {
+function s6p10x2() {
+  let numberOfCopies = getInput("number of copies");
   let Amount = 200000 + 30000 * numberOfCopies;
   return Amount;
 }
-function s6p10x3(numberOfCopies) {
+function s6p10x3() {
+  let numberOfCopies = getInput("number of copies");
   let Amount = 50000 + 20000 * numberOfCopies;
   return Amount;
 }
-function s6p10x4(numberOfCopies) {
+function s6p10x4() {
+  let numberOfCopies = getInput("number of copies");
   let Amount = 300000 + 50000 * numberOfCopies;
   return Amount;
 }
-function s6p10x5(numberOfCopies) {
+function s6p10x5() {
+  let numberOfCopies = getInput("number of copies");
   let Amount = 200000 + 50000 * numberOfCopies;
   return Amount;
 }
@@ -925,23 +986,28 @@ function s6p11x1() {
   let Amount = 100000;
   return Amount;
 }
-function s6p11x2(numberOfCopies) {
+function s6p11x2() {
+  let numberOfCopies = getInput("number of copies");
   let Amount = 20000 * numberOfCopies;
   return Amount;
 }
-function s6p12x1(numberOfHours) {
+function s6p12x1() {
+  let numberOfHours = getInput("number of copies");
   let Amount = numberOfHours * 100000;
   return Amount;
 }
-function s6p12x2a(numberOfHours) {
+function s6p12x2a() {
+  let numberOfHours = getInput("number of copies");
   let Amount = numberOfHours * 100000;
   return Amount;
 }
-function s6p12x2b(numberOfHours) {
+function s6p12x2b() {
+  let numberOfHours = getInput("number of copies");
   let Amount = numberOfHours * 20000;
   return Amount;
 }
-function s6p12x3(numberOfHours) {
+function s6p12x3() {
+  let numberOfHours = getInput("number of copies");
   let Amount = numberOfHours * 100000;
   return Amount;
 }
@@ -951,14 +1017,10 @@ export function getAmount(id) {
   Prompt();
   switch (id) {
     case "s1s1p1":
-      amount = s1s1p1();   
+      amount = s1s1p1();
       break;
     case "s1s1p2":
       amount = s1s1p2();
-
-      break;
-    case "s1s1p3":
-      amount = s1s1p3();
 
       break;
     case "s1s2p1":
@@ -1525,7 +1587,4 @@ export function getAmount(id) {
   return amount;
 }
 
-function Prompt(){
-
-}
-
+function Prompt() {}
