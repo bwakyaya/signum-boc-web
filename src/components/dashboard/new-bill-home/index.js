@@ -15,14 +15,9 @@ export default function NewBillForm() {
   const [items, setItems] = useState();
   const [disbursements, setDisbursements] = useState();
 
-  function check() {
-    if (summary) {
-      console.log(summary);
-    }
-  }
 
   useEffect(() => {
-    check();
+    console.log(summary);
   });
 
   function switchFormParts(step) {

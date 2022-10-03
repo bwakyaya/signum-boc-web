@@ -10,6 +10,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 const myData = [[]];
 export default function Disbursements(props) {
+  let disbursements = [["Transport to file plea",20000],["Airtime to contact witnesses", 50000],  ["Transport to serve summons", 70000]];
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
@@ -40,7 +41,7 @@ export default function Disbursements(props) {
         </div>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Disbursement</DialogTitle>
-          <DialogContent>{/* <NewItem /> */}</DialogContent>
+          <DialogContent></DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
             <Button
@@ -48,9 +49,9 @@ export default function Disbursements(props) {
                 myData.push([
                   "#",
                   "17th Sept. 2022",
-                  "hdf gsdsjk dbfksfjnf ksfjngks djn,jsdg vjdsnkgj kgjfgkdfj gdkfjgnkd fjgkdfjgn kdfjgndfkjgnd fkgjndf kgjndfk gdfjgnkdfgjkdfng",
-                  "hfjfggr",
-                  "tgdfgdf",
+                  "Transport to serve summons",
+                  "50000",
+                  "",
                 ]);
                 setDisbursement(
                   <ITable tableData={myData} caller={"disbursements"} />
