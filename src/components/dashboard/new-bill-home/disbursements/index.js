@@ -1,5 +1,4 @@
-import "./items.css";
-import ITable from "./items-table";
+import ITable from "../schedules/items-table";
 import React, { useState, useEffect } from "react";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import Dialog from "@mui/material/Dialog";
@@ -10,7 +9,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 const myData = [[]];
 export default function Disbursements(props) {
-  let disbursements = [["Transport to file plea",20000],["Airtime to contact witnesses", 50000],  ["Transport to serve summons", 70000]];
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);

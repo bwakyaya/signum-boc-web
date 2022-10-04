@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Stepper } from "react-form-stepper";
 import SummaryPage from "./summary";
-import CostItems from "./items";
+import CostItems from "./schedules";
 import Disbursements from "./disbursements";
 import Finish from "./finish";
 import "./body.css";
@@ -14,7 +14,6 @@ export default function NewBillForm() {
   const [summary, setSummary] = useState();
   const [items, setItems] = useState();
   const [disbursements, setDisbursements] = useState();
-
 
   useEffect(() => {
     console.log(summary);
