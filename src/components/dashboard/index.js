@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import NewBillForm from "./new-bill-home";
-import Drafts from "./drafts-home";
-import Archives from "./archive-home";
-import Profile from "./profile-home";
+import NewBillForm from "./new-bill";
+import Drafts from "./drafts";
+import Archives from "./archive";
+import Profile from "./profile";
 
 export default function Dashboard(props) {
   const [launcher, setLauncher] = useState(
@@ -19,7 +19,7 @@ export default function Dashboard(props) {
               alt="icon"
               src="newbill.png"
               onClick={() => {
-                setLauncher(<NewBillForm />);
+                setLauncher(<NewBillForm token={props.token} />);
               }}
             ></img>
             <figcaption className="new-bill-label">New Bill</figcaption>

@@ -8,15 +8,17 @@ import "./body.css";
 import Button from "@mui/material/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import axios from "axios";
 
-export default function NewBillForm() {
+const disbursements = [];
+export default function NewBillForm(props) {
   const [activeStep, setActiveStep] = useState(0);
   const [summary, setSummary] = useState();
   const [items, setItems] = useState();
-  const [disbursements, setDisbursements] = useState();
+  const [itemId, setItemId] = useState();
 
   useEffect(() => {
-    console.log(summary);
+    disbursements.push(fetchDisbursements(itemId, props.token));
   });
 
   function switchFormParts(step) {
@@ -26,10 +28,10 @@ export default function NewBillForm() {
         Component = <SummaryPage setSummary={setSummary} />;
         break;
       case 1:
-        Component = <CostItems setItems={setItems} />;
+        Component = <CostItems setItems={setItems} setItemId={setItemId} />;
         break;
       case 2:
-        Component = <Disbursements setDisbursements={setDisbursements} />;
+        Component = <Disbursements disbursements={disbursements} />;
         break;
       case 3:
         Component = (
@@ -116,4 +118,21 @@ export default function NewBillForm() {
       </div>
     </div>
   );
+}
+
+//API Call to fetch disbursements
+async function fetchDisbursements(paragraph, token) {
+  const url = "http://localhost:5000/disbursements";
+  const formData = new FormData();
+  formData.append("paragraph", paragraph);
+  const config = {
+    headers: {
+      "content-type": "multipart/form-data",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  return axios
+    .post(url, formData, config)
+    .then((response) => response)
+    .then((data) => JSON.parse(data));
 }

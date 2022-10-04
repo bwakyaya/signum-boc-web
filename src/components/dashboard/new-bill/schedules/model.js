@@ -202,15 +202,19 @@ function s3s1p1() {
     let temp_amount = 0.1 * amount;
     if (temp_amount < 500000) {
       Amount = 500000;
+      console.log(1);
     } else {
       Amount = temp_amount;
+      console.log(2);
     }
-    if (amount > 10000000 && amount <= 50000000) {
-      Amount = 0.1 * 10000000 + 0.03 * (amount - 10000000);
-    }
-    if (amount > 50000000 && amount <= 100000000) {
-    }
+  }
+  if (amount > 10000000 && amount <= 50000000) {
+    Amount = 0.1 * 10000000 + 0.03 * (amount - 10000000);
+    console.log(3);
+  }
+  if (amount > 50000000 && amount <= 100000000) {
     Amount = 0.1 * 10000000 + 0.03 * 40000000 + 0.02 * (amount - 50000000);
+    console.log(4);
   }
   if (amount > 100000000) {
     Amount =
@@ -878,7 +882,7 @@ function s6p6() {
   );
   let amount = getInput("fee charged by advocate.");
   let Amount = null;
-  switch (act) {
+  switch (Number(act)) {
     case 1:
       if (amount > 10000000) {
         Amount = amount;
@@ -1485,11 +1489,9 @@ export function getAmount(id) {
       break;
     case "s6p5h":
       amount = s6p5h();
-
       break;
     case "s6p6":
       amount = s6p6();
-
       break;
     case "s6p7":
       amount = s6p7();

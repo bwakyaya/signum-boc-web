@@ -13,6 +13,7 @@ const myData = [[]];
 export default function CostItems(props) {
   const [items, setItems] = useState();
   const [open, setOpen] = React.useState(false);
+  const [id, setId] = useState();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -23,7 +24,8 @@ export default function CostItems(props) {
   const [data, setData] = useState(<ITable tableData={myData} />);
 
   useEffect(() => {
-    props.setItems(data);
+    props.setItems(myData);
+    props.setItemId(id);
     // console.log(items);
   });
 
@@ -53,7 +55,7 @@ export default function CostItems(props) {
             <Button
               onClick={() => {
                 myData.push(items);
-                console.log(myData);
+                setId(items[5]);
                 setData(<ITable tableData={myData} />);
                 // testTable();
                 handleClose();

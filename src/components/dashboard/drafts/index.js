@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import IconButton from "@mui/material/IconButton";
+// import IconButton from "@mui/material/IconButton";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -24,8 +24,6 @@ const Demo = styled("div")(({ theme }) => ({
 }));
 
 export default function Drafts() {
-  const [secondary, setSecondary] = React.useState(false);
-
   return (
     <div className="list-div">
       <Box sx={{ flexGrow: 1 }} className="list">
@@ -42,10 +40,7 @@ export default function Drafts() {
             <List dense={false}>
               {generate(
                 <ListItem className="list-item">
-                  <ListItemText
-                    primary="Kristof versus UAP - Bill of costs.docx 12-04-19-165"
-                    secondary={secondary ? "Secondary text" : null}
-                  />
+                  <ListItemText primary="Kristof versus UAP - Bill of costs.docx 12-04-19-165" />
                   <EditIcon className="edit-icon" />
                   <DeleteIcon className="delete-icon" />
                 </ListItem>

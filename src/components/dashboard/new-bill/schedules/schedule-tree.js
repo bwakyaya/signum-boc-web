@@ -469,6 +469,20 @@ export default function ScheduleTree(props) {
               {
                 id: "s4s2p3",
                 name: "PARAGRAPH 3: Licenses",
+                children: [
+                  {
+                    id: "s4s2p3x1",
+                    name: "Instructions to file an application, to register a licensee and advice on whether the licensee is registrable",
+                  },
+                  {
+                    id: "s4s2p3x2",
+                    name: "Drawing the application",
+                  },
+                  {
+                    id: "s4s2p3x3",
+                    name: "Drawing a license agreement",
+                  },
+                ],
               },
               {
                 id: "s4s2p4",

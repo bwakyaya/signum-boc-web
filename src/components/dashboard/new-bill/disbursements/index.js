@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 
-const myData = [[]];
+let myData = [[]];
 export default function Disbursements(props) {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -20,7 +20,7 @@ export default function Disbursements(props) {
     <ITable tableData={myData} />
   );
   useEffect(() => {
-    props.setDisbursements(disbursement);
+    myData.push(props.disbursements);
   });
   function testTable() {
     if (myData) {
