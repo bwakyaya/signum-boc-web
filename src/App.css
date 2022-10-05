@@ -270,3 +270,19 @@ width: 100%;}
 .input-field{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.disbursementDetails{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 300px;
+}
+#disbursementDescription{
+  height: 80px;
+}
+.disbursementField{
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #04203A;
+  font-family: inherit;
+}

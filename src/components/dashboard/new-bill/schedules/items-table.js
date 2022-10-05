@@ -66,7 +66,7 @@ function TableRow(props) {
     <TableErrorBoundary>
       <tr>
         <td className="item">{row[0]}</td>
-        <td className="date">{row[1]}</td>
+        <td className="date">{formatDate(row[1])}</td>
         <td className="particulars">{row[2]}</td>
         <td className="amount">{formatAmount(row[3])}</td>
         <td className="tax">{formatAmount(row[4])}</td>
@@ -82,6 +82,12 @@ function formatAmount(amount) {
     return amount;
   }
   return amount.toLocaleString();
+}
+function formatDate(dateStr) {
+  if (!dateStr) {
+    return dateStr;
+  }
+  return dateStr.split("-").reverse().join("/");
 }
 
 export default ITable;

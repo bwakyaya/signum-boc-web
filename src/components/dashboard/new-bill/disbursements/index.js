@@ -1,5 +1,5 @@
 import ITable from "../schedules/items-table";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 
-let myData = [[]];
+let data = [[]];
 export default function Disbursements(props) {
   const [open, setOpen] = React.useState(false);
   const handleClickOpen = () => {
@@ -16,14 +16,12 @@ export default function Disbursements(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  const [disbursement, setDisbursement] = useState(
-    <ITable tableData={myData} />
-  );
-  useEffect(() => {
-    myData.push(props.disbursements);
-  });
+  const [disbursement, setDisbursement] = useState(<ITable tableData={data} />);
+
+  // myData.push(props.disbursements);
+
   function testTable() {
-    if (myData) {
+    if (data) {
       return disbursement;
     }
   }
@@ -39,20 +37,44 @@ export default function Disbursements(props) {
         </div>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Disbursement</DialogTitle>
-          <DialogContent></DialogContent>
+          <DialogContent>
+            <div className="disbursementDetails">
+              <input
+                type="date"
+                className="disbursementField"
+                id="disbursementDate"
+              />
+              <label>Description</label>
+              <textarea
+                id="disbursementDescription"
+                className="disbursementField"
+              ></textarea>
+              <label>Amount</label>
+              <input
+                type="number"
+                id="disbursementAmount"
+                className="disbursementField"
+              ></input>
+            </div>
+          </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
             <Button
               onClick={() => {
-                myData.push([
+                let disbursementAmount = Number(
+                  document.getElementById("disbursementAmount").value
+                );
+                let disbursementTax = 0.18 * disbursementAmount;
+                data.push([
                   "#",
-                  "17th Sept. 2022",
-                  "Transport to serve summons",
-                  "50000",
-                  "",
+                  document.getElementById("disbursementDate").value,
+                  document.getElementById("disbursementDescription").value,
+                  disbursementAmount,
+                  disbursementTax,
                 ]);
+                props.setDisbursements(data);
                 setDisbursement(
-                  <ITable tableData={myData} caller={"disbursements"} />
+                  <ITable tableData={data} caller={"disbursements"} />
                 );
                 handleClose();
               }}

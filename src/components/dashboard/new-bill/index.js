@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Stepper } from "react-form-stepper";
 import SummaryPage from "./summary";
 import CostItems from "./schedules";
@@ -10,16 +10,12 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import axios from "axios";
 
-const disbursements = [];
 export default function NewBillForm(props) {
   const [activeStep, setActiveStep] = useState(0);
   const [summary, setSummary] = useState();
   const [items, setItems] = useState();
   const [itemId, setItemId] = useState();
-
-  useEffect(() => {
-    disbursements.push(fetchDisbursements(itemId, props.token));
-  });
+  const [disbursements, setDisbursements] = useState();
 
   function switchFormParts(step) {
     let Component;
@@ -31,7 +27,7 @@ export default function NewBillForm(props) {
         Component = <CostItems setItems={setItems} setItemId={setItemId} />;
         break;
       case 2:
-        Component = <Disbursements disbursements={disbursements} />;
+        Component = <Disbursements setDisbursements={setDisbursements} />;
         break;
       case 3:
         Component = (
@@ -121,18 +117,18 @@ export default function NewBillForm(props) {
 }
 
 //API Call to fetch disbursements
-async function fetchDisbursements(paragraph, token) {
-  const url = "http://localhost:5000/disbursements";
-  const formData = new FormData();
-  formData.append("paragraph", paragraph);
-  const config = {
-    headers: {
-      "content-type": "multipart/form-data",
-      Authorization: `Bearer ${token}`,
-    },
-  };
-  return axios
-    .post(url, formData, config)
-    .then((response) => response)
-    .then((data) => JSON.parse(data));
-}
+// async function fetchDisbursements(paragraph, token) {
+//   const url = "http://localhost:5000/disbursements";
+//   const formData = new FormData();
+//   formData.append("paragraph", paragraph);
+//   const config = {
+//     headers: {
+//       "content-type": "multipart/form-data",
+//       Authorization: `Bearer ${token}`,
+//     },
+//   };
+//   return axios
+//     .post(url, formData, config)
+//     .then((response) => response)
+//     .then((data) => JSON.parse(data));
+// }
