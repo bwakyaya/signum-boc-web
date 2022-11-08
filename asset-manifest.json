@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.faf5c45a.css",
-    "main.js": "/react-gh-pages/static/js/main.a35f9896.js",
-    "static/js/382.d90b8981.chunk.js": "/react-gh-pages/static/js/382.d90b8981.chunk.js",
-    "static/js/787.9c0d2132.chunk.js": "/react-gh-pages/static/js/787.9c0d2132.chunk.js",
-    "static/media/newbill.png": "/react-gh-pages/static/media/newbill.7e39ed8985049510342d.png",
-    "index.html": "/react-gh-pages/index.html",
-    "main.faf5c45a.css.map": "/react-gh-pages/static/css/main.faf5c45a.css.map",
-    "main.a35f9896.js.map": "/react-gh-pages/static/js/main.a35f9896.js.map",
-    "382.d90b8981.chunk.js.map": "/react-gh-pages/static/js/382.d90b8981.chunk.js.map",
-    "787.9c0d2132.chunk.js.map": "/react-gh-pages/static/js/787.9c0d2132.chunk.js.map"
+    "main.css": "/signum-boc-web/static/css/main.a5bd725d.css",
+    "main.js": "/signum-boc-web/static/js/main.9b1add71.js",
+    "static/js/382.d90b8981.chunk.js": "/signum-boc-web/static/js/382.d90b8981.chunk.js",
+    "static/js/787.9c0d2132.chunk.js": "/signum-boc-web/static/js/787.9c0d2132.chunk.js",
+    "static/media/newbill.png": "/signum-boc-web/static/media/newbill.7e39ed8985049510342d.png",
+    "index.html": "/signum-boc-web/index.html",
+    "main.a5bd725d.css.map": "/signum-boc-web/static/css/main.a5bd725d.css.map",
+    "main.9b1add71.js.map": "/signum-boc-web/static/js/main.9b1add71.js.map",
+    "382.d90b8981.chunk.js.map": "/signum-boc-web/static/js/382.d90b8981.chunk.js.map",
+    "787.9c0d2132.chunk.js.map": "/signum-boc-web/static/js/787.9c0d2132.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.faf5c45a.css",
-    "static/js/main.a35f9896.js"
+    "static/css/main.a5bd725d.css",
+    "static/js/main.9b1add71.js"
   ]
 }
