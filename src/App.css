@@ -40,7 +40,7 @@
   border-bottom-left-radius: 8px;
   width: 50%;
   height: 100%;}
-  .login-options{
+.login-options{
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: rgb(240, 232, 222);
@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
 .username-section{
   display: flex;
   align-items: center;
@@ -104,11 +104,11 @@
   height: 15%;
 }
 .sign-up-label{
-padding-right: 40px;
+margin-right: 2em;
 font-size: 11px;}
 .forgot-password-label{
   font-size: 11px;
-  padding-left: 40px;}
+  margin-left: 2em;}
 .system-name{
   color: #04203A;
   text-align: center;
@@ -122,18 +122,7 @@ font-size: 11px;}
   /* box-shadow: 10px 10px 20px rgb(70, 70, 70); */
   /* border-radius: 5px; */
   /* overflow-y: auto; */}
-.left-panel{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  height: 100%;
-  width: 21%;
-  background-color: #04203A;
-  border: white;
-  border-width: 1px; 
-  border-style: solid;
-  /* border-radius: 10px; */} 
+
 .system-title{
   display: flex;
   justify-content: center;
