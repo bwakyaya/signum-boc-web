@@ -17,7 +17,7 @@ export default function Dashboard(props) {
             <img
               className="new-bill-icon"
               alt="icon"
-              src="newbill.png"
+              src={require("./newbill.png")}
               onClick={() => {
                 setLauncher(<NewBillForm token={props.token} />);
               }}
@@ -28,7 +28,7 @@ export default function Dashboard(props) {
             <img
               className="draft-icon"
               alt="icon"
-              src="draft.png"
+              src={require("./draft.png")}
               onClick={() => {
                 setLauncher(<Drafts />);
               }}
@@ -39,7 +39,7 @@ export default function Dashboard(props) {
             <img
               className="archive-icon"
               alt="icon"
-              src="archive.png"
+              src={require("./archive.png")}
               onClick={() => {
                 setLauncher(<Archives />);
               }}
@@ -50,7 +50,7 @@ export default function Dashboard(props) {
             <img
               className="profile-icon"
               alt="icon"
-              src="images.png"
+              src={require("./images.png")}
               onClick={() => {
                 setLauncher(
                   <Profile token={props.token} setToken={props.setToken} />
