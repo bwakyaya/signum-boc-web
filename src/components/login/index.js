@@ -31,8 +31,8 @@ export default function Login(props) {
           <img
             className="logo"
             src={require("./balance.png")}
-            height="100px"
-            width="130px"
+            height="50%"
+            width="50%"
             alt="logo-here"
           ></img>
         </div>

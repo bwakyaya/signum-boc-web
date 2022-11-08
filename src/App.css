@@ -144,9 +144,9 @@ font-size: 11px;}
     border-top: white;
     border-top-width: 1px; 
     border-top-style: solid; }
-.logo{
+/* .logo{
   height: 30%;
-  width: 100;}
+  width: 100;} */
 .boc-form-panel{
   display: flex;
   flex-direction: column;
